@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string name="flatlands">Flatlands</string>
+	<string name="flatlands_group">Flatlands</string>
+	<string name="scenario_flatlands_easy">Flatlands Easy</string>
+	<string name="scenario_flatlands_easy_subtitle">Very Easy</string>
+	<string name="scenario_flatlands_easy_description">
+Find a nice place to stay.
+	</string>
+	<string name="scenario_flatlands_easy_context">
+Deep, flat valleys in the middle of a mountain landscape. Rich in ore with thriving flora and harmless fauna. No Raiders. Less storms and blizzards. Longer Fall, shorter Winter.</string>
+	<string name="goal_flatlands_welcome_title">Good choice. Enjoy!</string>
+	<string name="goal_flatlands_welcome_description">Welcome to the dawn of Flatlands. Look at the view!</string>
+
+	<string name="flatlands_spawn">The Flatlands</string>
+	<string name="river_spawn">Riverlands</string>
+	<string name="valley_spawn">The Valley</string>
+	<string name="clear_water_spawn">Clear Water Lakes</string>
+
+<string name="milestone_yeiy_people">Yeiy! People</string>
+<string name="milestone_yeiy_people_description">Reach a population of 15.</string>
+<string name="milestone_simple_camp">Build a camp to survive</string>
+<string name="milestone_simple_camp_description">Wood Pile, Rock Pile, Skins Dryer, Crafter, 3 tents, Storage Tent.</string>
+<string name="milestone_survival5w">Five winters</string>
+<string name="milestone_survival5w_description">Survive for 5 winters.</string>
+<string name="milestone_200people">The 200</string>
+<string name="milestone_200people_description">Reach a population of 200.</string>
+<string name="milestone_lotopray">A lot of work</string>
+<string name="milestone_lotopray_description">Build 10 stone circles.</string>
+<string name="milestone_1k_bread">The daily bread</string>
+<string name="milestone_1k_bread_description">Bake 1000 delicious breads.</string>
+<string name="milestone_get_some_nuts">Get some nuts!</string>
+<string name="milestone_get_some_nuts_description">Collect 1000 nuts.</string>
+
+
+</strings>

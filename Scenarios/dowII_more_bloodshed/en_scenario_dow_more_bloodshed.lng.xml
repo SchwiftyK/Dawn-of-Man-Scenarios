@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string name="dow_more_bloodshed">More Bloodshed</string>
+	<string name="amazon_stories">Amazon stories</string>
+	<string name="scenario_dow_more_bloodshed">More Bloodshed</string>
+	<string name="scenario_dow_more_bloodshed_subtitle">Nasty</string>
+	<string name="scenario_dow_more_bloodshed_description">
+Build defenses and survive.
+	</string>
+	<string name="scenario_dow_more_bloodshed_context">After you raided your enemies, your girls threw it all in a pile. Build a fortress and defend it!</string>
+	<string name="goal_dow_more_bloodshed_welcome_title">Good choice. Enjoy!</string>
+	<string name="goal_dow_more_bloodshed_welcome_description">Welcome to more bloodshed!
+Better pause the game now, plan your settlement and then let them built it in time lapse.
+Food will respawn until Summer next year. Have fun!
+PS: Don't start with building a stone wall, that will (why ever) crash the game.If you like it, please rate it.
+	</string>
+
+	<string name="twolakes">Two nice lakes</string>
+	<string name="nicelake">The nice lake</string>
+	<string name="lookbehindyou">Look behind you</string>
+	<string name="popular_forest_river">The popular forest river</string>
+
+<string name="milestone_a_taste">A taste</string>
+<string name="milestone_a_taste_description">Kill 50 raiders.</string>
+<string name="milestone_so_far_away">So far away</string>
+<string name="milestone_so_far_away_description">Cut down trees and produce 300 Logs.</string>
+<string name="milestone_bloodshed">Bloodshed</string>
+<string name="milestone_bloodshed_description">Kill 300 raiders.</string>
+<string name="milestone_nice_defense">Nice defense</string>
+<string name="milestone_nice_defense_description">Build 75 Guard Towers and a stone wall 150 parts long.</string>
+<string name="milestone_people">So many People</string>
+<string name="milestone_people_description">Reach a population of 200.</string>
+<string name="milestone_survival20">Twenty winters</string>
+<string name="milestone_survival20_description">Survive for 20 winters.</string>
+<string name="milestone_more_bloodshed">More Bloodshed</string>
+<string name="milestone_more_bloodshed_description">Kill 1000 raiders.</string>
+
+</strings>

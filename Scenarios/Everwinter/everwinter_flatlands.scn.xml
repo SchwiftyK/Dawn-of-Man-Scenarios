@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scenario>
+	<hardcore_mode_allowed value="true"/>
+	<category value="Freeplay"/>
+	<group_id value="everwinter_group"/>
+	<size value="4"/>
+	<starting_conditions season_id="Fall"/>
+	<loading_screens values="loading_screen_the_northlands_01"/>
+
+	<locations>
+		<location id="cold_flatlands_spawn" seed="11111111" environment="flat_winterland" map_location="0.5,0.2" river="false" lakes="4"/>
+		<location id="frozen_river_spawn" seed="11111111" environment="flat_winterland" map_location="0.6,0.4"   river="true" lakes="4"/>
+		<location id="ore_lake_spawn" seed="00000000" environment="flat_winterland" map_location="0.35,0.3" river="false" lakes="4"/>
+		<location id="frozen_lakes_spawn" seed="00000000" environment="flat_winterland" map_location="0.2,0.5" river="true" lakes="6"/>
+	</locations>
+	<disasters>
+		<disaster disaster_type="Storm" period="2y" variance="1y"/>
+		<disaster disaster_type="Blizzard" period="1.25y" variance="0.25y"/>
+	</disasters>
+
+	<milestones>
+
+		<milestone id="mile_everw_village">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="storage_tent" value="3"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="tent" value="10"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="skins_dryer" value="5"/>
+					<condition type="ValueReached" id="Population" value="25"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_everw_survival5w">
+			<condition type="TimeElapsed" timer="GameTime" value="4.67y"/>
+		</milestone>
+
+		<milestone id="mile_everw_steadfast">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="storage_hut" value="5"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="hut" value="15"/>
+					<condition type="ValueReached" id="DomesticAnimalCount" value="25"/>
+					<condition type="ValueReached" id="Population" value="50"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_everw_sacrificial_ceremonies">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="skull_pole" value="25"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="totem" value="5"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="menhir" value="1"/>
+					<condition type="ValueReached" id="DomesticAnimalCount" value="50"/>
+					<condition type="EntityCountReached" entity_type="copper_knife" value="50"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_everw_pray">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="skull_pole" value="50"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="dolmen" value="3"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="stone_circle" value="1"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_everw_mammoth_hunter">
+			<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="mammoth" value="75"/>
+		</milestone>
+
+		<milestone id="mile_everw_bronze">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" entity_type="bronze_axe" value="50"/>
+					<condition type="EntityCountReached" entity_type="bronze_knife" value="50"/>
+					<condition type="EntityCountReached" entity_type="bronze_pick" value="50"/>
+					<condition type="EntityCountReached" entity_type="bronze_sickle" value="50"/>
+					<condition type="EntityCountReached" entity_type="bronze_spear" value="50"/>
+					<condition type="EntityCountReached" entity_type="bronze_sword" value="50"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_everw_steel">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" entity_type="steel_axe" value="75"/>
+					<condition type="EntityCountReached" entity_type="steel_knife" value="75"/>
+					<condition type="EntityCountReached" entity_type="steel_pick" value="75"/>
+					<condition type="EntityCountReached" entity_type="steel_sickle" value="75"/>
+					<condition type="EntityCountReached" entity_type="steel_spear" value="75"/>
+					<condition type="EntityCountReached" entity_type="steel_sword" value="75"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_everw_town">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="warehouse" value="10"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="roundhouse" value="40"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="blacksmith" value="5"/>
+					<condition type="ValueReached" id="DomesticAnimalCount" value="100"/>
+					<condition type="ValueReached" id="Population" value="200"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="statue" value="10"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="cairn" value="1"/>
+
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_everw_oktoberfest">
+				<condition type="EntityCountReached" entity_type="beer" value="100"/>
+		</milestone>
+
+	</milestones>
+
+	<events>
+
+		<!-- This gets run once, when the game is first started -->
+		<event>
+			<condition type="NewGame"/>
+			<actions>
+				<!-- Clear trees around start location -->
+				<action type="ClearTrees" radius="20"/>
+
+				<!-- Spawn initial entities -->
+
+				<action type="Spawn" entity_type="hearth" amount="1" placement="StartLocationCircular" angle="20" radius="0"/>
+				<action type="Spawn" entity_type="crafter" amount="1" placement="StartLocationCircular" angle="45" radius="10"/>
+				<action type="Spawn" entity_type="rock_pile" amount="1" placement="StartLocationCircular" angle="45" radius="10"/>
+				<action type="Spawn" entity_type="wood_pile" amount="1" placement="StartLocationCircular" angle="9" radius="20"/>
+				<action type="Spawn" entity_type="tent" amount="3" placement="StartLocationCircular" angle="45" radius="8"/>
+
+				<action type="Spawn" entity_type="nuts" amount="3" placement="Storage"/>
+				<action type="Spawn" entity_type="raw_fish" amount="3" placement="Storage"/>
+				<action type="Spawn" entity_type="raw_meat" amount="3" placement="Storage"/>
+				<action type="Spawn" entity_type="raw_skin" amount="3" placement="Storage"/>
+
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="40" radius="2" years_old="16" gender="Male"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="40" radius="2" years_old="16" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="40" radius="2" age="Old" gender="Male" name="Elder"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="40" radius="2" years_old="10" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="40" radius="2" years_old="10" gender="Male" name="Timmy"/>
+
+				<action type="Spawn" entity_type="skins_outfit" amount="9" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+			</actions>
+		</event>
+
+		<!-- This gets run every time the game is started or loaded, to allow for easy iteration -->
+		<event flags="MultipleExecutions">
+			<condition type="InitGame"/>
+			<actions>
+				<!-- Set animal populations, these will get spawned automatically -->
+				<action type="SetAnimalPopulation" animal_types="vulture dove eagle" min="0" max="0"/>
+
+				<action type="SetAnimalPopulation" animal_types="wolf" min="20" max="35"  era_factors ="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="cave_lion" min="20" max="35"  era_factors ="1 1 1 0.75 0.75 0.5"/>
+
+				<action type="SetAnimalPopulation" animal_types="bear" min="20" max="25" era_factors ="0.25 0.25 0.25 0.5 0.5 0.5"/>
+				<action type="SetAnimalPopulation" animal_types="cave_bear" min="20" max="25"  era_factors ="0.75 0.75 0.75 0.5 0.5 0.1"/>
+
+				<action type="SetAnimalPopulation" animal_types="ibex" min="30" max="36" era_factors ="1 1 1 1 1 0.75"/>
+				<action type="SetAnimalPopulation" animal_types="mouflon" min="30" max="36" era_factors ="1 1 1 1 1 0.75"/>
+				<action type="SetAnimalPopulation" animal_types="boar" min="30" max="36" era_factors ="1 1 1 1 1 0.75"/>
+
+				<action type="SetAnimalPopulation" animal_types="wild_horse wild_donkey" min="30" max="35"/>
+
+				<action type="SetAnimalPopulation" animal_type="deer" min="25" max="35"  era_factors ="1 1 1 1 1 0.75"/>
+				<action type="SetAnimalPopulation" animal_type="reindeer" min="15" max="20"  era_factors ="1 1 1 1 1 0.75"/>
+
+				<action type="SetAnimalPopulation" animal_type="ancient_bison" min="15" max="20"  era_factors ="0.75 0.75 0.75 0.5 0.5 0.1"/>
+				<action type="SetAnimalPopulation" animal_type="bison" min="15" max="20"  era_factors ="0.25 0.25 0.25 0.5 0.5 0.5"/>
+				<action type="SetAnimalPopulation" animal_type="aurochs" min="25" max="35" era_factors ="1 1 1 1 1 0.75"/>
+
+				<action type="SetAnimalPopulation" animal_type="megaloceros" min="15" max="20"  era_factors ="1 1 1 0.75 0.75 0.5"/>
+				<action type="SetAnimalPopulation" animal_type="mammoth" min="35" max="40"  era_factors ="1 1 1 0.75 0.75 0.5"/>
+				<action type="SetAnimalPopulation" animal_type="woolly_rhinoceros" min="30" max="40"  era_factors ="1 1 1 0.75 0.75 0.5"/>
+
+				<!-- Set raider parameters -->
+				<action type="SetRaider" era="Paleolithic" entity_types="wolf" min="3" max="5" period="1.5y" variance="0.2y"/>
+				<action type="SetRaider" era="Mesolithic" hardcore_timer="3y" entity_types="primitive_human" min="1" max="1" period="1.5y" variance="0.2y" extra_raider_per_population="7"/>
+				<action type="SetRaider" era="Neolithic" hardcore_timer="7y" entity_types="primitive_human" min="1" max="3" period="1.5y" variance="0.2y" extra_raider_per_population="6"/>
+				<action type="SetRaider" era="CopperAge" hardcore_timer="13y" entity_types="primitive_human" min="1" max="3" period="1.5y" variance="0.2y" extra_raider_per_population="5"/>
+				<action type="SetRaider" era="BronzeAge" hardcore_timer="18y" entity_types="primitive_human" min="3" max="5" period="1.5y" variance="0.2y" extra_raider_per_population="5"/>
+				<action type="SetRaider" era="IronAge" hardcore_timer="25y" entity_types="primitive_human" min="5" max="7" period="1.5y" variance="0.2y" extra_raider_per_population="4"/>
+
+				<!-- Features -->
+				<action type="SetFeatureEnabled" feature="Hints" value="true"/>
+				<action type="SetFeatureEnabled" feature="TameableAnimalSpawn" value="true"/>
+
+				<action type="SetKnowledgeParameters" tech_cost_multiplier="1.3"/>
+
+				<!-- Parameters -->
+				<action type="SetBirthParameters" decrease_start_population="700" decrease_halfing_population="45"/>
+				<action type="SetTraderPeriod" value="0.8y"/>
+				<action type="SetDiseaseParameters" period="0.666y" variance="0.45y" individual_disease_chance="0.7"/>
+
+			</actions>
+		</event>
+
+		<!-- Intro -->
+		<event>
+			<condition type="TimeElapsed" timer="RealTime" value="0"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_welcome_title" text="medium_everwinter_welcome_description"/>
+			</actions>
+		</event>
+
+		<!-- Extra Raiders -->
+		<event>
+				<condition type="ValueReached" id="Population" value="20"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_raiders20_title" text="medium_everwinter_raiders20_description"/>
+				<action type="TriggerRaiderAttack" amount="3"/>
+				<action type="TriggerRaiderAttack" amount="3"/>
+			</actions>
+		</event>
+			<event flags="RequiresPrevious">
+				<condition type="ValueReached" id="Population" value="35"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_raiders35_title" text="medium_everwinter_raiders35_description"/>
+				<action type="TriggerRaiderAttack" amount="5"/>
+				<action type="TriggerRaiderAttack" amount="7"/>
+			</actions>
+		</event>
+		<event flags="RequiresPrevious">
+			<condition type="ValueReached" id="Population" value="47"/>
+		<actions>
+			<action type="ShowMessage" title="medium_everwinter_raiders47_title" text="medium_everwinter_raiders47_description"/>
+			<action type="TriggerRaiderAttack" amount="19"/>
+		</actions>
+	</event>
+<event flags="RequiresPrevious">
+	<condition type="ValueReached" id="Population" value="60"/>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_raiders60_title" text="medium_everwinter_raiders60_description"/>
+	<action type="TriggerRaiderAttack" amount="25"/>
+</actions>
+</event>
+<event flags="RequiresPrevious">
+	<condition type="ValueReached" id="Population" value="77"/>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_raiders77_title" text="medium_everwinter_raiders77_description"/>
+	<action type="TriggerRaiderAttack" amount="32"/>
+</actions>
+</event>
+<event flags="RequiresPrevious">
+	<condition type="ValueReached" id="Population" value="90"/>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_raiders90_title" text="medium_everwinter_raiders90_description"/>
+	<action type="TriggerRaiderAttack" amount="35"/>
+</actions>
+</event>
+<event flags="RequiresPrevious">
+	<condition type="ValueReached" id="Population" value="105"/>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_raiders101_title" text="medium_everwinter_raiders101_description"/>
+	<action type="TriggerRaiderAttack" amount="42"/>
+</actions>
+</event>
+<event flags="RequiresPrevious">
+	<condition type="ValueReached" id="Population" value="120"/>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_raiders120_title" text="medium_everwinter_raiders120_description"/>
+	<action type="TriggerRaiderAttack" amount="50"/>
+</actions>
+</event>
+<event flags="RequiresPrevious">
+	<condition type="ValueReached" id="Population" value="140"/>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_raiders140_title" text="medium_everwinter_raiders140_description"/>
+	<action type="TriggerRaiderAttack" amount="50"/>
+</actions>
+</event>
+<event flags="RequiresPrevious">
+	<condition type="ValueReached" id="Population" value="150"/>
+<actions>
+	<action type="TriggerRaiderAttack" amount="25"/>
+	<action type="TriggerRaiderAttack" amount="25"/>
+</actions>
+</event>
+<event flags="RequiresPrevious">
+	<condition type="ValueReached" id="Population" value="160"/>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_romans_title" text="medium_everwinter_romans_description"/>
+	<action type="TriggerRaiderAttack" amount="50"/>
+</actions>
+</event>
+<event flags="RequiresPrevious">
+	<condition type="ValueReached" id="Population" value="175"/>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_romansII_title" text="medium_everwinter_romansII_description"/>
+	<action type="TriggerRaiderAttack" amount="75"/>
+</actions>
+</event>
+<event flags="RequiresPrevious">
+	<condition type="ValueReached" id="Population" value="190"/>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_romansIII_title" text="medium_everwinter_romansIII_description"/>
+	<action type="TriggerRaiderAttack" amount="100"/>
+</actions>
+</event>
+
+<!--long winter-->
+
+<event>
+			<condition type="TimeElapsed" timer="GameTime" value="6.67y"/>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_longwinter_title" text="medium_everwinter_longwinter_description"/>
+	<action type="SetTimeOfYear" value="0.5"/>
+</actions>
+</event>
+<event>
+			<condition type="TimeElapsed" timer="GameTime" value="7.16y"/>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_longwinter2_title" text="medium_everwinter_longwinter2_description"/>
+	<action type="SetTimeOfYear" value="0.5"/>
+</actions>
+</event>
+<event flags="RequiresPrevious">
+	<condition type="EntityCountReached" counter="BuiltStructures" entity_type="totem" value="10"/>
+<actions>
+	<action type="SetTimeOfYear" value="1"/>
+	<action type="ShowMessage" title="medium_everwinter_totemspring_title" text="medium_everwinter_totemspring_description"/>
+</actions>
+</event>
+
+<event>
+			<condition type="And">
+				<sub_conditions>
+					<condition type="TimeElapsed" timer="GameTime" value="7.66y"/>
+					<condition type="EntityCountComparison" counter="BuiltStructures" entity_type="totem" comparison="LessOrEquals" value="9"/>
+				</sub_conditions>
+			</condition>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_longwinter3_title" text="medium_everwinter_longwinter3_description"/>
+	<action type="SetTimeOfYear" value="0.5"/>
+</actions>
+</event>
+<event>
+			<condition type="And">
+				<sub_conditions>
+					<condition type="TimeElapsed" timer="GameTime" value="8.16y"/>
+					<condition type="EntityCountComparison" counter="BuiltStructures" entity_type="totem" comparison="LessOrEquals" value="9"/>
+				</sub_conditions>
+			</condition>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_longwinter3_title" text="medium_everwinter_longwinter3_description"/>
+	<action type="SetTimeOfYear" value="0.5"/>
+</actions>
+</event>
+<event>
+			<condition type="And">
+				<sub_conditions>
+					<condition type="TimeElapsed" timer="GameTime" value="8.66y"/>
+					<condition type="EntityCountComparison" counter="BuiltStructures" entity_type="totem" comparison="LessOrEquals" value="9"/>
+				</sub_conditions>
+			</condition>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_longwinter3_title" text="medium_everwinter_longwinter3_description"/>
+	<action type="SetTimeOfYear" value="0.5"/>
+</actions>
+</event>
+<event>
+			<condition type="And">
+				<sub_conditions>
+					<condition type="TimeElapsed" timer="GameTime" value="9.16y"/>
+					<condition type="EntityCountComparison" counter="BuiltStructures" entity_type="totem" comparison="LessOrEquals" value="9"/>
+				</sub_conditions>
+			</condition>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_longwinter3_title" text="medium_everwinter_longwinter3_description"/>
+	<action type="SetTimeOfYear" value="0.5"/>
+</actions>
+</event>
+<event>
+			<condition type="And">
+				<sub_conditions>
+					<condition type="TimeElapsed" timer="GameTime" value="9.66y"/>
+					<condition type="EntityCountComparison" counter="BuiltStructures" entity_type="totem" comparison="LessOrEquals" value="9"/>
+				</sub_conditions>
+			</condition>
+<actions>
+	<action type="ShowMessage" title="medium_everwinter_longwinter3_title" text="medium_everwinter_longwinter3_description"/>
+	<action type="SetTimeOfYear" value="0.5"/>
+</actions>
+</event>
+
+<!-- early winters -->
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="120"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="666"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="999"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="1450"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="1990"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="2550"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="3250"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="3850"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="4350"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="4950"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="6000"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="7000"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="8000"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="9000"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="9500"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="10000"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="11000"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+			<event>
+						<condition type="EntityCountReached" counter="ProducedResources" entity_type="straw" value="12000"/>
+			<actions>
+				<action type="ShowMessage" title="medium_everwinter_straw_earlywinter_title" text="medium_everwinter_straw_earlywinter_description"/>
+				<action type="SetTimeOfYear" value="0.499"/>
+			</actions>
+			</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="250"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="500"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="800"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="1200"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="1500"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="2000"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="2500"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="2999"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="3400"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="4000"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="4500"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="5000"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="5500"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="6000"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="6500"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="7000"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="8000"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="9000"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+				<event>
+							<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="10000"/>
+				<actions>
+					<action type="ShowMessage" title="medium_everwinter_grain_earlywinter_title" text="medium_everwinter_grain_earlywinter_description"/>
+					<action type="SetTimeOfYear" value="0.499"/>
+				</actions>
+				</event>
+
+					<event>
+								<condition type="EntityCountReached" counter="ProducedResources" entity_type="berries" value="250"/>
+					<actions>
+						<action type="ShowMessage" title="medium_everwinter_berries_earlywinter_title" text="medium_everwinter_berries_earlywinter_description"/>
+						<action type="SetTimeOfYear" value="0.499"/>
+					</actions>
+					</event>
+
+					<event>
+								<condition type="EntityCountReached" counter="ProducedResources" entity_type="berries" value="1000"/>
+					<actions>
+						<action type="ShowMessage" title="medium_everwinter_berries_earlywinter_title" text="medium_everwinter_berries_earlywinter_description"/>
+						<action type="SetTimeOfYear" value="0.499"/>
+					</actions>
+					</event>
+
+					<event>
+								<condition type="EntityCountReached" counter="ProducedResources" entity_type="berries" value="2000"/>
+					<actions>
+						<action type="ShowMessage" title="medium_everwinter_berries_earlywinter_title" text="medium_everwinter_berries_earlywinter_description"/>
+						<action type="SetTimeOfYear" value="0.499"/>
+					</actions>
+					</event>
+
+					<event>
+								<condition type="EntityCountReached" counter="ProducedResources" entity_type="berries" value="3000"/>
+					<actions>
+						<action type="ShowMessage" title="medium_everwinter_berries_earlywinter_title" text="medium_everwinter_berries_earlywinter_description"/>
+						<action type="SetTimeOfYear" value="0.499"/>
+					</actions>
+					</event>
+
+					<event>
+								<condition type="EntityCountReached" counter="ProducedResources" entity_type="berries" value="3500"/>
+					<actions>
+						<action type="ShowMessage" title="medium_everwinter_berries_earlywinter_title" text="medium_everwinter_berries_earlywinter_description"/>
+						<action type="SetTimeOfYear" value="0.499"/>
+					</actions>
+					</event>
+
+					<event>
+								<condition type="EntityCountReached" counter="ProducedResources" entity_type="berries" value="4000"/>
+					<actions>
+						<action type="ShowMessage" title="medium_everwinter_berries_earlywinter_title" text="medium_everwinter_berries_earlywinter_description"/>
+						<action type="SetTimeOfYear" value="0.499"/>
+					</actions>
+					</event>
+
+						<event>
+									<condition type="EntityCountReached" counter="ProducedResources" entity_type="fruit" value="250"/>
+						<actions>
+							<action type="ShowMessage" title="medium_everwinter_fruit_earlywinter_title" text="medium_everwinter_fruit_earlywinter_description"/>
+							<action type="SetTimeOfYear" value="0.499"/>
+						</actions>
+						</event>
+
+						<event>
+									<condition type="EntityCountReached" counter="ProducedResources" entity_type="fruit" value="500"/>
+						<actions>
+							<action type="ShowMessage" title="medium_everwinter_fruit_earlywinter_title" text="medium_everwinter_fruit_earlywinter_description"/>
+							<action type="SetTimeOfYear" value="0.499"/>
+						</actions>
+						</event>
+
+						<event>
+									<condition type="EntityCountReached" counter="ProducedResources" entity_type="fruit" value="1000"/>
+						<actions>
+							<action type="ShowMessage" title="medium_everwinter_fruit_earlywinter_title" text="medium_everwinter_fruit_earlywinter_description"/>
+							<action type="SetTimeOfYear" value="0.499"/>
+						</actions>
+						</event>
+
+						<event>
+									<condition type="EntityCountReached" counter="ProducedResources" entity_type="fruit" value="1500"/>
+						<actions>
+							<action type="ShowMessage" title="medium_everwinter_fruit_earlywinter_title" text="medium_everwinter_fruit_earlywinter_description"/>
+							<action type="SetTimeOfYear" value="0.499"/>
+						</actions>
+						</event>
+
+						<event>
+									<condition type="EntityCountReached" counter="ProducedResources" entity_type="fruit" value="2000"/>
+						<actions>
+							<action type="ShowMessage" title="medium_everwinter_fruit_earlywinter_title" text="medium_everwinter_fruit_earlywinter_description"/>
+							<action type="SetTimeOfYear" value="0.499"/>
+						</actions>
+						</event>
+
+						<event>
+									<condition type="EntityCountReached" counter="ProducedResources" entity_type="fruit" value="2500"/>
+						<actions>
+							<action type="ShowMessage" title="medium_everwinter_fruit_earlywinter_title" text="medium_everwinter_fruit_earlywinter_description"/>
+							<action type="SetTimeOfYear" value="0.499"/>
+						</actions>
+						</event>
+
+						<event>
+									<condition type="EntityCountReached" counter="ProducedResources" entity_type="fruit" value="3000"/>
+						<actions>
+							<action type="ShowMessage" title="medium_everwinter_fruit_earlywinter_title" text="medium_everwinter_fruit_earlywinter_description"/>
+							<action type="SetTimeOfYear" value="0.499"/>
+						</actions>
+						</event>
+
+						<event>
+									<condition type="EntityCountReached" counter="ProducedResources" entity_type="fruit" value="3500"/>
+						<actions>
+							<action type="ShowMessage" title="medium_everwinter_fruit_earlywinter_title" text="medium_everwinter_fruit_earlywinter_description"/>
+							<action type="SetTimeOfYear" value="0.499"/>
+						</actions>
+						</event>
+
+							<event>
+										<condition type="EntityCountReached" counter="ProducedResources" entity_type="pulses" value="125"/>
+							<actions>
+								<action type="ShowMessage" title="medium_everwinter_pulses_earlywinter_title" text="medium_everwinter_pulses_earlywinter_description"/>
+								<action type="SetTimeOfYear" value="0.499"/>
+							</actions>
+							</event>
+
+							<event>
+										<condition type="EntityCountReached" counter="ProducedResources" entity_type="pulses" value="225"/>
+							<actions>
+								<action type="ShowMessage" title="medium_everwinter_pulses_earlywinter_title" text="medium_everwinter_pulses_earlywinter_description"/>
+								<action type="SetTimeOfYear" value="0.499"/>
+							</actions>
+							</event>
+
+							<event>
+										<condition type="EntityCountReached" counter="ProducedResources" entity_type="pulses" value="666"/>
+							<actions>
+								<action type="ShowMessage" title="medium_everwinter_pulses_earlywinter_title" text="medium_everwinter_pulses_earlywinter_description"/>
+								<action type="SetTimeOfYear" value="0.499"/>
+							</actions>
+							</event>
+
+							<event>
+										<condition type="EntityCountReached" counter="ProducedResources" entity_type="pulses" value="1666"/>
+							<actions>
+								<action type="ShowMessage" title="medium_everwinter_pulses_earlywinter_title" text="medium_everwinter_pulses_earlywinter_description"/>
+								<action type="SetTimeOfYear" value="0.499"/>
+							</actions>
+							</event>
+
+							<event>
+										<condition type="EntityCountReached" counter="ProducedResources" entity_type="pulses" value="2666"/>
+							<actions>
+								<action type="ShowMessage" title="medium_everwinter_pulses_earlywinter_title" text="medium_everwinter_pulses_earlywinter_description"/>
+								<action type="SetTimeOfYear" value="0.499"/>
+							</actions>
+							</event>
+
+							<event>
+										<condition type="EntityCountReached" counter="ProducedResources" entity_type="pulses" value="3666"/>
+							<actions>
+								<action type="ShowMessage" title="medium_everwinter_pulses_earlywinter_title" text="medium_everwinter_pulses_earlywinter_description"/>
+								<action type="SetTimeOfYear" value="0.499"/>
+							</actions>
+							</event>
+
+							<event>
+										<condition type="EntityCountReached" counter="ProducedResources" entity_type="pulses" value="4666"/>
+							<actions>
+								<action type="ShowMessage" title="medium_everwinter_pulses_earlywinter_title" text="medium_everwinter_pulses_earlywinter_description"/>
+								<action type="SetTimeOfYear" value="0.499"/>
+							</actions>
+							</event>
+
+							<event>
+										<condition type="EntityCountReached" counter="ProducedResources" entity_type="pulses" value="5666"/>
+							<actions>
+								<action type="ShowMessage" title="medium_everwinter_pulses_earlywinter_title" text="medium_everwinter_pulses_earlywinter_description"/>
+								<action type="SetTimeOfYear" value="0.499"/>
+							</actions>
+							</event>
+
+							<event>
+										<condition type="EntityCountReached" counter="ProducedResources" entity_type="pulses" value="6666"/>
+							<actions>
+								<action type="ShowMessage" title="medium_everwinter_pulses_earlywinter_title" text="medium_everwinter_pulses_earlywinter_description"/>
+								<action type="SetTimeOfYear" value="0.499"/>
+							</actions>
+							</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="nuts" value="300"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_nuts_earlywinter_title" text="medium_everwinter_nuts_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="nuts" value="800"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_nuts_earlywinter_title" text="medium_everwinter_nuts_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="nuts" value="1500"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_nuts_earlywinter_title" text="medium_everwinter_nuts_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="nuts" value="2200"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_nuts_earlywinter_title" text="medium_everwinter_nuts_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="nuts" value="2900"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_nuts_earlywinter_title" text="medium_everwinter_nuts_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="nuts" value="3600"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_nuts_earlywinter_title" text="medium_everwinter_nuts_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="nuts" value="4100"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_nuts_earlywinter_title" text="medium_everwinter_nuts_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="linen" value="250"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_linen_earlywinter_title" text="medium_everwinter_linen_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="linen" value="450"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_linen_earlywinter_title" text="medium_everwinter_linen_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="linen" value="730"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_linen_earlywinter_title" text="medium_everwinter_linen_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="linen" value="1050"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_linen_earlywinter_title" text="medium_everwinter_linen_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="linen" value="1500"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_linen_earlywinter_title" text="medium_everwinter_linen_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="linen" value="2000"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_linen_earlywinter_title" text="medium_everwinter_linen_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="linen" value="2500"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_linen_earlywinter_title" text="medium_everwinter_linen_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="linen" value="3000"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_linen_earlywinter_title" text="medium_everwinter_linen_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="linen" value="3500"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_linen_earlywinter_title" text="medium_everwinter_linen_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+								<event>
+											<condition type="EntityCountReached" counter="ProducedResources" entity_type="linen" value="4000"/>
+								<actions>
+									<action type="ShowMessage" title="medium_everwinter_linen_earlywinter_title" text="medium_everwinter_linen_earlywinter_description"/>
+									<action type="SetTimeOfYear" value="0.499"/>
+								</actions>
+								</event>
+
+		<!-- conditioned migration parameters -->
+
+								<event>
+											<condition type="EraUnlocked" era="Paleolithic"/>
+								<actions>
+									<action type="SetMigrationParameters" min="2" max="4" period="0.666y" decrease_start_population="700" decrease_halfing_population="50"/>
+								</actions>
+								</event>
+
+							<event>
+										<condition type="EraUnlocked" era="Mesolithic"/>
+							<actions>
+								<action type="SetMigrationParameters" min="2" max="5" period="0.666y" decrease_start_population="700" decrease_halfing_population="50"/>
+							</actions>
+							</event>
+
+							<event>
+										<condition type="EraUnlocked" era="Neolithic"/>
+							<actions>
+								<action type="SetMigrationParameters" min="3" max="6" period="0.666y" decrease_start_population="700" decrease_halfing_population="50"/>
+							</actions>
+							</event>
+
+							<event>
+										<condition type="EraUnlocked" era="CopperAge"/>
+							<actions>
+								<action type="SetMigrationParameters" min="4" max="6" period="0.666y" decrease_start_population="700" decrease_halfing_population="50"/>
+							</actions>
+							</event>
+
+							<event>
+										<condition type="EraUnlocked" era="BronzeAge"/>
+							<actions>
+								<action type="SetMigrationParameters" min="4" max="7" period="0.666y" decrease_start_population="700" decrease_halfing_population="50"/>
+							</actions>
+							</event>
+
+							<event>
+										<condition type="EraUnlocked" era="IronAge"/>
+							<actions>
+								<action type="SetMigrationParameters" min="5" max="8" period="0.666y" decrease_start_population="700" decrease_halfing_population="50"/>
+							</actions>
+							</event>
+
+
+	</events>
+</scenario>

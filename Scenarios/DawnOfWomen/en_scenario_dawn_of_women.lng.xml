@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string name="dawn_of_women">Dawn of Women</string>
+	<string name="amazon_stories">Amazon stories</string>
+	<string name="scenario_dawn_of_women">The Amazons Tribe</string>
+	<string name="scenario_dawn_of_women_subtitle">Nice</string>
+	<string name="scenario_dawn_of_women_description">
+6 of your bravest girls already built a small camp. Lead the great amazon warriors to victory:
+• Accommodate Amazons and arm their army.
+• Enjoy some small story features
+	</string>
+	<string name="scenario_dawn_of_women_context">Penthesilea was an Amazonian queen, the daughter of Ares and Otrera and the sister of Hippolyta, Antiope and Melanippe. She assisted Troy in the Trojan War, during which she was killed by Achilles. But before that, she had to raise an army.</string>
+	<string name="goal_dawn_of_women_welcome_title">Good choice. Enjoy!</string>
+	<string name="goal_dawn_of_women_welcome_description">Welcome to the dawn of women.
+Lead this Amazon people into a glorious future.
+Have fun!
+PS: Since messages crash the game while the technology tree is open, almost all events are displayed as quest tips.
+Keep an eye on it.</string>
+
+	<string name="goal_dawn_of_women_army">Arm your army! Create 75 of the following: •Steel swords •composite bows •steel spears</string>
+	<string name="dawn_of_women_done">Your warriors are equipped with the finest steel. Good job! I hope you enjoyed.</string>
+
+	<string name="goals_hint_dawn_of_women">Penthesilea is your queen, she won't do anything on her own.</string>
+
+	<string name="goal_dawn_of_women_horses">Tame 50 horses and raze your enemies to the ground.</string>
+
+	<string name="goal_dawn_of_women_gods">Build 5 Menhir to pray to the gods of war.</string>
+
+	<string name="dawn_of_women_queen_perished">Your queen is dead.</string>
+	<string name="dawn_of_women_queen_perished_description">Queen Penthesilea perished. Her people are very sad. Build a stone circle to honor her memory.</string>
+
+	<string name="goal_dawn_of_women_burial">Honor your dead queen with a stone circle.</string>
+
+	<string name="dawn_of_women_timedspawn1">The harsh winter brought some humans to your camp. Give them shelter.</string>
+	<string name="dawn_of_women_timedspawn2">The light summer wind blew a few residents into your village.</string>
+	<string name="dawn_of_women_timedspawn3">A few half-frozen have found their way into your camp.</string>
+	<string name="dawn_of_women_timedspawn4">Some lost souls have found their way to your fire.</string>
+	<string name="dawn_of_women_timedspawn5">The harsh winter brought some humans to your camp. Give them shelter.</string>
+	<string name="dawn_of_women_timedspawn6">The snow's thawing and some girls have arrived at your camp.</string>
+	<string name="dawn_of_women_timedspawn7">Spring at last! A few flower girls live with you now.</string>
+	<string name="dawn_of_women_timedspawn8">Another spring, another addition to your camp.</string>
+	<string name="dawn_of_women_timedspawn9">The harsh winter brought some humans to your camp. Give them shelter.</string>
+	<string name="dawn_of_women_timedspawn10">The light spring breeze blew a few residents into your village.</string>
+	<string name="dawn_of_women_timedspawn15">You've already needed 15 winters. Get ready. This is not a freeplay mission.</string>
+	<string name="dawn_of_women_spawn_btools">A women and her two girls arrived at your camp. Give them shelter.</string>
+	<string name="dawn_of_women_spawn_ctools">Flint spears made a few forest women curious. They joined your camp.</string>
+	<string name="dawn_of_women_spawn_dryfood">Some hungry girls found their way to the offspring of the good smell: your dried food.</string>
+	<string name="dawn_of_women_spawn_slings">3 young girls saw how your huntresses use their slings and joined your tribe.</string>
+	<string name="dawn_of_women_spawn_leather">Tight leather outfits! Aphrodite likes that and joined your settlement.</string>
+	<string name="dawn_of_women_spawn_doggy">Cute dogs! All girls love them! A few have joined your group.</string>
+	<string name="dawn_of_women_spawn_spirits">7 old ladies have heard about your spiritual side and want to be buried soon.</string>
+	<string name="dawn_of_women_spawn_pots">Nice pots! Girls love to colour them. A few talented brush swingers have arrived.</string>
+	<string name="dawn_of_women_spawn_polstones">Polished stones! Are these real? May I touch them? Feels good!</string>
+	<string name="dawn_of_women_spawn_archers">Virgin goddess Artemis joined your settlement and brought a few huntresses.</string>
+	<string name="dawn_of_women_spawn_grainproc">Kids love cereals for breakfast. Take good care of your two new arrivals.</string>
+	<string name="dawn_of_women_spawn_pulseproc">Planting pulses is hard work! Fortunately, new people have arrived.</string>
+	<string name="dawn_of_women_spawn_sledges">Sledding is fun! That means growth.</string>
+	<string name="dawn_of_women_spawn_cerealslaves">So much to do! But at your last fight you were able to capture slaves. Send them to work!</string>
+	<string name="dawn_of_women_spawn_miningslaves">Working in the mines is hard work! Fortunately you could take a few slaves. Send them to the mines.</string>
+	<string name="dawn_of_women_spawn_thatching">It's nice to live in modern style. And it attracts people!</string>
+	<string name="dawn_of_women_spawn_wells">Viva con aqua! A couple of girls with water jugs and clipboards have arrived. They want to stay.</string>
+	<string name="dawn_of_women_spawn_pulseslaves">New work needs new slaves. You have captured some.</string>
+	<string name="dawn_of_women_spawn_flax">Finally you can plant Flax. And a few harvesters have already arrived.</string>
+	<string name="dawn_of_women_spawn_goatsdom">Goat girls have discovered that you wanted to tame their goat. Now they stay.</string>
+	<string name="dawn_of_women_spawn_sheepsdom">Soft and fluffy wool underwear feels good! A feeling that you like to share with your new arrivals.</string>
+	<string name="dawn_of_women_spawn_pigsdom">Congratulations, your amazons can tame pigs now! These girls will help you.</string>
+	<string name="dawn_of_women_spawn_weaving">Aphrodite likes your high fashion coture plan and called her friends into stock for a fashion show.</string>
+	<string name="dawn_of_women_spawn_stilting">Building bridges is better than sleeping under them. That's why these girls live with you now!</string>
+	<string name="dawn_of_women_spawn_megaliths">Meglith structures need strong hands. These girls love to pull heavy big things on a rope at night.</string>
+	<string name="dawn_of_women_spawn_coppertools">Copper is practical and modern. A few girls from Troy wanted to see it.</string>
+	<string name="dawn_of_women_spawn_treesdom">Planting trees makes wonderful avenues possible. These talented landscape gardeners want to help you.</string>
+	<string name="dawn_of_women_spawn_ryeslaves">You've captured many attackers. Send them to the fields or to the mines!</string>
+	<string name="dawn_of_women_spawn_cattlesdom">Some girls came to your farm for a weekend and want to stay.</string>
+	<string name="dawn_of_women_spawn_donkeysdom">Donkeys are intelligent but stubborn. You better tame horses!</string>
+	<string name="dawn_of_women_spawn_bronzetools">Fine bronze tools are the way to success!</string>
+	<string name="dawn_of_women_spawn_masonry">Houses of stone and strong hands to build them. These women stay!</string>
+	<string name="dawn_of_women_spawn_swords">Ares and his groupie girls joined your camp to practice with your swords.</string>
+	<string name="dawn_of_women_spawn_compbows">Apollo joined your settlement and teaches new female fighters to become composite archers.</string>
+	<string name="dawn_of_women_spawn_beerbrew">Drunk and happy. Some funny brewing maidens joined your camp.</string>
+	<string name="dawn_of_women_spawn_irontools">Iron! Finally! Not much longer until steel processing.</string>
+	<string name="dawn_of_women_spawn_steeltools">Steel processing. Have 75 swords, bows and spears made to equip our army!</string>
+	<string name="dawn_of_women_spawn_mill">The old mill is rattling. A few industrious millers have arrived at your place.</string>
+	<string name="dawn_of_women_spawn_stonewalls">All in all it's just another brick in the wall.</string>
+	<string name="dawn_of_women_spawn_baking">The smell of fresh bread attracted some hermits from the mountains. Feed them.</string>
+
+
+</strings>

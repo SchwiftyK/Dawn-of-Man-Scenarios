@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scenario>
+	<category value="Community"/>
+	<group_id value="amazon_stories"/>
+	<hardcore_mode_allowed value="true"/>
+	<size value="4"/>
+
+	<locations>
+			<location id="twolakes" seed="2289625" environment="eurasia_warm" map_location="0.74,0.12" river = "true"/>
+			<location id="nicelake" seed="2289800" environment="eurasia_warm" map_location="0.1,0.6" river = "false"/>
+			<location id="lookbehindyou" seed="2289800" environment="eurasia_warm" map_location="0.1,0.18" river = "true"/>
+			<location id="popular_forest_river" seed="56443622" environment="eurasia" map_location="0.5,0.6"/>
+	</locations>
+
+		<!-- Set disaster parameters -->
+		<disasters>
+			<disaster disaster_type="Storm" period="3y" variance="1.5y"/>
+			<disaster disaster_type="Blizzard" period="2.5y" variance="1.5y"/>
+		</disasters>
+
+		<!-- Set milestones -->
+		<milestones>
+
+			<milestone id="a_taste">
+				<condition type="EntityCountReached" counter="KilledRaiders" value="50"/>
+			</milestone>
+
+			<milestone id="so_far_away">
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="log" value="300"/>
+			</milestone>
+
+			<milestone id="bloodshed">
+				<condition type="EntityCountReached" counter="KilledRaiders" value="300"/>
+			</milestone>
+
+			<milestone id="nice_defense">
+				<condition type="And">
+					<sub_conditions>
+						<condition type="EntityCountReached" counter="BuiltStructures" entity_type="guard_tower" value="75"/>
+						<condition type="EntityCountReached" counter="BuiltStructures" entity_type="wall" value="150"/>
+					</sub_conditions>
+				</condition>
+			</milestone>
+
+			<milestone id="people">
+				<condition type="ValueReached" id="Population" value="200"/>
+			</milestone>
+
+			<milestone id="survival20">
+				<condition type="TimeElapsed" timer="GameTime" value="20y"/>
+			</milestone>
+
+			<milestone id="more_bloodshed">
+				<condition type="EntityCountReached" counter="KilledRaiders" value="1000"/>
+			</milestone>
+
+		</milestones>
+
+
+	<events>
+
+		<!-- This gets run every time the game is started or loaded, to allow for easy iteration -->
+		<event>
+			<condition type="NewGame"/>
+			<actions>
+				<!-- Clear trees around start location -->
+				<action type="ClearTrees" radius="250"/>
+
+				<!-- Spawn initial entities -->
+
+				<action type="Spawn" entity_type="primitive_human" amount="75" placement="StartLocationCircular" angle="35" radius="3" years_old="16" gender="Female"/>
+
+				<!-- spawn equip -->
+				<action type="Spawn" entity_type="linen_outfit" amount="100" placement="StartLocationCircular" angle="20" radius="3"/>
+				<action type="Spawn" entity_type="wool_outfit" amount="100" placement="StartLocationCircular" angle="20" radius="3"/>
+				<action type="Spawn" entity_type="steel_axe" amount="100" placement="StartLocationCircular" angle="20" radius="3"/>
+				<action type="Spawn" entity_type="steel_pick" amount="40" placement="StartLocationCircular" angle="20" radius="3"/>
+				<action type="Spawn" entity_type="steel_sickle" amount="40" placement="StartLocationCircular" angle="20" radius="3"/>
+				<action type="Spawn" entity_type="steel_spear" amount="50" placement="StartLocationCircular" angle="20" radius="3"/>
+				<action type="Spawn" entity_type="steel_knife" amount="50" placement="StartLocationCircular" angle="20" radius="3"/>
+				<action type="Spawn" entity_type="fishing_rod" amount="25" placement="StartLocationCircular" angle="20" radius="3"/>
+				<action type="Spawn" entity_type="composite_bow" amount="75" placement="StartLocationCircular" angle="20" radius="2"/>
+
+				<!-- spawn animals -->
+				<action type="Spawn" entity_type="horse" amount="50" placement="StartLocationCircular" angle="35" radius="5"/>
+				<action type="Spawn" entity_type="cattle" amount="10" placement="StartLocationCircular" angle="35" radius="6"/>
+				<action type="Spawn" entity_type="sheep" amount="10" placement="StartLocationCircular" angle="35" radius="6"/>
+
+				<!-- spawn materials -->
+				<action type="Spawn" entity_type="sticks" amount="750" placement="StartLocationCircular" angle="20" radius="5"/>
+				<action type="Spawn" entity_type="tannin" amount="100" placement="StartLocationCircular" angle="20" radius="6"/>
+				<action type="Spawn" entity_type="log" amount="750" placement="StartLocationCircular" angle="20" radius="7"/>
+				<action type="Spawn" entity_type="straw" amount="750" placement="StartLocationCircular" angle="50" radius="8"/>
+				<action type="Spawn" entity_type="flint" amount="100" placement="StartLocationCircular" angle="40" radius="5"/>
+				<action type="Spawn" entity_type="stone" amount="600" placement="StartLocationCircular" angle="35" radius="6"/>
+				<action type="Spawn" entity_type="mud" amount="300" placement="StartLocationCircular" angle="35" radius="7"/>
+				<action type="Spawn" entity_type="leather" amount="500" placement="StartLocationCircular" angle="35" radius="8"/>
+				<action type="Spawn" entity_type="steel" amount="150" placement="StartLocationCircular" angle="35" radius="9"/>
+				<action type="Spawn" entity_type="iron" amount="250" placement="StartLocationCircular" angle="35" radius="9"/>
+				<action type="Spawn" entity_type="bone" amount="100" placement="StartLocationCircular" angle="20" radius="5"/>
+
+				<action type="Spawn" entity_type="raw_skin" amount="100" placement="StartLocationCircular" angle="35" radius="3"/>
+
+				<action type="Spawn" entity_type="dry_skin" amount="250" placement="StartLocationCircular" angle="35" radius="3"/>
+				<action type="Spawn" entity_type="sledge" amount="50" placement="StartLocationCircular" angle="35" radius="13"/>
+				<action type="Spawn" entity_type="cart" amount="50" placement="StartLocationCircular" angle="35" radius="15"/>
+
+				<!-- spawn food -->
+				<action type="Spawn" entity_type="grain" amount="50" placement="StartLocationCircular" angle="40" radius="3"/>
+				<action type="Spawn" entity_type="beer" amount="100" placement="StartLocationCircular" angle="40" radius="3"/>
+				<action type="Spawn" entity_type="milk" amount="100" placement="StartLocationCircular" angle="40" radius="3"/>
+				<action type="Spawn" entity_type="water" amount="100" placement="StartLocationCircular" angle="40" radius="3"/>
+				<action type="Spawn" entity_type="berries" amount="50" placement="StartLocationCircular" angle="40" radius="3"/>
+				<action type="Spawn" entity_type="dry_fish" amount="100" placement="StartLocationCircular" angle="35" radius="3"/>
+				<action type="Spawn" entity_type="cured_meat" amount="100" placement="StartLocationCircular" angle="35" radius="3"/>
+				<action type="Spawn" entity_type="bread" amount="100" placement="StartLocationCircular" angle="35" radius="3"/>
+
+				<!-- unlock techs -->
+				<action type="Unlock" tech_era="IronAge"/>
+
+			</actions>
+		</event>
+
+
+		<!-- This gets run every time the game is started or loaded, to allow for easy iteration -->
+		<event flags="MultipleExecutions">
+			<condition type="InitGame"/>
+			<actions>
+				<!-- Set animal populations, these will get spawned automatically -->
+				<action type="SetAnimalPopulation" animal_types="vulture dove eagle" min="2" max="5"/>
+
+				<action type="SetAnimalPopulation" animal_types="wolf" min="15" max="25" era_factors ="0.25 0.5 0.75 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="cave_lion" min="15" max="25" era_factors ="1 0.75 0.5 0.25 0 1"/>
+
+				<action type="SetAnimalPopulation" animal_types="bear" min="10" max="20" era_factors ="0.0 0.25 0.5 0.75 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="cave_bear" min="10" max="20" era_factors ="1 0.75 0.5 0.25 0 1"/>
+
+				<action type="SetAnimalPopulation" animal_types="ibex mouflon boar" min="20" max="35"/>
+				<action type="SetAnimalPopulation" animal_types="wild_horse wild_donkey" min="20" max="30"/>
+
+				<action type="SetAnimalPopulation" animal_type="deer" min="15" max="40" era_factors ="0 0 0.25 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="reindeer" min="25" max="40" era_factors ="1 0.75 0.5 0.25 0 1"/>
+
+				<action type="SetAnimalPopulation" animal_type="ancient_bison" min="20" max="25" era_factors ="1 0.75 0.5 0.25 0 1"/>
+				<action type="SetAnimalPopulation" animal_type="bison" min="20" max="25" era_factors ="0 0.25 0.5 0.75 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="aurochs" min="10" max="25"/>
+
+				<action type="SetAnimalPopulation" animal_type="megaloceros" min="15" max="30" era_factors ="1 0.75 0.5 0.25 0 1"/>
+				<action type="SetAnimalPopulation" animal_type="mammoth" min="10" max="15" era_factors ="1 0.75 0.5 0 0 1"/>
+				<action type="SetAnimalPopulation" animal_type="woolly_rhinoceros" min="10" max="15" era_factors ="1 0.5 0.25 0 0 1"/>
+
+				<!-- Set raider parameters -->
+				<action type="SetRaider" era="IronAge" hardcore_timer="0.75y" entity_types="primitive_human" min="20" max="30" period="0.8y" variance="0.1y" extra_raider_per_population="20"/>
+
+				<!-- Features -->
+				<action type="SetFeatureEnabled" feature="Hints" value="false"/>
+				<action type="SetFeatureEnabled" feature="TameableAnimalSpawn" value="true"/>
+
+				<!-- Knowledge dev -->
+				<action type="SetKnowledgeParameters" tech_cost_multiplier="0"/>
+
+				<!-- Knowledge RELEASE
+				<action type="SetKnowledgeParameters" tech_cost_multiplier="0.7"/> -->
+
+				<!-- Set migration parameters NOMIGRATION -->
+				<action type="SetMigrationParameters" min="0" max="0" period="2y" decrease_start_population="500" decrease_halfing_population="250"/>
+
+				<!-- Set birth parameters -->
+				<action type="SetBirthParameters" decrease_start_population="500" decrease_halfing_population="250"/>
+
+				<!-- Set trader parameters -->
+				<action type="SetTraderPeriod" value="0.75y"/>
+
+				<!-- Set disease parameters -->
+				<action type="SetDiseaseParameters" period="1y" variance="0.4y" individual_disease_chance="0.5"/>
+
+
+			</actions>
+		</event>
+
+		<!-- Intro -->
+		<event>
+			<condition type="TimeElapsed" timer="RealTime" value="1"/>
+			<actions>
+				<action type="ShowMessage" title="goal_dow_more_bloodshed_welcome_title" text="goal_dow_more_bloodshed_welcome_description"/>
+			</actions>
+		</event>
+
+				<!-- Food respawn events -->
+				<event>
+					<condition type="TimeElapsed" timer="GameTime" value="0.25y"/>
+				<actions>
+					<action type="Spawn" entity_type="grain" amount="50" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="beer" amount="500" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="milk" amount="150" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="water" amount="150" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="berries" amount="50" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="dry_fish" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="cured_meat" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="bread" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="straw" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+				</actions>
+				</event>
+
+				<event>
+					<condition type="TimeElapsed" timer="GameTime" value="0.5y"/>
+				<actions>
+					<action type="Spawn" entity_type="grain" amount="50" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="beer" amount="500" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="milk" amount="150" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="water" amount="150" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="berries" amount="50" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="dry_fish" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="cured_meat" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="bread" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="straw" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+				</actions>
+				</event>
+
+				<event>
+					<condition type="TimeElapsed" timer="GameTime" value="0.75y"/>
+				<actions>
+					<action type="Spawn" entity_type="grain" amount="50" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="beer" amount="100" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="milk" amount="100" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="water" amount="100" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="berries" amount="50" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="dry_fish" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="cured_meat" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="bread" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="straw" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+				</actions>
+				</event>
+
+				<event>
+					<condition type="TimeElapsed" timer="GameTime" value="1y"/>
+				<actions>
+					<action type="Spawn" entity_type="grain" amount="50" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="beer" amount="100" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="milk" amount="100" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="water" amount="100" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="berries" amount="50" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="dry_fish" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="cured_meat" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="bread" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="straw" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+				</actions>
+				</event>
+
+				<event>
+					<condition type="TimeElapsed" timer="GameTime" value="1.25y"/>
+				<actions>
+					<action type="Spawn" entity_type="grain" amount="50" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="beer" amount="100" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="milk" amount="100" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="water" amount="100" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="berries" amount="50" placement="StartLocationCircular" angle="40" radius="3"/>
+					<action type="Spawn" entity_type="dry_fish" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="cured_meat" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="bread" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+					<action type="Spawn" entity_type="straw" amount="50" placement="StartLocationCircular" angle="35" radius="3"/>
+				</actions>
+				</event>
+
+
+	</events>
+</scenario>

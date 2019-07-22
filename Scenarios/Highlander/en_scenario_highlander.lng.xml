@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string name="highlander">Highlander</string>
+	<string name="amazon_stories">Amazon stories</string>
+	<string name="scenario_highlander">Highlander</string>
+	<string name="scenario_highlander_subtitle">Challenging</string>
+	<string name="scenario_highlander_description">
+You are Connor MacLeod. But you don't know yet that you will bear that name.
+	</string>
+	<string name="scenario_highlander_context">
+The First incarnation.
+Sometime between 30,000 and 14,000 BP long before Connor MacLeod is reborn as Highlander, a simple man lived all alone ...</string>
+	<string name="goal_highlander_welcome_title">Good choice. Enjoy!</string>
+	<string name="goal_highlander_welcome_description">Welcome to the dawn of Highlander.
+After your last tribe noticed you were immortal, they got scared and sent you away.	If you want to stay alone, that's fine.
+If you want company again, you should quickly gather materials. When the snow has melted, travellers often find their way to a new home.
+	</string>
+
+	<string name="twolakes">Two nice lakes</string>
+	<string name="nicelake">The nice lake</string>
+	<string name="lookbehindyou">Look behind you</string>
+	<string name="popular_forest_river">The popular forest river</string>
+	<string name="flatlands_spawn">The Flatlands</string>
+	<string name="river_spawn">Riverlands</string>
+	<string name="valley_spawn">The Valley</string>
+	<string name="clear_water_spawn">Clear Water Lakes</string>
+
+<string name="milestone_first_time">The first time always hurts</string>
+<string name="milestone_first_time_description">Connor MacLeod must die and rise again.</string>
+<string name="milestone_simple_camp">Build a simple camp</string>
+<string name="milestone_simple_camp_description">Wood Pile, Rock Pile, Skins Dryer, Crafter, 3 tents, Storage Tent.</string>
+<string name="milestone_survival5">Three winters</string>
+<string name="milestone_survival5_description">Survive for 3 winters.</string>
+<string name="milestone_150people">Never alone again</string>
+<string name="milestone_150people_description">Reach a population of 150.</string>
+<string name="milestone_macsword">Clan MacLeod Sword</string>
+<string name="milestone_macsword_description">Produce this noble sword from steel.</string>
+
+<string name="milestone_daily_bread">Our daily bread</string>
+<string name="milestone_daily_bread_description">Bake 200 delicious breads.</string>
+
+<string name="milestone_battle_tested">Battle tested</string>
+<string name="milestone_battle_tested_description">Kill 150 raiders.</string>
+
+<string name="respawn">That felt terrible! You are back, your dead body still in front of your inner eye.</string>
+<string name="last_respawn">Your head feels like it's about to fall off. If you die again, it will surely be your end.</string>
+
+<string name="last_dead_title">Poor Connor MacLeod</string>
+<string name="last_dead_description">This time your head was cut off from your body. You're not coming back. Peace at last...</string>
+
+
+
+
+</strings>

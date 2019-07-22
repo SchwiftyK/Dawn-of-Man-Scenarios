@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string name="small_easy">Small Easy</string>
+	<string name="easyvillage_group">Small Village - Easy Versions</string>
+	<string name="scenario_small_easy">Small Easy Version</string>
+	<string name="scenario_small_easy_subtitle">Easy, Max Pop: ~25</string>
+	<string name="scenario_small_easy_description">
+Find a nice place to stay.
+	</string>
+	<string name="scenario_small_easy_context">
+Easy Version. No human raiders. A deep gorge in the middle of the mountains with a fertile valley. You will never leave it, but others will surely find their way to you.</string>
+	<string name="small_village_welcome_title">Good choice. Enjoy!</string>
+	<string name="small_village_welcome_description">Welcome to the easy version of the small village project. Let's see what you can do with a handful of people (~25). Finally an opportunity to know all your villagers by name.
+You don't have any buildings yet. Tell your people to grab the skins and some nuts at their feet and send them to the best place for a settlement.
+(b)Enable primal vision(/b) mode, using menu button or pressing (primal_vision_key). Look where all the resources (flint, water, sticks, ore, and so on) are close together and build your village there.
+If you like it, give it a thumbs up in the workshop! Have fun!
+	</string>
+
+	<string name="little_flatlands_spawn">Small Flatlands</string>
+	<string name="twisted_rivers_spawn">Twisted Rivers</string>
+	<string name="far_stach_spawn">No sticks here</string>
+	<string name="copper_lake_spawn">Copper Lake</string>
+
+<string name="milestone_mile_15_people">15 People</string>
+<string name="milestone_mile_15_people_description">Reach a population of 15.</string>
+<string name="milestone_mile_camp">Build a camp</string>
+<string name="milestone_mile_camp_description">Hearth, Wood Pile, Rock Pile, Skins Dryer, Crafter, 3 tents, Storage Tent.</string>
+<string name="milestone_mile_survival5w">Five winters</string>
+<string name="milestone_mile_survival5w_description">Survive for 5 winters.</string>
+<string name="milestone_mile_21people">Blackjack</string>
+<string name="milestone_mile_21people_description">Reach a population of 21.</string>
+<string name="milestone_mile_prayi">A lot of work</string>
+<string name="milestone_mile_prayi_description">Build 1 menhir and 1 dolmen.</string>
+<string name="milestone_mile_deer">The Deer Hunter</string>
+<string name="milestone_mile_deer_description">Hunt 100 Deer.</string>
+<string name="milestone_mile_prayii">Now get on with it</string>
+<string name="milestone_mile_prayii_description">Build 1 stone circle.</string>
+
+
+</strings>

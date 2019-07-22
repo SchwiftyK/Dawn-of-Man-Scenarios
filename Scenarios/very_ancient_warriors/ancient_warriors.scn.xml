@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scenario>
+	<hardcore_mode_allowed value="true"/>
+	<category value="Freeplay"/>
+	<size value="4"/>
+	<loading_screens values="loading_screen_ancient_warriors_01"/>
+	<starting_conditions season_id="Fall"/>
+
+	<locations>
+		<location id="canyon_of_slaughter" seed="129993647" environment="eurasia_conflict" map_location="0.7,0.45"/>
+		<location id="blood_river" seed="522929622" environment="eurasia_conflict" map_location="0.45,0.6" position="620,915"/>
+		<location id="plains_of_conflict" seed="423556580" environment="eurasia_conflict" map_location="0.3,0.4"/>
+		<location id="blood_lake" seed="533288934" environment="eurasia_conflict" map_location="0.2,0.22" river="false" lakes="9"/>
+	</locations>
+
+	<disasters>
+		<disaster disaster_type="Storm" period="1.5y" variance="0.25y"/>
+		<disaster disaster_type="Blizzard" period="2.0y" variance="1y"/>
+	</disasters>
+
+	<milestones>
+
+		<milestone id="survival">
+			<condition type="TimeElapsed" timer="GameTime" value="2y"/>
+		</milestone>
+
+		<milestone id="first_blood">
+			<condition type="EntityCountReached" counter="KilledRaiders" value="1"/>
+		</milestone>
+
+		<milestone id="basic_defense">
+			<condition type="EntityCountReached" counter="BuiltStructures" entity_type="watchtower" value="5"/>
+		</milestone>
+
+		<milestone id="expansion">
+			<condition type="ValueReached" id="Population" value="20"/>
+		</milestone>
+
+		<milestone id="weapon_production">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="workshop" value="1"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="metalsmith" value="1"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="rivers_of_blood">
+			<condition type="EntityCountReached" counter="KilledRaiders" value="100"/>
+		</milestone>
+
+		<milestone id="swordmaking">
+			<condition type="EntityCountReached" entity_type="bronze_sword" value="5"/>
+		</milestone>
+
+		<milestone id="advanced_defense">
+			<condition type="EntityCountReached" counter="BuiltStructures" entity_type="guard_tower" value="5"/>
+		</milestone>
+
+		<milestone id="swordmastery">
+			<condition type="EntityCountReached" entity_type="steel_sword" value="20"/>
+		</milestone>
+
+		<milestone id="warrior_settlement">
+			<condition type="ValueReached" id="Population" value="150"/>
+		</milestone>
+
+	</milestones>
+
+	<events>
+		<event>
+
+			<!-- This gets run once, when the game is first started -->
+			<condition type="NewGame"/>
+			<actions>
+				<!-- Clear trees around start location -->
+				<action type="ClearTrees" radius="30"/>
+
+				<!-- Spawn initial entities -->
+				<action type="Spawn" entity_type="hearth" amount="1" placement="StartLocationCircular" radius="0" />
+				<action type="Spawn" entity_type="tent" amount="3" placement="StartLocationCircular" radius="13" />
+				<action type="Spawn" entity_type="crafter" amount="1" placement="StartLocationCircular" radius="13" />
+				<action type="Spawn" entity_type="storage_tent" amount="1" placement="StartLocationCircular" radius="13" />
+
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="32" radius="2.5" age="Young"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="32" radius="2.5" age="Young" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="32" radius="2.5" age="Young" gender="Male"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="32" radius="2.5" age="Adult" gender="Male"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="32" radius="2.5" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="32" radius="2.5" age="Adult"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="32" radius="2.5" age="Old" gender="Male"/>
+
+				<action type="Spawn" entity_type="skins_outfit" amount="11" placement="Human"/>
+
+				<action type="Spawn" entity_type="biface" amount="4" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="4" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Human"/>
+
+				<action type="Spawn" entity_type="sticks" amount="2" placement="Storage"/>
+				<action type="Spawn" entity_type="flint" amount="1" placement="Storage"/>
+				<action type="Spawn" entity_type="berries" amount="1" placement="Storage"/>
+				<action type="Spawn" entity_type="dry_fish" amount="2" placement="Storage"/>
+				<action type="Spawn" entity_type="cured_meat" amount="2" placement="Storage"/>
+			</actions>
+		</event>
+
+		<!-- This gets run every time the game is started or loaded, to allow for easy iteration -->
+		<event flags="MultipleExecutions">
+			<condition type="InitGame"/>
+			<actions>
+				<!-- Set animal populations, these will get spawned automatically -->
+				<action type="SetAnimalPopulation" animal_types="vulture dove eagle" min="7" max="12"/>
+
+				<action type="SetAnimalPopulation" animal_types="wolf bear" min="12" max="25" era_factors ="0.25 0.5 0.75 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="cave_lion cave_bear" min="12" max="25" era_factors ="1 0.75 0.5 0.25 0 0"/>
+
+				<action type="SetAnimalPopulation" animal_types="ibex mouflon boar wild_horse wild_donkey" min="15" max="25"/>
+
+				<action type="SetAnimalPopulation" animal_type="deer" min="15" max="40" era_factors ="0 0 0.25 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="reindeer" min="25" max="40" era_factors ="1 0.75 0.5 0.25 0 0"/>
+
+				<action type="SetAnimalPopulation" animal_type="ancient_bison" min="20" max="25" era_factors ="1 0.75 0.5 0.25 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="bison" min="20" max="25" era_factors ="0 0.25 0.5 0.75 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="aurochs" min="10" max="25"/>
+
+				<action type="SetAnimalPopulation" animal_type="megaloceros" min="15" max="30" era_factors ="1 0.75 0.5 0.25 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="mammoth" min="10" max="15" era_factors ="1 0.75 0.5 0 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="woolly_rhinoceros" min="10" max="15" era_factors ="1 0.5 0.25 0 0 0"/>
+
+				<!-- Set raider parameters -->
+				<action type="SetRaider" era="Paleolithic" entity_types="wolf cave_lion" period="1.0y" variance="0.5y"/>
+				<action type="SetRaider" era="Mesolithic" hardcore_timer="5y" entity_types="wolf cave_lion cave_bear" period="1.0y" variance="0.5y"/>
+				<action type="SetRaider" era="Neolithic"  hardcore_timer="10y" entity_types="primitive_human" min="4" max="7" period="1.25y" variance="0.5y" extra_raider_per_population="40"/>
+				<action type="SetRaider" era="CopperAge" hardcore_timer="15y" entity_types="primitive_human" min="8" max="12" period="1.25y" variance="0.5y" extra_raider_per_population="40"/>
+				<action type="SetRaider" era="BronzeAge" hardcore_timer="20y" entity_types="primitive_human" min="13" max="18" period="1.25y" variance="0.5y" extra_raider_per_population="40"/>
+				<action type="SetRaider" era="IronAge" hardcore_timer="25y" entity_types="primitive_human" min="19" max="24" period="1.25y" variance="0.5y" extra_raider_per_population="40"/>
+
+				<!-- Set migration parameters -->
+				<action type="SetMigrationParameters" min="2" max="4" period="0.75y" decrease_start_population="75" decrease_halfing_population="50"/>
+				<action type="SetBirthParameters" decrease_start_population="150" decrease_halfing_population="100"/>
+				<action type="SetTraderPeriod" value="0.75y"/>
+				<action type="SetDiseaseParameters" period="1.0y" variance="0.5y" individual_disease_chance="0.75"/>
+
+				<!-- Features -->
+				<action type="SetFeatureEnabled" feature="TameableAnimalSpawn" value="true"/>
+
+				<!-- Knowledge -->
+				<action type="SetKnowledgeParameters" tech_cost_multiplier="1.5"/>
+
+			</actions>
+		</event>
+	</events>
+</scenario>

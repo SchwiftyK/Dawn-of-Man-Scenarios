@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scenario>
+	<category value="Challenge"/>
+	<group_id value="amazon_stories"/>
+	<hardcore_mode_allowed value="true"/>
+	<size value="4"/>
+
+	<locations>
+		<location id="twisty_river" seed="12333647" environment="eurasia" map_location="0.655,0.52"/>
+		<location id="forest_river" seed="56443622" environment="eurasia" map_location="0.5,0.6"/>
+		<location id="river_fork" seed="44294647" environment="eurasia" map_location="0.55,0.2"/>
+		<location id="lake_valley" seed="10002934" environment="eurasia" map_location="0.2,0.7" river="false" lakes="9"/>
+		<location id="mountain_lake" seed="38364557" environment="eurasia" map_location="0.65,0.05" river="false" lakes="9"/>
+		<location id="merging_streams" seed="73400324" environment="eurasia" map_location="0.35,0.35"/>
+	</locations>
+
+		<!-- Set disaster parameters -->
+		<disasters>
+			<disaster disaster_type="Storm" period="2.5y" variance="1.5y"/>
+			<disaster disaster_type="Blizzard" period="2.5y" variance="1.5y"/>
+		</disasters>
+
+	<goals>
+		<goal id="dawn_of_women_army">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" entity_type="steel_sword" value="75"/>
+					<condition type="EntityCountReached" entity_type="steel_spear" value="75"/>
+					<condition type="EntityCountReached" entity_type="composite_bow" value="75"/>
+				</sub_conditions>
+			</condition>
+		</goal>
+
+		<goal id="dawn_of_women_burial">
+			<condition type="EntityCountReached" counter="BuiltStructures" entity_type="stone_circle" value="1"/>
+		</goal>
+
+		<goal id="dawn_of_women_horses">
+			<condition type="EntityCountReached" entity_type="horse" value="50"/>
+		</goal>
+
+		<goal id="dawn_of_women_gods">
+			<condition type="EntityCountReached" counter="BuiltStructures" entity_type="menhir" value="5"/>
+		</goal>
+
+	</goals>
+
+	<events>
+
+		<!-- This gets run every time the game is started or loaded, to allow for easy iteration -->
+		<event>
+			<condition type="NewGame"/>
+			<actions>
+				<!-- Clear trees around start location -->
+				<action type="ClearTrees" radius="50"/>
+
+				<!-- Spawn initial entities -->
+				<action type="Spawn" entity_type="hearth" amount="1" placement="StartLocationCircular" radius="0" />
+				<action type="Spawn" entity_type="tent" amount="2" placement="StartLocationCircular" angle="90" radius="15" />
+				<action type="Spawn" entity_type="storage_tent" amount="1" placement="StartLocationCircular" radius="5" />
+				<action type="Spawn" entity_type="crafter" amount="1" placement="StartLocationCircular" radius="10" />
+
+				<action type="Spawn" entity_type="primitive_human" amount="6" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" years_old="20" gender="Female" name="Penthesilea" behaviour="NoTasks,NoOutfitChange"/>
+
+				<action type="Spawn" entity_type="linen_outfit" amount="1" placement="Penthesilea"/>
+				<action type="Spawn" entity_type="steel_spear" amount="1" placement="Penthesilea"/>
+				<action type="Spawn" entity_type="composite_bow" amount="1" placement="Penthesilea"/>
+				<action type="Spawn" entity_type="leather_outfit" amount="5" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="5" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="2" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="3" placement="Human"/>
+
+				<action type="Spawn" entity_type="sticks" amount="10" placement="Storage"/>
+				<action type="Spawn" entity_type="flint" amount="10" placement="Storage"/>
+				<action type="Spawn" entity_type="berries" amount="20" placement="Storage"/>
+				<action type="Spawn" entity_type="raw_skin" amount="5" placement="Storage"/>
+				<action type="Spawn" entity_type="dry_skin" amount="5" placement="Storage"/>
+				<action type="Spawn" entity_type="dry_fish" amount="20" placement="Storage"/>
+				<action type="Spawn" entity_type="raw_meat" amount="10" placement="Storage"/>
+				<action type="Spawn" entity_type="cart" amount="1" placement="StartLocationCircular" angle="35" radius="15"/>
+
+				<action type="Unlock" tech_type="horse_domestication"/>
+
+				<!-- Set the main goal -->
+				<action type="SetGoal" id="dawn_of_women_army"/>
+			</actions>
+		</event>
+
+		<!-- This gets run every time the game is started or loaded, to allow for easy iteration -->
+		<event flags="MultipleExecutions">
+			<condition type="InitGame"/>
+			<actions>
+				<!-- Set animal populations, these will get spawned automatically -->
+				<action type="SetAnimalPopulation" animal_types="vulture dove eagle" min="7" max="12"/>
+
+				<action type="SetAnimalPopulation" animal_types="wolf" min="15" max="25" era_factors ="0.25 0.5 0.75 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="cave_lion" min="15" max="25" era_factors ="1 0.75 0.5 0.25 0 0"/>
+
+				<action type="SetAnimalPopulation" animal_types="bear" min="10" max="20" era_factors ="0.0 0.25 0.5 0.75 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="cave_bear" min="10" max="20" era_factors ="1 0.75 0.5 0.25 0 0"/>
+
+				<action type="SetAnimalPopulation" animal_types="ibex mouflon boar" min="20" max="35"/>
+				<action type="SetAnimalPopulation" animal_types="wild_horse wild_donkey" min="20" max="30"/>
+
+				<action type="SetAnimalPopulation" animal_type="deer" min="15" max="40" era_factors ="0 0 0.25 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="reindeer" min="25" max="40" era_factors ="1 0.75 0.5 0.25 0 0"/>
+
+				<action type="SetAnimalPopulation" animal_type="ancient_bison" min="20" max="25" era_factors ="1 0.75 0.5 0.25 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="bison" min="20" max="25" era_factors ="0 0.25 0.5 0.75 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="aurochs" min="10" max="25"/>
+
+				<action type="SetAnimalPopulation" animal_type="megaloceros" min="15" max="30" era_factors ="1 0.75 0.5 0.25 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="mammoth" min="10" max="15" era_factors ="1 0.75 0.5 0 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="woolly_rhinoceros" min="10" max="15" era_factors ="1 0.5 0.25 0 0 0"/>
+
+				<!-- Set raider parameters -->
+				<action type="SetRaider" era="Paleolithic" entity_types="wolf cave_lion" period="1.5y" variance="0.5y"/>
+				<action type="SetRaider" era="Mesolithic" hardcore_timer="5y" entity_types="wolf cave_lion cave_bear" period="1.5y" variance="0.5y"/>
+				<action type="SetRaider" era="Neolithic" hardcore_timer="10y" entity_types="primitive_human" min="3" max="5" period="2.0y" variance="0.5y" extra_raider_per_population="40"/>
+				<action type="SetRaider" era="CopperAge" hardcore_timer="15y" entity_types="primitive_human" min="5" max="10" period="2.0y" variance="0.5y" extra_raider_per_population="40"/>
+				<action type="SetRaider" era="BronzeAge" hardcore_timer="20y" entity_types="primitive_human" min="10" max="15" period="2.0y" variance="0.5y" extra_raider_per_population="40"/>
+				<action type="SetRaider" era="IronAge" hardcore_timer="25y" entity_types="primitive_human" min="20" max="25" period="2.0y" variance="0.5y" extra_raider_per_population="40"/>
+
+				<!-- Features -->
+				<action type="SetFeatureEnabled" feature="Hints" value="true"/>
+				<action type="SetFeatureEnabled" feature="TameableAnimalSpawn" value="true"/>
+
+				<!-- Knowledge -->
+				<action type="SetKnowledgeParameters" tech_cost_multiplier="0.7"/>
+
+				<!-- Set migration parameters -->
+				<action type="SetMigrationParameters" min="0" max="0" period="1y" decrease_start_population="75" decrease_halfing_population="50"/>
+
+				<!-- Set birth parameters -->
+				<action type="SetBirthParameters" decrease_start_population="10" decrease_halfing_population="5"/>
+
+				<!-- Set trader parameters -->
+				<action type="SetTraderPeriod" value="0.7y"/>
+
+				<!-- Set disease parameters -->
+				<action type="SetDiseaseParameters" period="2.5y" variance="1.5y" individual_disease_chance="0.8"/>
+
+
+				<!-- Set start goals hint parameters -->
+				<action type="SetGoalsHint" value="goals_hint_dawn_of_women"/>
+
+			</actions>
+		</event>
+
+		<!-- Intro -->
+		<event>
+			<condition type="TimeElapsed" timer="RealTime" value="1"/>
+			<actions>
+				<action type="ShowMessage" title="goal_dawn_of_women_welcome_title" text="goal_dawn_of_women_welcome_description"/>
+			</actions>
+		</event>
+
+		<!-- Burial ceremony goal-->
+		<event>
+			<condition type="Not">
+				<sub_condition type="IsAlive" name="Penthesilea"/>
+			</condition>
+			<actions>
+				<action type="ShowMessage" title="dawn_of_women_queen_perished" text="dawn_of_women_queen_perished_description"/>
+				<action type="SetGoal" id="dawn_of_women_burial"/>
+			</actions>
+		</event>
+
+		<!-- Horses to raid goal -->
+		<event>
+			<condition type="EntityCountReached" entity_type="primitive_human" value="45"/>
+			<actions>
+				<action type="SetGoal" id="dawn_of_women_horses"/>
+			</actions>
+		</event>
+
+		<!-- Gods of war goal -->
+		<event>
+			<condition type="EntityCountReached" entity_type="horse" value="10"/>
+			<actions>
+				<action type="SetGoal" id="dawn_of_women_gods"/>
+			</actions>
+		</event>
+
+		<!-- Set female spawn events -->
+
+				<!-- Timed spawn events -->
+		<event>
+			<condition type="TimeElapsed" timer="GameTime" value="1y"/>
+		<actions>
+		<action type="SetGoalsHint" value="dawn_of_women_timedspawn1"/>
+		<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+		<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" aangle="35" radius="3" age="Young" gender="Female"/>
+		</actions>
+		</event>
+
+		<event>
+			<condition type="TimeElapsed" timer="GameTime" value="1.5y"/>
+		<actions>
+		<action type="SetGoalsHint" value="dawn_of_women_timedspawn2"/>
+		<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+		<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" aangle="35" radius="3" age="Young" gender="Female"/>
+		</actions>
+		</event>
+
+		<event>
+			<condition type="TimeElapsed" timer="GameTime" value="3y"/>
+		<actions>
+		<action type="SetGoalsHint" value="dawn_of_women_timedspawn3"/>
+		<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+		<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" aangle="35" radius="3" age="Young" gender="Female"/>
+		</actions>
+		</event>
+
+		<event>
+			<condition type="TimeElapsed" timer="GameTime" value="4y"/>
+		<actions>
+		<action type="SetGoalsHint" value="dawn_of_women_timedspawn4"/>
+		<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+		<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" aangle="35" radius="3" age="Young" gender="Female"/>
+		</actions>
+		</event>
+
+
+		<event>
+			<condition type="TimeElapsed" timer="GameTime" value="5y"/>
+		<actions>
+		<action type="SetGoalsHint" value="dawn_of_women_timedspawn5"/>
+		<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+		<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" aangle="35" radius="3" age="Young" gender="Female"/>
+		</actions>
+		</event>
+
+		<event>
+			<condition type="TimeElapsed" timer="GameTime" value="6y"/>
+		<actions>
+		<action type="SetGoalsHint" value="dawn_of_women_timedspawn6"/>
+		<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+		<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" aangle="35" radius="3" age="Young" gender="Female"/>
+		</actions>
+		</event>
+
+		<event>
+			<condition type="TimeElapsed" timer="GameTime" value="7y"/>
+		<actions>
+		<action type="SetGoalsHint" value="dawn_of_women_timedspawn7"/>
+		<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+		<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" aangle="35" radius="3" age="Young" gender="Female"/>
+		</actions>
+		</event>
+
+		<event>
+			<condition type="TimeElapsed" timer="GameTime" value="8y"/>
+		<actions>
+		<action type="SetGoalsHint" value="dawn_of_women_timedspawn8"/>
+		<action type="Spawn" entity_type="primitive_human" amount="5" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+		<action type="Spawn" entity_type="primitive_human" amount="5" placement="StartLocationCircular" aangle="35" radius="3" age="Young" gender="Female"/>
+		</actions>
+		</event>
+
+		<event>
+			<condition type="TimeElapsed" timer="GameTime" value="9y"/>
+		<actions>
+		<action type="SetGoalsHint" value="dawn_of_women_timedspawn9"/>
+		<action type="Spawn" entity_type="primitive_human" amount="6" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+		<action type="Spawn" entity_type="primitive_human" amount="8" placement="StartLocationCircular" aangle="35" radius="3" age="Young" gender="Female"/>
+		</actions>
+		</event>
+
+		<event>
+			<condition type="TimeElapsed" timer="GameTime" value="10y"/>
+		<actions>
+		<action type="SetGoalsHint" value="dawn_of_women_timedspawn10"/>
+		<action type="Spawn" entity_type="primitive_human" amount="8" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+		<action type="Spawn" entity_type="primitive_human" amount="10" placement="StartLocationCircular" aangle="35" radius="3" age="Young" gender="Female"/>
+		</actions>
+		</event>
+
+		<event>
+			<condition type="TimeElapsed" timer="GameTime" value="15y"/>
+		<actions>
+		<action type="SetGoalsHint" value="dawn_of_women_timedspawn15"/>
+		<action type="Spawn" entity_type="primitive_human" amount="30" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+		</actions>
+		</event>
+
+
+		<!-- Bone Tool Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="bone_tools"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_btools"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- Composite Tool Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="composite_tools"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_ctools"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- Food Dryer Spawn -->
+		<event>
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="food_dryer" value="1"/>
+					<condition type="EntityCountReached" entity_type="cured_meat" value="20"/>
+				</sub_conditions>
+			</condition>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_dryfood"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- slingmaking Spawn -->
+		<event>
+			<condition type="And">
+				<sub_conditions>
+					<condition type="AnyTasksActive" task_type="Hunt"/>
+					<condition type="EntityCountReached" entity_type="sling" value="3"/>
+				</sub_conditions>
+			</condition>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_slings"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- Leather Tech Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="tanning"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_leather"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female" name="Aphrodite" behaviour="NoTasks,NoOutfitChange"/>
+				<action type="Spawn" entity_type="leather_outfit" amount="1" placement="Aphrodite"/>
+			</actions>
+		</event>
+
+		<!-- 	dog_domestication Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="dog_domestication"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_doggy"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	spirituality Spawn -->
+
+		<event>
+			<condition type="TechUnlocked" tech="spirituality"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_spirits"/>
+				<action type="Spawn" entity_type="primitive_human" amount="7" placement="StartLocationCircular" angle="35" radius="3" age="Old" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	pottery Spawn -->
+
+		<event>
+			<condition type="TechUnlocked" tech="pottery"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_pots"/>
+				<action type="Spawn" entity_type="primitive_human" amount="5" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+
+		<!-- 	stone_polishing Spawn -->
+
+		<event>
+			<condition type="TechUnlocked" tech="stone_polishing"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_polstones"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	archery Spawn -->
+
+		<event>
+			<condition type="TechUnlocked" tech="archery"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_archers"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female" name="Artemis" SpawnType="Leader" behaviour="NoTasks,NoOutfitChange"/>
+				<action type="Spawn" entity_type="linen_outfit" amount="1" placement="Artemis"/>
+				<action type="Spawn" entity_type="composite_bow" amount="1" placement="Artemis"/>
+				<action type="Spawn" entity_type="flint_knife" amount="1" placement="Artemis"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female" name="Huntress Sila" SpawnType="Follower"/>
+				<action type="Spawn" entity_type="bow" amount="1" placement="Huntress Sila"/>
+				<action type="Spawn" entity_type="flint_knife" amount="1" placement="Huntress Sila"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female" name="Huntress Vero" SpawnType="Follower"/>
+				<action type="Spawn" entity_type="bow" amount="1" placement="Huntress Vero"/>
+				<action type="Spawn" entity_type="flint_knife" amount="1" placement="Huntress Vero"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female" name="Huntress Iphigenia" SpawnType="Follower"/>
+				<action type="Spawn" entity_type="bow" amount="1" placement="Huntress Iphigenia"/>
+				<action type="Spawn" entity_type="flint_knife" amount="1" placement="Huntress Iphigenia"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female" name="Huntress Gorana" SpawnType="Follower"/>
+				<action type="Spawn" entity_type="bow" amount="1" placement="Huntress Gorana"/>
+				<action type="Spawn" entity_type="flint_knife" amount="1" placement="Huntress Gorana"/>
+			</actions>
+		</event>
+
+
+		<!-- 	grain_processing Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="grain_processing"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_grainproc"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	pulse_processing Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="pulse_processing"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_pulseproc"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	sledgemaking Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="sledgemaking"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_sledges"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	cereal_domestication Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="cereal_domestication"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_cerealslaves"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Male" name="Male Slave" behaviour="NoTasks,NoOutfitChange"/>
+			</actions>
+		</event>
+
+		<!-- 	underground_mining Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="underground_mining"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_miningslaves"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Male" name="Male Slave" behaviour="NoTasks,NoOutfitChange"/>
+			</actions>
+		</event>
+
+		<!-- 	thatching Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="thatching"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_thatching"/>
+				<action type="Spawn" entity_type="primitive_human" amount="5" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	well_digging Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="well_digging"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_wells"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	pulse_domestication Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="pulse_domestication"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_pulseslaves"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Male" name="Male Slave" behaviour="NoTasks,NoOutfitChange"/>
+			</actions>
+		</event>
+
+		<!-- 	flax_domestication Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="flax_domestication"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_flax"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	goat_domestication Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="goat_domestication"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_goatsdom"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	sheep_domestication Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="sheep_domestication"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_sheepsdom"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+		<!-- 	pig_domestication Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="pig_domestication"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_pigsdom"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+		<!-- 	weaving Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="weaving"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_weaving"/>
+				<action type="Spawn" entity_type="primitive_human" amount="5" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	stilting Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="stilting"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_stilting"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	megalithism Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="megalithism"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_megaliths"/>
+				<action type="Spawn" entity_type="primitive_human" amount="5" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	copper_smelting Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="copper_smelting"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_coppertools"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	fruit_tree_domestication Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="fruit_tree_domestication"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_treesdom"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	rye_domestication Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="rye_domestication"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_ryeslaves"/>
+				<action type="Spawn" entity_type="primitive_human" amount="10" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Male" name="Male Slave" behaviour="NoTasks,NoOutfitChange"/>
+			</actions>
+		</event>
+
+		<!-- 	cattle_domestication Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="cattle_domestication"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_cattlesdom"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	donkey_domestication Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="donkey_domestication"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_donkeysdom"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+		<!--  bronze_smelting Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="bronze_smelting"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_bronzetools"/>
+				<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	masonry Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="masonry"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_masonry"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	swordmaking Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="swordmaking"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_swords"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Male" name="Ares" SpawnType="Leader"/>
+				<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female" SpawnType="Follower"/>
+			</actions>
+		</event>
+
+		<!-- 	composite_archery Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="composite_archery"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_compbows"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Male" name="Apollo"/>
+				<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+
+		<!-- 	brewing Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="brewing"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_beerbrew"/>
+				<action type="Spawn" entity_type="primitive_human" amount="5" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	iron_smelting Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="iron_smelting"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_irontools"/>
+				<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	steelmaking Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="steelmaking"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_steeltools"/>
+				<action type="Spawn" entity_type="primitive_human" amount="5" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="5" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	hydropower Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="hydropower"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_mill"/>
+				<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+
+		<!-- 	reinforced_fortifications Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="reinforced_fortifications"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_stonewalls"/>
+				<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="2" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+		<!-- 	baking Spawn -->
+		<event>
+			<condition type="TechUnlocked" tech="baking"/>
+			<actions>
+				<action type="SetGoalsHint" value="dawn_of_women_spawn_baking"/>
+				<action type="Spawn" entity_type="primitive_human" amount="5" placement="StartLocationCircular" angle="35" radius="3" age="Adult" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="5" placement="StartLocationCircular" angle="35" radius="3" age="Young" gender="Female"/>
+			</actions>
+		</event>
+
+
+
+		<!-- Completion -->
+		<!-- Show done message -->
+		<event id="done">
+			<condition type="TimeElapsed" timer="GoalsCompletedTime" value="1"/>
+			<actions>
+				<action type="ShowMessage" title="dawn_of_women" text="dawn_of_women_done"/>
+			</actions>
+		</event>
+
+		<!-- Quit game -->
+		<event id="back_to_game" flags="RequiresPrevious,ClearUi">
+			<condition type="TimeElapsed" timer="GoalsCompletedTime" value="2"/>
+			<actions>
+				<action type="QuitGame" success="true"/>
+			</actions>
+		</event>
+
+		<!-- Failure condition -->
+
+		<!-- TBD -->
+
+
+	</events>
+</scenario>

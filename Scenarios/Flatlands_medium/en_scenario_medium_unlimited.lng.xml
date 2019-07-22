@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string name="medium_unlimited">Medium Flatlands</string>
+	<string name="scenario_medium_unlimited">A Medium Sized Map</string>
+	<string name="scenario_medium_unlimited_subtitle">Unlimited Population</string>
+	<string name="scenario_medium_unlimited_description">
+Find a nice place to stay.
+	</string>
+	<string name="scenario_medium_unlimited_context">
+A deep gorge in the middle of the mountains with a fertile valley. You will never leave it, but others will surely find their way to you.</string>
+	<string name="medium_unlimited_welcome_title">Good choice. Enjoy!</string>
+	<string name="medium_unlimited_welcome_description">Welcome to a medium sized, altered Version of the Flatlands. Let's see what you can do with a bunch of people.
+You don't have any buildings yet. Tell your people to grab the skins and some nuts at their feet and send them to the best place for a settlement.
+(b)Enable primal vision(/b) mode, using menu button or pressing (primal_vision_key). Look where all the resources (flint, water, sticks, ore, and so on) are close together and build your village there.
+If you like it, give it a thumbs up in the workshop! Have fun!
+</string>
+
+	<string name="medium_flatlands_spawn">Medium Flatlands</string>
+	<string name="very_twisted_rivers_spawn">Very Twisted Rivers</string>
+	<string name="copper_lakes_spawn">Copper Lakes</string>
+	<string name="so_far_stach_spawn">need more sticks</string>
+
+<string name="milestone_mile_50_people">50 People</string>
+<string name="milestone_mile_50_people_description">Reach a population of 50.</string>
+<string name="milestone_mile_camp">Build a camp</string>
+<string name="milestone_mile_camp_description">Hearth, Wood Pile, Rock Pile, Skins Dryer, Crafter, 3 tents, Storage Tent.</string>
+<string name="milestone_mile_survival5w">Five winters</string>
+<string name="milestone_mile_survival5w_description">Survive for 5 winters.</string>
+<string name="milestone_mile_100_animals">100 Domestic Animals</string>
+<string name="milestone_mile_100_animals_description">Reach a domestic animal population of 100.</string>
+<string name="milestone_mile_prayiv">A lot of work</string>
+<string name="milestone_mile_prayiv_description">Build 3 menhir and 1 dolmen.</string>
+<string name="milestone_mile_deer">The Deer Hunter</string>
+<string name="milestone_mile_deer_description">Hunt 100 Deer.</string>
+<string name="milestone_mile_prayiii">Now get on with it</string>
+<string name="milestone_mile_prayiii_description">Build 3 stone circles.</string>
+
+
+</strings>

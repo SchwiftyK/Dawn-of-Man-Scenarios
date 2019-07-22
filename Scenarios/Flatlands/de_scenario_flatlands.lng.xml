@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string name="flatlands">Flachland</string>
+	<string name="flatlands_group">Flachland</string>
+	<string name="scenario_flatlands">Flachland</string>
+	<string name="scenario_flatlands_subtitle">Ausgewogen</string>
+	<string name="scenario_flatlands_description">
+Finde einen schönen Platz, um zu siedeln.
+	</string>
+	<string name="scenario_flatlands_context">
+Tiefe, flache Täler inmitten einer Gebirgslandschaft. Reich an Erz und mit gedeihender Flora and Fauna.</string>
+	<string name="goal_flatlands_welcome_title">Gute Wahl! Viel Spaß!</string>
+	<string name="goal_flatlands_welcome_description">Willkommen in den Flachlanden, schau dir die Aussicht an!</string>
+
+	<string name="flatlands_spawn">Flachland</string>
+	<string name="river_spawn">Donautal</string>
+	<string name="valley_spawn">Kleines Lautertal</string>
+	<string name="clear_water_spawn">Zell am See</string>
+
+<string name="milestone_yeiy_people">Jippie! Leute</string>
+<string name="milestone_yeiy_people_description">Erreiche eine Bevölkerung von 15.</string>
+<string name="milestone_simple_camp">Errichte ein Lager</string>
+<string name="milestone_simple_camp_description">Holzhaufen, Steinhaufen, Häutetrockner, Handwerksschuppen, 3 Zelte, Lagerzelt.</string>
+<string name="milestone_survival5w">Fünf Winter</string>
+<string name="milestone_survival5w_description">Überlebe 5 Winter.</string>
+<string name="milestone_200people">Die 200</string>
+<string name="milestone_200people_description">Erreiche eine Bevölkerung von 200.</string>
+<string name="milestone_lotopray">Eine menge Arbeit</string>
+<string name="milestone_lotopray_description">Errichte 10 Steinkreise.</string>
+<string name="milestone_1k_bread">Unser Täglich Brot</string>
+<string name="milestone_1k_bread_description">Backe 1000 köstliche Brote.</string>
+<string name="milestone_sic_o_war">Kriegsbegeistert</string>
+<string name="milestone_sic_o_war_description">Töte 500 Angreifer.</string>
+
+
+</strings>
