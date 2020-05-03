@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<environment>
+	<noise_amplitudes values="0.03 0.2321 0.01 0.05 0.0035 0.007 0.03 0.05"/>
+	<distance_height_offset value="0.1"/>
+	<deposits values="Flint Tin Copper Iron"/>
+	<resource_factor value="10.5"/>
+	<ford_distance_factor value="0.65"/>
+	<sun_angle_factor value="0.75"/>
+	<trees_everywhere value="false"/>
+	<tree_override_prototypes>
+
+		<tree_override_prototype>
+			<id value="Oak"/>
+			<min_altitude value="2" />
+			<max_altitude value="25"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Fir"/>
+			<min_altitude value="30" />
+			<max_altitude value="80"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Beech"/>
+			<min_altitude value="4" />
+			<max_altitude value="15"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Cherry"/>
+			<min_altitude value="0" />
+			<max_altitude value="5"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Birch"/>
+			<min_altitude value="-3" />
+			<max_altitude value="1"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Pear"/>
+			<min_altitude value="-1" />
+			<max_altitude value="5"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Flax"/>
+			<min_altitude value="-3" />
+			<max_altitude value="0"/>
+		</tree_override_prototype>
+
+	</tree_override_prototypes>
+
+	<seasons>
+		<season id="Spring" setup_id="Spring" duration="0.25" precipitation_chance="0.3" windy_chance="0.5" very_windy_chance="0.1" fish_boost="1.0">
+			<min_temperature value="10"/>
+			<max_temperature value="25"/>
+		</season>
+
+		<season id="Summer" setup_id="Summer" duration="0.3" precipitation_chance="0.0"  windy_chance="0.25">
+			<min_temperature value="20"/>
+			<max_temperature value="40"/>
+			<min_wind value="0"/>
+			<max_wind value="5"/>
+		</season>
+
+		<season id="Fall" setup_id="Fall" duration="0.3" precipitation_chance="0.25" windy_chance="0.5" very_windy_chance="0.1">
+			<min_temperature value="5"/>
+			<max_temperature value="25"/>
+		</season>
+
+		<season id="Winter" setup_id="Winter" snow_setup_id="WinterSnow" duration="0.15" precipitation_chance="1" windy_chance="0.5" very_windy_chance="0.5" reduced_fauna="true">
+			<min_temperature value="-15"/>
+			<max_temperature value="10.0"/>
+		</season>
+	</seasons>
+
+</environment>

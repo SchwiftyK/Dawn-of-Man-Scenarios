@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string name="nemesis1">Nemesis in the Stone Age</string>
+	<string name="nemesis1_group">Nemesis in the Stone Age</string>
+	<string name="scenario_nemesis1">Nemesis in the Stone Age</string>
+	<string name="scenario_nemesis1_subtitle">A new approach to DoM.</string>
+	<string name="scenario_nemesis1_description">Gather 3 lost hunters, face hunger, walk forward with tenacity.</string>
+	<string name="scenario_nemesis1_context">In this map, you will not accumulate knowledge points to trade for new technologies.
+Nemesis asks you to hunt to learn how to make better weapons, manufacture and use simple tools to learn how to make better tools, build simple structures to learn how to build new structures, and accumulate materials to discover new uses.</string>
+
+	<string name="nemesis1_ishtar">Ishtar Lake</string>
+	<string name="nemesis1_lakshmi">Lakshmi River</string>
+	<string name="nemesis1_ixchel">Ixchel Valley</string>
+
+	<string name="nemesis1_welcome_title">A camp too far away ...</string>
+	<string name="nemesis1_welcome_description">Eight months ago, the elder commanded us to establish a temporary fishing camp here. We should go back in the summer.
+Zchwifty, Nahkia and Bhuds went hunting and didn't return. A fire burned our supplies.
+Le'vel wants to go back to the village but Zlob'naya says we can't cross the mountains during winter.
+What should we do?</string>
+
+	<string name="nemesis1_german_title">The Peacemaker</string>
+	<string name="nemesis1_german_description">Zchwifty is a friend of the tribe that lives here. For now, they will not attack us ... but if he dies, we are doomed.</string>
+
+	<string name="nemesis1_bhuds_title">The Tracker</string>
+	<string name="nemesis1_bhuds_description">Bhuds can follow any animal trail.</string>
+
+	<string name="nemesis1_nahkia_title">The Smart</string>
+	<string name="nemesis1_nahkia_description">Nahkia knows many things about this land.</string>
+
+	<string name="nemesis1_germanold_title">Zchwifty is dead!</string>
+	<string name="nemesis1_germanold_description">Zchwifty is dead ... and with him the truce died.
+The tribe that lives in these lands is coming for us. We are doomed.</string>
+
+	<string name="nemesis1_bhudsmammoth_title">The tracker is working.</string>
+	<string name="nemesis1_bhudsmammoth_description">Bhuds said he saw tracks of two young mammoths near the village.
+It's a waste of time arguing with him.</string>
+
+	<string name="nemesis1_beernahkia_title">Smart people do smart things.</string>
+	<string name="nemesis1_beernahkia_description">People commented that Nakia forgot a pot of grain in the rain. Today she decided to boil the mixture.
+Maybe she wants to dry the rotten grains. It is a waste of food and logs.
+Congratulations! You discovered the Brewing technology.</string>
+
+	<string name="nemesis1_unlock_dog_domestication_title">Dogs Domestication</string>
+	<string name="nemesis1_unlock_dog_domestication_description">"Kill this wolf now or it will come for revenge." (You have discovered Dogs Domestication technology.)</string>
+
+	<string name="nemesis1_unlock_food_drying_title">Food Drying</string>
+	<string name="nemesis1_unlock_food_drying_description">"Who keeps today, eat tomorrow." (You have discovered Food Drying technology.)</string>
+
+	<string name="nemesis1_unlock_spirituality_title">Spirituality</string>
+	<string name="nemesis1_unlock_spirituality_description">"The strength and ferocity of the great beasts is in their bones." (You have discovered Spirituality technology.)</string>
+
+	<string name="nemesis1_unlock_tanning_title">Tanning</string>
+	<string name="nemesis1_unlock_tanning_description">"The good side of summer is the fruit, the bad are the insects." (You have discovered Tanning technology.)</string>
+
+	<string name="nemesis1_unlock_bone_tools_title">Bone Tools</string>
+	<string name="nemesis1_unlock_bone_tools_description">"Bone against flesh! Now the great beasts are doomed!" (You have discovered Bone Tools technology.)</string>
+
+	<string name="nemesis1_unlock_composite_tools_title">Composite Tools</string>
+	<string name="nemesis1_unlock_composite_tools_description">"A biface at the tip of a spear ... Why didn't I think of that before?" (You have discovered Composite Tools technology.)</string>
+
+	<string name="nemesis1_unlock_slingmaking_title">Slingmaking</string>
+	<string name="nemesis1_unlock_slingmaking_description">"... and the bear said: Am I Goliath, that you come at me with a sling?" (You have discovered Slingmaking technology.)</string>
+
+	<string name="nemesis1_unlock_pottery_title">Pottery</string>
+	<string name="nemesis1_unlock_pottery_description">"Clay and fire ... is that all I need?" (Congratulations! You discovered Pottery technology and Mankind entered the Mesolithic Era.)</string>
+
+	<string name="nemesis1_unlock_stone_polishing_title">Stone Polishing</string>
+	<string name="nemesis1_unlock_stone_polishing_description">"A stone can be everything if you know how to get everything out of it." (You have discovered Stone Polishing technology.)</string>
+
+	<string name="nemesis1_unlock_sledgemaking_title">Sledgemaking</string>
+	<string name="nemesis1_unlock_sledgemaking_description">"I am tired of carrying stones and logs." (You have discovered Sledgemaking technology.)</string>
+
+	<string name="nemesis1_unlock_grain_processing_title">Grain Processing</string>
+	<string name="nemesis1_unlock_grain_processing_description">"We need to hunt these mice or there will be no grain left for the winter." (You have discovered Grain Processing technology.)</string>
+
+	<string name="nemesis1_unlock_pulse_processing_title">Pulse Processing</string>
+	<string name="nemesis1_unlock_pulse_processing_description">"It tastes bad, but it's food." (You have discovered Pulse Processing technology.)</string>
+
+	<string name="nemesis1_unlock_archery_title">Archery</string>
+	<string name="nemesis1_unlock_archery_description">"If it were small, it would serve to hunt mice." (You have discovered Archery technology.)</string>
+
+	<string name="nemesis1_unlock_cereal_domestication_title">Cereal Domestication</string>
+	<string name="nemesis1_unlock_cereal_domestication_description">"Teach a dog to protect the granary or get another animal to do so." (Congratulations! You discovered Cereal Domestication technology and Mankind entered the Neolithic Era.)</string>
+
+	<string name="nemesis1_unlock_pulse_domestication_title">Pulse Domestication</string>
+	<string name="nemesis1_unlock_pulse_domestication_description">"Plant in winter? Who had this bad idea?" (You have discovered Pulse Domestication technology.)</string>
+
+	<string name="nemesis1_unlock_flax_domestication_title">Flax Domestication</string>
+	<string name="nemesis1_unlock_flax_domestication_description">"Plant clothes? Doesn't look too smart to me!" (You have discovered Flax Domestication technology.)</string>
+
+	<string name="nemesis1_unlock_underground_mining_title">Underground Mining</string>
+	<string name="nemesis1_unlock_underground_mining_description">"With some furniture, this mine could be a cave." (You have discovered Underground Mining technology.)</string>
+
+	<string name="nemesis1_unlock_thatching_title">Thatching</string>
+	<string name="nemesis1_unlock_thatching_description">"Without cats, a granary only facilitates the work of mice." (You have discovered Thatching technology.)</string>
+
+	<string name="nemesis1_unlock_well_digging_title">Well Digging</string>
+	<string name="nemesis1_unlock_well_digging_description">"Too much work for water. If only it were beer ..." (You have discovered Well Digging technology.)</string>
+
+	<string name="nemesis1_unlock_fortifications_title">Fortifications</string>
+	<string name="nemesis1_unlock_fortifications_description">"Gates, towers, platforms ... where will I get logs for all this?" (You have discovered Fortifications technology.)</string>
+
+	<string name="nemesis1_unlock_goat_domestication_title">Goat Domestication</string>
+	<string name="nemesis1_unlock_goat_domestication_description">"Lots of milk and no cats. This is wrong." (You have discovered Goat Domestication technology.)</string>
+
+	<string name="nemesis1_unlock_sheep_domestication_title">Sheep Domestication</string>
+	<string name="nemesis1_unlock_sheep_domestication_description">"It's hot and beautiful, but itchy." (You have discovered Sheep Domestication technology.)</string>
+
+	<string name="nemesis1_unlock_pig_domestication_title">Pig Domestication</string>
+	<string name="nemesis1_unlock_pig_domestication_description">"Is there much left to invent sausages?" (You have discovered Pig Domestication technology.)</string>
+
+	<string name="nemesis1_unlock_weaving_title">Weaving</string>
+	<string name="nemesis1_unlock_weaving_description">"New clothes ... I'm starting to enjoy civilized life." (You have discovered Weaving technology.)</string>
+
+	<string name="nemesis1_unlock_stilting_title">Stilting</string>
+	<string name="nemesis1_unlock_stilting_description">"Bath in ice water? Nevermore!" (You have discovered Stilting technology.)</string>
+
+	<string name="nemesis1_unlock_megalithism_title">Megalithism</string>
+	<string name="nemesis1_unlock_megalithism_description">"Why carry stones if we can make cave paintings?" (You have discovered Megalithism technology.)</string>
+
+	<string name="milestone_nemesis1_dogs_domestication">Dogs Domestication</string>
+	<string name="milestone_nemesis1_dogs_domestication_description">Hunt 5 cave lions, 5 wolves, 5 cave bears</string>
+
+ 	<string name="milestone_nemesis1_slingmaking">Slingmaking</string>
+	<string name="milestone_nemesis1_slingmaking_description">Store 15 skins outfits, 25 raw skins, hunt 10 cave bears, 10 wolves, 10 cave lions</string>
+
+	<string name="milestone_nemesis1_bone_tools">Bone Tools</string>
+	<string name="milestone_nemesis1_bone_tools_description">Store 30 bone, 10 wooden spears, 10 wooden harpoons, hunt 5 mammoths, 5 rhinos</string>
+
+	<string name="milestone_nemesis1_composite_tools">Composite Tools</string>
+	<string name="milestone_nemesis1_composite_tools_description">Store 20 flint, 10 bone spears, 10 bone harpoons, 20 biface, hunt 15 mammoths, 15 rhinos</string>
+
+	<string name="milestone_nemesis1_food_drying">Food Drying</string>
+	<string name="milestone_nemesis1_food_drying_description">Store 20 raw meat, 15 raw fish, 50 sticks, build 5 skin dryers</string>
+
+	<string name="milestone_nemesis1_spirituality">Spirituality</string>
+	<string name="milestone_nemesis1_spirituality_description">Hunt 10 mammoths, 10 rhinos, store 30 bones, build 5 skull poles, 5 tents</string>
+
+	<string name="milestone_nemesis1_tanning">Tanning</string>
+	<string name="milestone_nemesis1_tanning_description">Collect 20 nuts, store 20 skin outfits, 30 raw skins, 60 sticks</string>
+
+	<string name="milestone_nemesis1_pottery">Pottery</string>
+	<string name="milestone_nemesis1_pottery_description">Store 10 flint spear, 10 flint axes, 10 bone harpoons, 20 slings, 20 biface, 20 leather outfit, build 5 totem, 5 food dryer</string>
+
+	<string name="milestone_nemesis1_stone_polishing">Stone Polishing</string>
+	<string name="milestone_nemesis1_stone_polishing_description">Store 15 stone, 10 flint axe, 10 flint spear, 10 flint pick, 75 cured meat</string>
+
+	<string name="milestone_nemesis1_sledgemaking">Sledgemaking</string>
+	<string name="milestone_nemesis1_sledgemaking_description">Store 50 sticks, 30 leather, 25 log</string>
+
+	<string name="milestone_nemesis1_grain_processing">Grain Processing</string>
+	<string name="milestone_nemesis1_grain_processing_description">Collect 60 berries, store 15 berries, 10 flint sicle</string>
+
+	<string name="milestone_nemesis1_pulse_processing">Pulse Processing</string>
+	<string name="milestone_nemesis1_pulse_processing_description">Collect 10 grain, 20 flour, 30 bread, store 15 flint sickle, build 1 mortar, 1 haystack</string>
+
+	<string name="milestone_nemesis1_archery">Archery</string>
+	<string name="milestone_nemesis1_archery_description">Kill 10 raiders, store 25 sling, 25 flint spear</string>
+
+	<string name="milestone_nemesis1_cereal_domestication">Cereal Domestication</string>
+	<string name="milestone_nemesis1_cereal_domestication_description">Collect 40 grain, 40 flour, 50 bread, store 10 grain, 25 flint sickle, build 3 mortar, 3 haystack</string>
+
+	<string name="milestone_nemesis1_pulse_domestication">Pulse Domestication</string>
+	<string name="milestone_nemesis1_pulse_domestication_description">Collect 30 pulses, store 10 pulses</string>
+
+	<string name="milestone_nemesis1_flax_domestication">Flax Domestication</string>
+	<string name="milestone_nemesis1_flax_domestication_description">Store 10 linen</string>
+
+	<string name="milestone_nemesis1_underground_mining">Underground Mining</string>
+	<string name="milestone_nemesis1_underground_mining_description">Collect 50 flint, store 20 logs, 15 flint pick</string>
+
+	<string name="milestone_nemesis1_thatching">Thatching</string>
+	<string name="milestone_nemesis1_thatching_description">Store 50 straw</string>
+
+	<string name="milestone_nemesis1_well_digging">Well Digging</string>
+	<string name="milestone_nemesis1_well_digging_description">Store 50 water</string>
+
+	<string name="milestone_nemesis1_fortifications">Fortifications</string>
+	<string name="milestone_nemesis1_fortifications_description">Kill 20 raiders, store 25 bow</string>
+
+	<string name="milestone_nemesis1_goat_domestication">Goat Domestication</string>
+	<string name="milestone_nemesis1_goat_domestication_description">Hunt 15 ibex</string>
+
+	<string name="milestone_nemesis1_sheep_domestication">Sheep Domestication</string>
+	<string name="milestone_nemesis1_sheep_domestication_description">Hunt 15 mouflon, collect 10 milk</string>
+
+	<string name="milestone_nemesis1_pig_domestication">Pig Domestication</string>
+	<string name="milestone_nemesis1_pig_domestication_description">Hunt 15 boar, collect 10 wool</string>
+
+	<string name="milestone_nemesis1_weaving">Weaving</string>
+	<string name="milestone_nemesis1_weaving_description">Collect 20 wool</string>
+
+	<string name="milestone_nemesis1_stilting">Stilting</string>
+	<string name="milestone_nemesis1_stilting_description">Build 4 watchtower, 2 gate</string>
+
+	<string name="milestone_nemesis1_megalithism">Megalithism</string>
+	<string name="milestone_nemesis1_megalithism_description">Build 15 totem, collect 50 stone, store 20 flint pick</string>
+
+</strings>

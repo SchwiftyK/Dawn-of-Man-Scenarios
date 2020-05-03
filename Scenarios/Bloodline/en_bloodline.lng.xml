@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string name="bloodline_group">Bloodline</string>
+	<string name="scenario_bloodline">Bloodline</string>
+  <string name="scenario_bloodline_subtitle">Family Fun</string>
+	<string name="scenario_bloodline_description">Almost no migration.</string>
+	<string name="scenario_bloodline_context">
+Fruit Trees along the river. Nice big flat map. Don't forget to select NOMAD MODE! There are a lot of very unique spots to settle.</string>
+
+	<string name="bloodline_african_plain">African Plain</string>
+	<string name="bloodline_lake_triangle">Lake Triangle</string>
+	<string name="bloodline_swirly_river">Swirly River</string>
+	<string name="bloodline_swamp">Swamp</string>
+	<string name="bloodline_rich_plain">Rich Plain</string>
+	<string name="bloodline_rich_river">Rich River</string>
+
+
+	<string name="scenario_bloodline_tribe">Bloodline - Tribe</string>
+	<string name="scenario_bloodline_tribe_subtitle">Tribe Fun</string>
+	<string name="scenario_bloodline_tribe_description">More initial starting People.</string>
+ 	<string name="scenario_bloodline_tribe_context">
+Even more Trees! More Oaks for Tannin to support larger settlements! Nice big flat map. Don't forget to select NOMAD MODE AND EXPLORE!</string>
+
+	<string name="scenario_bloodline_migration">Tribe Migration</string>
+	<string name="scenario_bloodline_migration_subtitle">Migration: ON</string>
+	<string name="scenario_bloodline_migration_description">Normal migration is on.</string>
+ 	<string name="scenario_bloodline_migration_context">
+People will join your settlement like usual. You start with a medium sized Tribe. Nice big flat map. Don't forget to select NOMAD MODE, it's FUN!</string>
+
+	<string name="scenario_bloodline_easy">Bloodline - Easy Version</string>
+	<string name="scenario_bloodline_easy_subtitle">NO HUMAN RAIDERS!</string>
+	<string name="scenario_bloodline_easy_description">NO HUMAN RAIDERS.</string>
+ 	<string name="scenario_bloodline_easy_context">
+NO HUMAN RAIDERS!! Just play forever and have fun with your People. Not much migration, just enough to avoid inbred. Nice big flat map. Don't forget to select NOMAD MODE! Seriously it is FUN!</string>
+
+	<string name="milestone_mile_bloodline_family_home">Our Home</string>
+	<string name="milestone_mile_bloodline_family_home_description">Build 7 Tents, 4 Skin Dryers, 3 Skull Poles, 1 Crafter and 1 Burial Mound.</string>
+
+	<string name="milestone_mile_bloodline_family_respect">Respect the Rhinos!</string>
+	<string name="milestone_mile_bloodline_family_respect_description">Reach the Neolithic Era without killing a Wolly Rhino or an Elasmotherium.</string>
+
+	<string name="milestone_mile_bloodline_family_hyena_hunter">Butcher the Beasts</string>
+	<string name="milestone_mile_bloodline_family_hyena_hunter_description">Hunt 150 Cave Hyenas.</string>
+
+	<string name="milestone_mile_bloodline_family_free_love">Free Love and Peace</string>
+	<string name="milestone_mile_bloodline_family_free_love_description">Reach a Population of 100 People.</string>
+
+	<string name="milestone_mile_bloodline_family_milk_bread">Milk and Bread</string>
+	<string name="milestone_mile_bloodline_family_milk_bread_description">Produce 600 units milk and have 50 units milk and 50 bread in stock.</string>
+
+	<string name="milestone_mile_bloodline_family_graveyard">Graveyard</string>
+	<string name="milestone_mile_bloodline_family_graveyard_description">Build 1 Cairn, 1 Dolmen and 10 Burial Mounds.</string>
+
+	<string name="milestone_mile_bloodline_family_moo">Moo!</string>
+	<string name="milestone_mile_bloodline_family_moo_description">Have 30 or more domesticated Cattle.</string>
+
+	<string name="milestone_mile_bloodline_family_colleteral_damage">Colleteral Damage</string>
+	<string name="milestone_mile_bloodline_family_colleteral_damage_description">10 or more Residents die in a short amount of time.</string>
+
+	<string name="milestone_mile_bloodline_family_town">Family Town</string>
+	<string name="milestone_mile_bloodline_family_town_description">Build: 20 roundhouses, 10 warehouses, 6 breweries and 3 Blacksmiths.</string>
+
+
+
+	<string name="milestone_mile_bloodline_tribe_home">Our Home</string>
+	<string name="milestone_mile_bloodline_tribe_home_description">Build 20 Tents, 4 Skin Dryers, 4 Totems, 1 Crafter and 5 Burial Mounds.</string>
+
+	<string name="milestone_mile_bloodline_tribe_respect">Respect the Rhinos!</string>
+	<string name="milestone_mile_bloodline_tribe_respect_description">Reach the Neolithic Era without killing a Wolly Rhino or an Elasmotherium.</string>
+
+	<string name="milestone_mile_bloodline_tribe_hyena_hunter">Butcher the Beasts</string>
+	<string name="milestone_mile_bloodline_tribe_hyena_hunter_description">Hunt 250 Cave Hyenas.</string>
+
+	<string name="milestone_mile_bloodline_tribe_free_love">Free Love and Peace</string>
+	<string name="milestone_mile_bloodline_tribe_free_love_description">Reach a Population of 150 People.</string>
+
+	<string name="milestone_mile_bloodline_tribe_milk_bread">Milk and Bread</string>
+	<string name="milestone_mile_bloodline_tribe_milk_bread_description">Produce 2000 units milk and have 100 units milk and 100 bread in stock.</string>
+
+	<string name="milestone_mile_bloodline_tribe_graveyard">Graveyard</string>
+	<string name="milestone_mile_bloodline_tribe_graveyard_description">Build 1 Cairn, 3 Dolmen and 20 Burial Mounds.</string>
+
+	<string name="milestone_mile_bloodline_tribe_moo">Moo! Moo!</string>
+	<string name="milestone_mile_bloodline_tribe_moo_description">Have 50 or more domesticated Cattle.</string>
+
+	<string name="milestone_mile_bloodline_tribe_colleteral_damage">Colleteral Damage</string>
+	<string name="milestone_mile_bloodline_tribe_colleteral_damage_description">15 or more Residents die in a short amount of time.</string>
+
+	<string name="milestone_mile_bloodline_tribe_town">Family Town</string>
+	<string name="milestone_mile_bloodline_tribe_town_description">Build: 40 roundhouses, 10 warehouses, 8 breweries and 3 Blacksmiths.</string>
+
+</strings>

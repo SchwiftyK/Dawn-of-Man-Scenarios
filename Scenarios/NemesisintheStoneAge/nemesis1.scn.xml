@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scenario>
+	<hardcore_mode_allowed value="true"/>
+	<category value="Freeplay"/>
+	<group_id value="nemesis1_group"/>
+	<size value="4"/>
+	<starting_conditions season_id="Winter"/>
+
+
+	<locations>
+		<location id="nemesis1_ishtar" seed="49958847" environment="nemesis1_glacial" map_location="0.3,0.4" river="false" lakes="6"/>
+		<location id="nemesis1_lakshmi" seed="99122323" environment="nemesis1_glacial" map_location="0.6,0.3" river="true" lakes="4"/>
+		<location id="nemesis1_ixchel" seed="32421138" environment="nemesis1_glacial" map_location="0.5,0.5" river="true" lakes="0"/>
+
+	</locations>
+
+	<disasters>
+		<disaster disaster_type="Storm" period="1.5y" variance="0.25y"/>
+		<disaster disaster_type="Blizzard" period="1.5y" variance="0.25y"/>
+	</disasters>
+
+
+	<milestones>
+
+<milestone id="nemesis1_dogs_domestication">
+<condition type="And">
+<sub_conditions>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="cave_lion" value="5"/>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="cave_bear" value="5"/>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="wolf" value="5"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_slingmaking">
+<condition type="And">
+<sub_conditions>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="skins_outfit" value="15"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="raw_skin" value="25"/>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="cave_bear" value="10"/>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="wolf" value="10"/>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="cave_lion" value="10"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_bone_tools">
+<condition type="And">
+<sub_conditions>
+<condition type="EntityCountReached" entity_type="bone" value="30"/>
+<condition type="EntityCountReached" entity_type="wooden_spear" value="10"/>
+<condition type="EntityCountReached" entity_type="wooden_harpoon" value="10"/>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="mammoth" value="5"/>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="woolly_rhinoceros" value="5"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_composite_tools">
+<condition type="And">
+<sub_conditions>
+<condition type="EntityCountReached" entity_type="flint" value="20"/>
+<condition type="EntityCountReached" entity_type="bone_spear" value="10"/>
+<condition type="EntityCountReached" entity_type="bone_harpoon" value="10"/>
+<condition type="EntityCountReached" entity_type="biface" value="20"/>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="mammoth" value="15"/>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="woolly_rhinoceros" value="15"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_food_drying">
+<condition type="And">
+<sub_conditions>
+<condition type="EntityCountReached" entity_type="raw_meat" value="20"/>
+<condition type="EntityCountReached" entity_type="raw_fish" value="15"/>
+<condition type="EntityCountReached" entity_type="sticks" value="50"/>
+<condition type="EntityCountReached" counter="BuiltStructures" entity_type="skins_dryer" value="5"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_spirituality">
+<condition type="And">
+<sub_conditions>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="mammoth" value="10"/>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="woolly_rhinoceros" value="10"/>
+<condition type="EntityCountReached" entity_type="bone" value="30"/>
+<condition type="EntityCountReached" counter="BuiltStructures" entity_type="skull_pole" value="5"/>
+<condition type="EntityCountReached" counter="BuiltStructures" entity_type="tent" value="5"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_tanning">
+<condition type="And">
+<sub_conditions>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="nuts" value="20"/>
+<condition type="EntityCountReached" entity_type="skins_outfit" value="20"/>
+<condition type="EntityCountReached" entity_type="raw_skin" value="30"/>
+<condition type="EntityCountReached" entity_type="sticks" value="60"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_pottery">
+<condition type="And">
+<sub_conditions>
+<condition type="EntityCountReached" entity_type="flint_spear" value="10"/>
+<condition type="EntityCountReached" entity_type="flint_axe" value="10"/>
+<condition type="EntityCountReached" entity_type="bone_harpoon" value="10"/>
+<condition type="EntityCountReached" entity_type="biface" value="20"/>
+<condition type="EntityCountReached" entity_type="leather_outfit" value="20"/>
+<condition type="EntityCountReached" entity_type="sling" value="20"/>
+<condition type="EntityCountReached" counter="BuiltStructures" entity_type="totem" value="5"/>
+<condition type="EntityCountReached" counter="BuiltStructures" entity_type="food_dryer" value="5"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_stone_polishing">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Mesolithic"/>
+<condition type="EntityCountReached" entity_type="stone" value="15"/>
+<condition type="EntityCountReached" entity_type="flint_axe" value="10"/>
+<condition type="EntityCountReached" entity_type="flint_spear" value="10"/>
+<condition type="EntityCountReached" entity_type="flint_pick" value="10"/>
+<condition type="EntityCountReached" entity_type="cured_meat" value="75"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_sledgemaking">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Mesolithic"/>
+<condition type="EntityCountReached" entity_type="sticks" value="50"/>
+<condition type="EntityCountReached" entity_type="leather" value="30"/>
+<condition type="EntityCountReached" entity_type="log" value="25"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_grain_processing">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Mesolithic"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="berries" value="60"/>
+<condition type="EntityCountReached" entity_type="berries" value="15"/>
+<condition type="EntityCountReached" entity_type="flint_sickle" value="10"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_pulse_processing">
+<condition type="And">
+<sub_conditions>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="10"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="flour" value="20"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="bread" value="30"/>
+<condition type="EntityCountReached" counter="BuiltStructures" entity_type="mortar" value="1"/>
+<condition type="EntityCountReached" counter="BuiltStructures" entity_type="haystack" value="1"/>
+<condition type="EntityCountReached" entity_type="flint_sickle" value="15"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_archery">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Mesolithic"/>
+<condition type="EntityCountReached" counter="KilledRaiders" value="10"/>
+<condition type="EntityCountReached" entity_type="sling" value="25"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="wooden_spear" value="25"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="bone_spear" value="25"/>
+<condition type="EntityCountReached" entity_type="flint_spear" value="25"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_cereal_domestication">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Mesolithic"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="40"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="flour" value="40"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="bread" value="50"/>
+<condition type="EntityCountReached" entity_type="grain" value="10"/>
+<condition type="EntityCountReached" entity_type="flint_sickle" value="25"/>
+<condition type="EntityCountReached" counter="BuiltStructures" entity_type="mortar" value="3"/>
+<condition type="EntityCountReached" counter="BuiltStructures" entity_type="haystack" value="3"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_pulse_domestication">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Neolithic"/>
+<condition type="TechUnlocked" tech="cereal_domestication"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="pulses" value="30"/>
+<condition type="EntityCountReached" entity_type="pulses" value="10"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_flax_domestication">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Neolithic"/>
+<condition type="TechUnlocked" tech="pulse_domestication"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="linen" value="10"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_underground_mining">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Neolithic"/>
+<condition type="TechUnlocked" tech="stone_polishing"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="flint" value="50"/>
+<condition type="EntityCountReached" entity_type="log" value="20"/>
+<condition type="EntityCountReached" entity_type="flint_pick" value="15"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_thatching">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Neolithic"/>
+<condition type="EntityCountReached" entity_type="straw" value="50"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_well_digging">
+<condition type="And">
+<sub_conditions>
+<condition type="EntityCountReached" entity_type="water" value="50"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_fortifications">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Neolithic"/>
+<condition type="TechUnlocked" tech="archery"/>
+<condition type="EntityCountReached" counter="KilledRaiders" value="20"/>
+<condition type="EntityCountReached" entity_type="bow" value="25"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_goat_domestication">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Neolithic"/>
+<condition type="TechUnlocked" tech="dog_domestication"/>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="ibex" value="15"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_sheep_domestication">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Neolithic"/>
+<condition type="TechUnlocked" tech="goat_domestication"/>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="mouflon" value="15"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="milk" value="10"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_pig_domestication">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Neolithic"/>
+<condition type="TechUnlocked" tech="sheep_domestication"/>
+<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="boar" value="15"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="wool" value="10"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_weaving">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Neolithic"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="wool" value="20"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_stilting">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Neolithic"/>
+<condition type="TechUnlocked" tech="sledgemaking"/>
+<condition type="EntityCountReached" counter="BuiltStructures" entity_type="watchtower" value="4"/>
+<condition type="EntityCountReached" counter="BuiltStructures" entity_type="gate" value="2"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+<milestone id="nemesis1_megalithism">
+<condition type="And">
+<sub_conditions>
+<condition type="EraUnlocked" era="Neolithic"/>
+<condition type="EntityCountReached" counter="BuiltStructures" entity_type="totem" value="15"/>
+<condition type="EntityCountReached" counter="ProducedResources" entity_type="stone" value="50"/>
+<condition type="EntityCountReached" entity_type="flint_pick" value="20"/>
+</sub_conditions>
+</condition>
+</milestone>
+
+	</milestones>
+
+	<events>
+
+		<!-- This gets run once, when the game is first started -->
+		<event>
+			<condition type="NewGame"/>
+			<actions>
+		<!-- Hide Tec Tree -->
+				<action type="HideUi" hide_disabled_ui="false"/>
+				<action type="SetFeatureEnabled" feature="Knowledge" value="false"/>
+				<action type="SetFeatureEnabled" feature="TechConfirmMessages" value="true"/>
+
+				<!-- Clear trees around start location -->
+				<action type="ClearTrees" radius="30"/>
+
+				<!-- Spawn initial entities -->
+
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="30" radius="10" years_old="16" gender="Female" name="Zlob'naya"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="10" radius="10" years_old="16" gender="Male" name="Le'vel"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="20" radius="12" years_old="16" gender="Male" name="Kaliko"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="28" radius="350" years_old="16" gender="Female" name="Nahkia"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="29" radius="350" years_old="16" gender="Male" name="Bhuds"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="30" radius="350" years_old="16" gender="Male" name="Zchwifty"/>
+
+				<action type="Spawn" entity_type="skins_outfit" amount="1" placement="Zlob'naya"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Zlob'naya"/>
+
+				<action type="Spawn" entity_type="skins_outfit" amount="1" placement="Le'vel"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Le'vel"/>
+
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Kaliko"/>
+				<action type="Spawn" entity_type="skins_outfit" amount="1" placement="Kaliko"/>
+
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Nahkia"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Nahkia"/>
+
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Bhuds"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Bhuds"/>
+
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Zchwifty"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Zchwifty"/>
+
+				<action type="Spawn" entity_type="hearth" amount="1" placement="StartLocationCircular" radius="0"/>
+				<action type="Spawn" entity_type="storage_tent" amount="1" placement="StartLocationCircular" angle="90" radius="15"/>
+
+				<action type="Spawn" entity_type="cave_lion" amount="1"  placement="StartLocationCircular" angle="90" radius="150" gender="Female" age="Old"/>
+				<action type="Spawn" entity_type="cave_lion" amount="1"  placement="StartLocationCircular" angle="90" radius="170" gender="Female" age="Young"/>
+				<action type="Spawn" entity_type="cave_lion" amount="1"  placement="StartLocationCircular" angle="90" radius="190" gender="Female" age="Young"/>
+
+				<action type="Spawn" entity_type="wolf" amount="1"  placement="StartLocationCircular" angle="45" radius="45" gender="Male" age="Young"/>
+				<action type="Spawn" entity_type="wolf" amount="1"  placement="StartLocationCircular" angle="45" radius="55" gender="Female" age="Old"/>
+
+				<action type="Spawn" entity_type="reindeer" amount="1"  placement="StartLocationCircular" angle="60" radius="90" gender="Female" age="Young"/>
+				<action type="Spawn" entity_type="reindeer" amount="1"  placement="StartLocationCircular" angle="60" radius="80" gender="Male" age="Young"/>
+				<action type="Spawn" entity_type="reindeer" amount="1"  placement="StartLocationCircular" angle="60" radius="70" gender="Female" age="Adult"/>
+
+			</actions>
+		</event>
+
+		<!-- This gets run every time the game is started or loaded, to allow for easy iteration -->
+		<event flags="MultipleExecutions">
+			<condition type="InitGame"/>
+			<actions>
+				<!-- Set animal populations, these will get spawned automatically -->
+				<action type="SetAnimalPopulation" animal_types="vulture dove eagle" min="1" max="2"/>
+
+				<action type="SetAnimalPopulation" animal_types="wolf" min="20" max="30"  era_factors ="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="cave_lion" min="20" max="30"  era_factors ="1 1 0.75 0.5 0 0"/>
+
+				<action type="SetAnimalPopulation" animal_types="bear" min="12" max="25" era_factors ="0 0.25 0.25 0.5 0.75 1"/>
+				<action type="SetAnimalPopulation" animal_types="cave_bear" min="20" max="30"  era_factors ="1 1 0.5 0.25 0 0"/>
+
+				<action type="SetAnimalPopulation" animal_types="ibex" min="16" max="25" era_factors ="0 0.25 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="mouflon" min="16" max="25" era_factors ="0 0.25 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="boar" min="16" max="25" era_factors ="0 0.25 1 1 1 1"/>
+
+				<action type="SetAnimalPopulation" animal_types="wild_horse" min="16" max="25" era_factors ="0 0.25 0.5 0.75 1 1"/>
+        <action type="SetAnimalPopulation" animal_types="wild_donkey" min="16" max="25" era_factors ="0 0.25 0.5 0.75 1 1"/>
+
+				<action type="SetAnimalPopulation" animal_type="deer" min="12" max="25"  era_factors ="0 0 0 0.25 0.5 1"/>
+				<action type="SetAnimalPopulation" animal_type="reindeer" min="15" max="25"  era_factors ="1 0.5 0.5 0.25 0 0"/>
+
+				<action type="SetAnimalPopulation" animal_type="ancient_bison" min="25" max="30"  era_factors ="0.5 0.5 1 0 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="bison" min="14" max="20"  era_factors ="0 0.25 0.5 0.75 0.75 0.75"/>
+				<action type="SetAnimalPopulation" animal_type="aurochs" min="20" max="25" era_factors ="0.5 0.5 0.5 0.75 1 1"/>
+
+				<action type="SetAnimalPopulation" animal_type="megaloceros" min="25" max="35"  era_factors ="1 0.5 1 0 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="mammoth" min="25" max="35"  era_factors ="1 1 0.75 0 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="woolly_rhinoceros" min="25" max="35"  era_factors ="1 1 0.75 0 0 0"/>
+
+				<!-- Set raider parameters -->
+				<action type="SetRaider" era="Paleolithic" entity_types="wolf cave_lion cave_bear" min="1" max="3" period="0.9y" variance="0.5y"/>
+				<action type="SetRaider" era="Mesolithic" entity_types="primitive_human" min="5" max="8" period="0.9y" variance="0.5y" extra_raider_per_population="30"/>
+				<action type="SetRaider" era="Neolithic" hardcore_timer="10y" entity_types="primitive_human" min="8" max="10" period="1.3y" variance="0.5y" extra_raider_per_population="30"/>
+				<action type="SetRaider" era="CopperAge" hardcore_timer="15y" entity_types="primitive_human" min="7" max="15" period="1.3y" variance="0.5y" extra_raider_per_population="30"/>
+				<action type="SetRaider" era="BronzeAge" hardcore_timer="20y" entity_types="primitive_human" min="7" max="15" period="1.3y" variance="0.5y" extra_raider_per_population="30"/>
+				<action type="SetRaider" era="IronAge" hardcore_timer="25y" entity_types="primitive_human" min="15" max="20" period="1.3y" variance="0.5y" extra_raider_per_population="30"/>
+
+				<!-- Features -->
+				<action type="SetFeatureEnabled" feature="Hints" value="true"/>
+				<action type="SetFeatureEnabled" feature="TameableAnimalSpawn" value="true"/>
+				<action type="SetKnowledgeParameters" tech_cost_multiplier="1.5"/>
+
+				<!-- Parameters -->
+				<action type="SetMigrationParameters" min="2" max="4" period="0.8y" decrease_start_population="500" decrease_halfing_population="150"/>
+				<action type="SetBirthParameters" decrease_start_population="500" decrease_halfing_population="500"/>
+				<action type="SetTraderPeriod" value="0.8y"/>
+				<action type="SetDiseaseParameters" period="1.5y" variance="0.5y" individual_disease_chance="0.3"/>
+			  </actions>
+			  </event>
+
+				<!-- Camera -->
+				<event>
+				<condition type="TimeElapsed" timer="RealTime" value="0"/>
+				<actions>
+				<action type="ShowMessage" title="nemesis1_welcome_title" text="nemesis1_welcome_description"/>
+				</actions>
+				</event>
+
+				<event flags="RequiresPrevious">
+				<condition type="TimeElapsed" timer="MessageTime" value="3"/>
+				<actions>
+				<action type="FocusCamera" location="Entity" entity_name="Zchwifty"/>
+				</actions>
+				</event>
+
+				<event flags="RequiresPrevious">
+				<condition type="TimeElapsed" timer="EventTriggeredTime" value="1"/>
+				<actions>
+				<action type="ShowMessage" title="nemesis1_german_title" text="nemesis1_german_description"/>
+				</actions>
+				</event>
+
+				<event flags="RequiresPrevious">
+				<condition type="TimeElapsed" timer="MessageTime" value="2"/>
+				<actions>
+				<action type="FocusCamera" location="Entity" entity_name="Bhuds"/>
+				</actions>
+				</event>
+
+				<event flags="RequiresPrevious">
+				<condition type="TimeElapsed" timer="EventTriggeredTime" value="1"/>
+				<actions>
+				<action type="ShowMessage" title="nemesis1_bhuds_title" text="nemesis1_bhuds_description"/>
+				</actions>
+				</event>
+
+				<event flags="RequiresPrevious">
+				<condition type="TimeElapsed" timer="MessageTime" value="2"/>
+				<actions>
+				<action type="FocusCamera" location="Entity" entity_name="Nahkia"/>
+				</actions>
+				</event>
+
+				<event flags="RequiresPrevious">
+				<condition type="TimeElapsed" timer="EventTriggeredTime" value="2"/>
+				<actions>
+				<action type="ShowMessage" title="nemesis1_nahkia_title" text="nemesis1_nahkia_description"/>
+				</actions>
+				</event>
+
+				<!-- Bonus -->
+				<event>
+				<condition type="Not">
+				<sub_condition type="IsAlive" name="Zchwifty"/>
+				</condition>
+				<actions>
+				<action type="ShowMessage" title="nemesis1_germanold_title" text="nemesis1_germanold_description"/>
+				<action type="TriggerRaiderAttack" amount="10"/>
+				</actions>
+				</event>
+
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="TimeElapsed" timer="GameTime" value="1y"/>
+				<condition type="IsAlive" name="Bhuds"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Spawn" entity_type="mammoth" amount="2" placement="StartLocationCircular" angle="0" radius="25" gender="Female" age="Young"/>
+				<action type="SetLocationMarker" marker_type="NearestEntity" entity_type="mammoth"/>
+				<action type="FocusCamera" location="LastMarker"/>
+				<action type="ShowMessage" title="nemesis1_bhudsmammoth_title" text="nemesis1_bhudsmammoth_description"/>
+				</actions>
+				</event>
+
+				<event flags="RequiresPrevious">
+				<condition type="TimeElapsed" timer="MessageTime" value="2"/>
+				<actions>
+				<action type="ClearLocationMarkers"/>
+				</actions>
+				</event>
+
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="IsAlive" name="Nahkia"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="10"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="brewing"/>
+				<action type="ShowMessage" title="nemesis1_beernahkia_title" text="nemesis1_beernahkia_description"/>
+				</actions>
+				</event>
+
+				<!-- Dog Domestication -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="cave_lion" value="5"/>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="cave_bear" value="5"/>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="wolf" value="5"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="dog_domestication"/>
+				<action type="ShowMessage" title="nemesis1_unlock_dog_domestication_title" text="nemesis1_unlock_dog_domestication_description"/>
+				</actions>
+				</event>
+
+				<!-- Slingmaking -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="skins_outfit" value="15"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="raw_skin" value="25"/>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="cave_bear" value="10"/>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="wolf" value="10"/>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="cave_lion" value="10"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="slingmaking"/>
+				<action type="ShowMessage" title="nemesis1_unlock_slingmaking_title" text="nemesis1_unlock_slingmaking_description"/>
+				</actions>
+				</event>
+
+				<!-- Food Drying -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EntityCountReached" entity_type="raw_meat" value="20"/>
+				<condition type="EntityCountReached" entity_type="raw_fish" value="15"/>
+				<condition type="EntityCountReached" entity_type="sticks" value="50"/>
+				<condition type="EntityCountReached" counter="BuiltStructures" entity_type="skins_dryer" value="5"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="food_drying"/>
+				<action type="ShowMessage" title="nemesis1_unlock_food_drying_title" text="nemesis1_unlock_food_drying_description"/>
+				</actions>
+				</event>
+
+				<!-- Spitituality -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="mammoth" value="10"/>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="woolly_rhinoceros" value="10"/>
+				<condition type="EntityCountReached" entity_type="bone" value="30"/>
+				<condition type="EntityCountReached" counter="BuiltStructures" entity_type="skull_pole" value="5"/>
+				<condition type="EntityCountReached" counter="BuiltStructures" entity_type="tent" value="5"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="spirituality"/>
+				<action type="ShowMessage" title="nemesis1_unlock_spirituality_title" text="nemesis1_unlock_spirituality_description"/>
+				</actions>
+				</event>
+
+				<!-- Tanning -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="nuts" value="20"/>
+				<condition type="EntityCountReached" entity_type="skins_outfit" value="20"/>
+				<condition type="EntityCountReached" entity_type="raw_skin" value="30"/>
+				<condition type="EntityCountReached" entity_type="sticks" value="60"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="tanning"/>
+				<action type="ShowMessage" title="nemesis1_unlock_tanning_title" text="nemesis1_unlock_tanning_description"/>
+				</actions>
+				</event>
+
+				<!-- Bone Tools -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EntityCountReached" entity_type="bone" value="30"/>
+				<condition type="EntityCountReached" entity_type="wooden_spear" value="10"/>
+				<condition type="EntityCountReached" entity_type="wooden_harpoon" value="10"/>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="mammoth" value="5"/>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="woolly_rhinoceros" value="5"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="bone_tools"/>
+				<action type="ShowMessage" title="nemesis1_unlock_bone_tools_title" text="nemesis1_unlock_bone_tools_description"/>
+				</actions>
+				</event>
+
+				<!-- Composite Tools -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EntityCountReached" entity_type="flint" value="20"/>
+				<condition type="EntityCountReached" entity_type="bone_spear" value="10"/>
+				<condition type="EntityCountReached" entity_type="bone_harpoon" value="10"/>
+				<condition type="EntityCountReached" entity_type="biface" value="20"/>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="mammoth" value="15"/>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="woolly_rhinoceros" value="15"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="composite_tools"/>
+				<action type="ShowMessage" title="nemesis1_unlock_composite_tools_title" text="nemesis1_unlock_composite_tools_description"/>
+				</actions>
+				</event>
+
+				<!-- Potery -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EntityCountReached" entity_type="flint_spear" value="10"/>
+				<condition type="EntityCountReached" entity_type="flint_axe" value="10"/>
+				<condition type="EntityCountReached" entity_type="bone_harpoon" value="10"/>
+				<condition type="EntityCountReached" entity_type="biface" value="20"/>
+				<condition type="EntityCountReached" entity_type="leather_outfit" value="20"/>
+				<condition type="EntityCountReached" entity_type="sling" value="20"/>
+				<condition type="EntityCountReached" counter="BuiltStructures" entity_type="totem" value="5"/>
+				<condition type="EntityCountReached" counter="BuiltStructures" entity_type="food_dryer" value="5"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="pottery"/>
+				<action type="ShowMessage" title="nemesis1_unlock_pottery_title" text="nemesis1_unlock_pottery_description"/>
+				</actions>
+				</event>
+
+				<!-- STONEPOLISHING -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Mesolithic"/>
+				<condition type="EntityCountReached" entity_type="stone" value="15"/>
+				<condition type="EntityCountReached" entity_type="flint_axe" value="10"/>
+				<condition type="EntityCountReached" entity_type="flint_spear" value="10"/>
+				<condition type="EntityCountReached" entity_type="flint_pick" value="10"/>
+				<condition type="EntityCountReached" entity_type="cured_meat" value="75"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="stone_polishing"/>
+				<action type="ShowMessage" title="nemesis1_unlock_stone_polishing_title" text="nemesis1_unlock_stone_polishing_description"/>
+				</actions>
+				</event>
+
+				<!-- SLEDGEMAKING -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Mesolithic"/>
+				<condition type="EntityCountReached" entity_type="sticks" value="50"/>
+				<condition type="EntityCountReached" entity_type="leather" value="30"/>
+				<condition type="EntityCountReached" entity_type="log" value="25"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="sledgemaking"/>
+				<action type="ShowMessage" title="nemesis1_unlock_sledgemaking_title" text="nemesis1_unlock_sledgemaking_description"/>
+				</actions>
+				</event>
+
+				<!-- GRAIN PROCESSING -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Mesolithic"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="berries" value="60"/>
+				<condition type="EntityCountReached" entity_type="berries" value="15"/>
+				<condition type="EntityCountReached" entity_type="flint_sickle" value="10"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="grain_processing"/>
+				<action type="ShowMessage" title="nemesis1_unlock_grain_processing_title" text="nemesis1_unlock_grain_processing_description"/>
+				</actions>
+				</event>
+
+				<!-- PULSE PROCESSING -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="10"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="flour" value="20"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="bread" value="30"/>
+				<condition type="EntityCountReached" counter="BuiltStructures" entity_type="mortar" value="1"/>
+				<condition type="EntityCountReached" counter="BuiltStructures" entity_type="haystack" value="1"/>
+				<condition type="EntityCountReached" entity_type="flint_sickle" value="15"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="pulse_processing"/>
+				<action type="ShowMessage" title="nemesis1_unlock_pulse_processing_title" text="nemesis1_unlock_pulse_processing_description"/>
+				</actions>
+				</event>
+
+				<!-- ARCHERY -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Mesolithic"/>
+				<condition type="EntityCountReached" counter="KilledRaiders" value="10"/>
+				<condition type="EntityCountReached" entity_type="sling" value="25"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="wooden_spear" value="25"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="bone_spear" value="25"/>
+				<condition type="EntityCountReached" entity_type="flint_spear" value="25"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="archery"/>
+				<action type="ShowMessage" title="nemesis1_unlock_archery_title" text="nemesis1_unlock_archery_description"/>
+				</actions>
+				</event>
+
+				<!-- CEREAL DOMESTICATION -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Mesolithic"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="grain" value="40"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="flour" value="40"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="bread" value="50"/>
+				<condition type="EntityCountReached" entity_type="grain" value="10"/>
+				<condition type="EntityCountReached" entity_type="flint_sickle" value="25"/>
+				<condition type="EntityCountReached" counter="BuiltStructures" entity_type="mortar" value="3"/>
+				<condition type="EntityCountReached" counter="BuiltStructures" entity_type="haystack" value="3"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="cereal_domestication"/>
+				<action type="ShowMessage" title="nemesis1_unlock_cereal_domestication_title" text="nemesis1_unlock_cereal_domestication_description"/>
+				</actions>
+				</event>
+
+				<!-- PULSE DOMESTICATION -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Neolithic"/>
+				<condition type="TechUnlocked" tech="cereal_domestication"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="pulses" value="30"/>
+				<condition type="EntityCountReached" entity_type="pulses" value="10"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="pulse_domestication"/>
+				<action type="ShowMessage" title="nemesis1_unlock_pulse_domestication_title" text="nemesis1_unlock_pulse_domestication_description"/>
+				</actions>
+				</event>
+
+				<!-- FLAX DOMESTICATION -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Neolithic"/>
+				<condition type="TechUnlocked" tech="pulse_domestication"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="linen" value="10"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="flax_domestication"/>
+				<action type="ShowMessage" title="nemesis1_unlock_flax_domestication_title" text="nemesis1_unlock_flax_domestication_description"/>
+				</actions>
+				</event>
+
+				<!-- UNDERGROUND MINING -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Neolithic"/>
+				<condition type="TechUnlocked" tech="stone_polishing"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="flint" value="50"/>
+				<condition type="EntityCountReached" entity_type="log" value="20"/>
+				<condition type="EntityCountReached" entity_type="flint_pick" value="15"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="underground_mining"/>
+				<action type="ShowMessage" title="nemesis1_unlock_underground_mining_title" text="nemesis1_unlock_underground_mining_description"/>
+				</actions>
+				</event>
+
+				<!-- THATCHING -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Neolithic"/>
+				<condition type="EntityCountReached" entity_type="straw" value="50"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="thatching"/>
+				<action type="ShowMessage" title="nemesis1_unlock_thatching_title" text="nemesis1_unlock_thatching_description"/>
+				</actions>
+				</event>
+
+				<!-- WELL DIGGING -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EntityCountReached" entity_type="water" value="50"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="well_digging"/>
+				<action type="ShowMessage" title="nemesis1_unlock_well_digging_title" text="nemesis1_unlock_well_digging_description"/>
+				</actions>
+				</event>
+
+				<!-- FORTIFICATIONS -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="TechUnlocked" tech="archery"/>
+				<condition type="EntityCountReached" counter="KilledRaiders" value="20"/>
+				<condition type="EntityCountReached" entity_type="bow" value="25"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="fortifications"/>
+				<action type="ShowMessage" title="nemesis1_unlock_fortifications_title" text="nemesis1_unlock_fortifications_description"/>
+				</actions>
+				</event>
+
+				<!-- GOAT DOMESTICATION -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Neolithic"/>
+				<condition type="TechUnlocked" tech="dog_domestication"/>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="ibex" value="15"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="goat_domestication"/>
+				<action type="ShowMessage" title="nemesis1_unlock_goat_domestication_title" text="nemesis1_unlock_goat_domestication_description"/>
+				</actions>
+				</event>
+
+				<!-- SHEEP DOMESTICATION -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Neolithic"/>
+				<condition type="TechUnlocked" tech="goat_domestication"/>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="mouflon" value="15"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="milk" value="10"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="sheep_domestication"/>
+				<action type="ShowMessage" title="nemesis1_unlock_sheep_domestication_title" text="nemesis1_unlock_sheep_domestication_description"/>
+				</actions>
+				</event>
+
+				<!-- PIG DOMESTICATION -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Neolithic"/>
+				<condition type="TechUnlocked" tech="sheep_domestication"/>
+				<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="boar" value="15"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="wool" value="10"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="pig_domestication"/>
+				<action type="ShowMessage" title="nemesis1_unlock_pig_domestication_title" text="nemesis1_unlock_pig_domestication_description"/>
+				</actions>
+				</event>
+
+				<!-- WEAVING -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Neolithic"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="wool" value="20"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="weaving"/>
+				<action type="ShowMessage" title="nemesis1_unlock_weaving_title" text="nemesis1_unlock_weaving_description"/>
+				</actions>
+				</event>
+
+				<!-- STILTING -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Neolithic"/>
+				<condition type="TechUnlocked" tech="sledgemaking"/>
+				<condition type="EntityCountReached" counter="BuiltStructures" entity_type="watchtower" value="4"/>
+				<condition type="EntityCountReached" counter="BuiltStructures" entity_type="gate" value="2"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="stilting"/>
+				<action type="ShowMessage" title="nemesis1_unlock_stilting_title" text="nemesis1_unlock_stilting_description"/>
+				</actions>
+				</event>
+
+				<!-- MEGALISTHISM -->
+				<event>
+				<condition type="And">
+				<sub_conditions>
+				<condition type="EraUnlocked" era="Neolithic"/>
+				<condition type="EntityCountReached" counter="BuiltStructures" entity_type="totem" value="15"/>
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="stone" value="50"/>
+				<condition type="EntityCountReached" entity_type="flint_pick" value="20"/>
+				</sub_conditions>
+				</condition>
+				<actions>
+				<action type="Unlock" tech_type="megalithism"/>
+				<action type="ShowMessage" title="nemesis1_unlock_megalithism_title" text="nemesis1_unlock_megalithism_description"/>
+				</actions>
+				</event>
+
+	</events>
+</scenario>

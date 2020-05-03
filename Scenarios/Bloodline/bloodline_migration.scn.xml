@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scenario>
+	<category value="Challenge"/>
+	<size value="5"/>
+	<hardcore_mode_allowed value="true"/>
+	<nomad_mode_allowed value="true"/>
+	<group_id value="bloodline_group"/>
+
+
+	<locations>
+		<location id="bloodline_african_plain" seed="3212123" environment="schwifty_africa_more_oaks" map_location="0.35,0.35"/>
+		<location id="bloodline_lake_triangle" seed="2857909" environment="schwifty_africa_more_oaks" map_location="0.65,0.65" lakes="24"/>
+		<location id="bloodline_swirly_river" seed="2153404" environment="schwifty_africa_more_oaks" map_location="0.75,0.15" lakes="64"/>
+		<location id="bloodline_swamp" seed="200101745" environment="schwifty_africa_more_oaks" map_location="0.15,0.15" lakes="84"/>
+		<location id="bloodline_rich_plain" seed="3212123" environment="schwifty_africa_more_sticks" map_location="0.5,0.5"/>
+		<location id="bloodline_rich_river" seed="200100000" environment="schwifty_africa_more_sticks" position="1520,1685" map_location="0.65,0.42" lakes="24" river="true"/>
+	</locations>
+
+	<milestones>
+
+		<milestone id="mile_bloodline_tribe_home">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="tent" value="20"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="skins_dryer" value="4"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="totem" value="4"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="burial_mound" value="5"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="crafter" value="1"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_bloodline_tribe_respect">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EraUnlocked" era="Neolithic"/>
+					<condition type="EntityCountComparison" counter="HuntedAnimals" entity_type="elasmotherium" value="0" comparison="Equals"/>
+					<condition type="EntityCountComparison" counter="HuntedAnimals" entity_type="woolly_rhinoceros" value="0" comparison="Equals"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_bloodline_tribe_hyena_hunter">
+			<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="cave_hyena" value="250"/>
+		</milestone>
+
+
+		<milestone id="mile_bloodline_tribe_free_love">
+			<condition type="ValueReached" id="Population" value="150"/>
+		</milestone>
+
+		<milestone id="mile_bloodline_tribe_graveyard">
+			<condition type="EntityCountReached" counter="BuiltStructures" entity_type="cairn" value="1"/>
+			<condition type="EntityCountReached" counter="BuiltStructures" entity_type="dolmen" value="3"/>
+			<condition type="EntityCountReached" counter="BuiltStructures" entity_type="burial_mound" value="20"/>
+		</milestone>
+
+		<milestone id="mile_bloodline_tribe_moo">
+			<condition type="EntityCountComparison" counter="AliveAnimals" entity_type="cattle" comparison="GreaterOrEquals" value="30"/>
+		</milestone>
+
+		<milestone id="mile_bloodline_tribe_colleteral_damage">
+			<condition type="EntityCountComparison" counter="DeadResidents" comparison="GreaterOrEquals" value="15"/>
+		</milestone>
+
+		<milestone id="mile_bloodline_tribe_milk_bread">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" entity_type="bread" value="100"/>
+					<condition type="EntityCountReached" entity_type="milk" value="100"/>
+					<condition type="EntityCountReached" counter="ProducedResources" entity_type="milk" value="2000"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_bloodline_tribe_town">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="roundhouse" value="40"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="warehouse" value="10"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="brewery" value="8"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="blacksmith" value="3"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+	</milestones>
+
+	<events>
+		<!-- Spawn structures and stored resources for normal (settled) mode -->
+		<event>
+			<condition type="NewGame" start_mode="Settled"/>
+			<actions>
+				<!-- Clear large tree area around start location -->
+				<action type="ClearTrees" radius="30"/>
+
+				<!-- Spawn structures -->
+				<action type="Spawn" entity_type="hearth" amount="1" placement="StartLocationCircular" radius="0"/>
+				<action type="Spawn" entity_type="tent" amount="6" placement="StartLocationCircular" radius="10"/>
+
+				<!-- Spawn stored resources -->
+				<action type="Spawn" entity_type="raw_skin" amount="8" placement="Storage"/>
+				<action type="Spawn" entity_type="raw_fish" amount="8" placement="Storage"/>
+				<action type="Spawn" entity_type="raw_meat" amount="8" placement="Storage"/>
+			</actions>
+		</event>
+
+		<!-- Spawn humans and tools for all modes -->
+		<event>
+			<condition type="NewGame"/>
+			<actions>
+
+				<!-- Spawn humans -->
+				<action type="Spawn" entity_type="primitive_human" amount="5" placement="StartLocationCircular" angle="7" radius="6" years_old="16" gender="Male"/>
+				<action type="Spawn" entity_type="primitive_human" amount="5" placement="StartLocationCircular" angle="7" radius="6" years_old="16" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="7" radius="6" years_old="174" gender="Male"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="7" radius="6" years_old="174" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="7" radius="6" years_old="12" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="3" placement="StartLocationCircular" angle="7" radius="6" years_old="12" gender="Male"/>
+
+				<!-- Spawn outfits and tools -->
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+
+			</actions>
+		</event>
+
+		<!-- Spawn food and building materials in nomad mode -->
+		<event>
+			<condition type="NewGame" start_mode="Nomad"/>
+			<actions>
+				<!-- Clear small tree area around start location -->
+				<action type="ClearTrees" radius="5"/>
+
+				<!-- Spawn some food and dry_skin -->
+				<action type="Spawn" entity_type="dry_skin" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="nuts" amount="2" placement="Human"/>
+				<action type="Spawn" entity_type="dry_skin" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="nuts" amount="2" placement="Human"/>
+				<action type="Spawn" entity_type="dry_skin" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="nuts" amount="2" placement="Human"/>
+				<action type="Spawn" entity_type="dry_skin" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="nuts" amount="2" placement="Human"/>
+				<action type="Spawn" entity_type="dry_skin" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="nuts" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="dry_skin" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="nuts" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="dry_skin" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="nuts" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="dry_skin" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="nuts" amount="2" placement="Human"/>
+				<action type="Spawn" entity_type="dry_skin" amount="1" placement="Human"/>
+			</actions>
+		</event>
+
+		<!-- This gets run every time the game is started or loaded, to allow for easy iteration -->
+		<event flags="MultipleExecutions">
+			<condition type="InitGame"/>
+			<actions>
+				<!-- Set animal populations, these will get spawned automatically -->
+				<action type="SetAnimalPopulation" animal_types="vulture dove eagle" min="0" max="0"/>
+
+				<action type="SetAnimalPopulation" animal_types="wolf" min="25" max="40" era_factors ="0.5 0.75 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="cave_lion" min="25" max="45" era_factors ="1 0.75 0.5 0.25 0.25 0"/>
+				<action type="SetAnimalPopulation" animal_types="cave_hyena" min="35" max="60" />
+
+				<action type="SetAnimalPopulation" animal_types="bear" min="10" max="20" era_factors ="0.0 0.25 0.5 0.75 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="cave_bear" min="10" max="20" era_factors ="1 0.75 0.5 0.5 0.25 0"/>
+
+				<action type="SetAnimalPopulation" animal_types="ibex mouflon boar" min="20" max="55"/>
+				<action type="SetAnimalPopulation" animal_types="wild_donkey" min="15" max="40"/>
+				<action type="SetAnimalPopulation" animal_types="wild_horse" min="15" max="40" era_factors ="1 1 1 1 0.5 0"/>
+				<action type="SetAnimalPopulation" animal_types="feral_horse" min="15" max="40" era_factors ="0 0 0 0 0.5 1"/>
+
+				<action type="SetAnimalPopulation" animal_type="deer" min="15" max="40" era_factors ="0 0 0.25 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="reindeer" min="25" max="40" era_factors ="1 0.75 0.5 0.5 0.5 0.5"/>
+
+				<action type="SetAnimalPopulation" animal_type="ancient_bison" min="15" max="40" era_factors ="1 0.75 0.5 0.25 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="bison" min="15" max="40" era_factors ="0 0.25 0.5 0.75 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="aurochs" min="10" max="40"/>
+				<action type="SetAnimalPopulation" animal_type="muskox" min="10" max="40"/>
+
+				<action type="SetAnimalPopulation" animal_type="megaloceros" min="15" max="40" era_factors ="1 0.75 0.5 0.25 0.25 0"/>
+				<action type="SetAnimalPopulation" animal_type="mammoth" min="35" max="60" era_factors ="1 0.75 0.5 0.25 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="elasmotherium" min="25" max="50" era_factors ="1 0.75 0.5 0.25 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="woolly_rhinoceros" min="35" max="60" era_factors ="1 0.5 0.25 0.25 0 0"/>
+
+				<!-- Set raider parameters -->
+				<action type="SetRaider" era="Paleolithic" entity_types="wolf cave_lion cave_hyena" grace_period="2.5y" mins="1 1 1" maxes="2 1 2" period="1.25y" variance="0.5y"/>
+				<action type="SetRaider" era="Mesolithic" hardcore_timer="5y" entity_types="wolf cave_lion cave_bear cave_hyena" mins="2 1 1 2" maxes="3 2 1 3" period="2.25y" variance="0.5y"/>
+				<action type="SetRaider" era="Neolithic" hardcore_timer="10y" entity_types="wolf cave_lion cave_bear cave_hyena" mins="5 4 2 5" period="2.0y" variance="0.5y" extra_raider_per_population="40"/>
+				<action type="SetRaider" era="CopperAge" hardcore_timer="15y" entity_types="primitive_human" min="1" max="3" period="3.0y" variance="0.5y" extra_raider_per_population="10"/>
+				<action type="SetRaider" era="BronzeAge" hardcore_timer="20y" entity_types="primitive_human" min="2" max="4" period="2.8y" variance="0.5y" extra_raider_per_population="8"/>
+				<action type="SetRaider" era="IronAge" hardcore_timer="25y" entity_types="primitive_human" min="3" max="5" period="2.5y" variance="0.5y" extra_raider_per_population="7"/>
+
+				<!-- Features -->
+				<action type="SetFeatureEnabled" feature="Hints" value="false"/>
+				<action type="SetFeatureEnabled" feature="Warnings" value="false"/>
+				<action type="SetFeatureEnabled" feature="TameableAnimalSpawn" value="true"/>
+
+				<!-- Parameters -->
+				<action type="SetMigrationParameters" min="1" max="4" period="0.7y" decrease_start_population="9000" decrease_halfing_population="9000"/>
+				<action type="SetBirthParameters" decrease_start_population="9000" decrease_halfing_population="9000"/>
+				<action type="SetTraderPeriod" value="1.5y"/>
+				<action type="SetDiseaseParameters" period="2.5y" variance="0.5y" individual_disease_chance="0.05"/>
+
+				<!-- Knowledge -->
+				<action type="SetKnowledgeParameters" tech_cost_multiplier="1.1"/>
+
+			</actions>
+		</event>
+	</events>
+</scenario>

@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scenario>
+	<category value="Community"/>
+	<group_id value="highlander"/>
+	<hardcore_mode_allowed value="true"/>
+	<size value="4"/>
+
+	<locations>
+			<location id="highlander_twolakes" seed="2289625" environment="eurasia_warm" map_location="0.74,0.12" river = "true"/>
+			<location id="highlander_nicelake" seed="2289800" environment="eurasia_warm" map_location="0.1,0.6" river = "false"/>
+			<location id="highlander_lookbehindyou" seed="2289800" environment="eurasia_warm" map_location="0.1,0.18" river = "true"/>
+			<location id="highlander_popular_forest_river" seed="56443622" environment="eurasia" map_location="0.5,0.6"/>
+			<location id="highlander_flatlands_spawn" seed="11111111" environment="flat_river" map_location="0.5,0.2" river="false" lakes="4"/>
+			<location id="highlander_river_spawn" seed="11111111" environment="flat_river" map_location="0.6,0.4"   river="true" lakes="4"/>
+			<location id="highlander_valley_spawn" seed="00000000" environment="flat_river" map_location="0.35,0.3" river="false" lakes="4"/>
+			<location id="highlander_clear_water_spawn" seed="00000000" environment="flat_river" map_location="0.2,0.5" river="true" lakes="8"/>
+	</locations>
+
+		<!-- Set disaster parameters -->
+		<disasters>
+			<disaster disaster_type="Storm" period="1.5y" variance="0.75y"/>
+			<disaster disaster_type="Blizzard" period="2.5y" variance="1.5y"/>
+		</disasters>
+
+		<!-- Set milestones -->
+		<milestones>
+
+			<milestone id="hl_first_time">
+				<condition type="IsAlive" name="C&#x200b;onnor MacLeod"/>
+			</milestone>
+
+			<milestone id="hl_simple_camp">
+				<condition type="And">
+					<sub_conditions>
+						<condition type="EntityCountReached" counter="BuiltStructures" entity_type="crafter" value="1"/>
+						<condition type="EntityCountReached" counter="BuiltStructures" entity_type="storage_tent" value="1"/>
+						<condition type="EntityCountReached" counter="BuiltStructures" entity_type="tent" value="3"/>
+						<condition type="EntityCountReached" counter="BuiltStructures" entity_type="rock_pile" value="1"/>
+						<condition type="EntityCountReached" counter="BuiltStructures" entity_type="wood_pile" value="1"/>
+						<condition type="EntityCountReached" counter="BuiltStructures" entity_type="skins_dryer" value="1"/>
+					</sub_conditions>
+				</condition>
+			</milestone>
+
+			<milestone id="hl_survival5">
+				<condition type="TimeElapsed" timer="GameTime" value="3y"/>
+			</milestone>
+
+			<milestone id="hl_150people">
+				<condition type="ValueReached" id="Population" value="150"/>
+			</milestone>
+
+			<milestone id="hl_macsword">
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="steel_sword" value="1"/>
+			</milestone>
+
+			<milestone id="hl_daily_bread">
+				<condition type="EntityCountReached" counter="ProducedResources" entity_type="bread" value="200"/>
+			</milestone>
+
+			<milestone id="hl_battle_tested">
+				<condition type="EntityCountReached" counter="KilledRaiders" value="150"/>
+			</milestone>
+
+		</milestones>
+
+
+	<events>
+
+		<!-- This gets run every time the game is started or loaded, to allow for easy iteration -->
+		<event>
+			<condition type="NewGame"/>
+			<actions>
+				<!-- Clear trees around start location -->
+				<action type="ClearTrees" radius="15"/>
+
+				<!-- Spawn initial entities -->
+				<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor MacLeod" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+				<action type="Spawn" entity_type="hearth" amount="1" placement="StartLocationCircular" angle="0" radius="7"/>
+				<action type="Spawn" entity_type="tent" amount="1" placement="StartLocationCircular" angle="90" radius="0"/>
+				<!-- spawn equip -->
+				<action type="Spawn" entity_type="biface" amount="1" placement="Storage"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Storage"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Storage"/>
+				<action type="Spawn" entity_type="skins_outfit" placement="Storage"/>
+
+			</actions>
+		</event>
+
+
+		<!-- This gets run every time the game is started or loaded, to allow for easy iteration -->
+		<event flags="MultipleExecutions">
+			<condition type="InitGame"/>
+			<actions>
+				<!-- Set animal populations, these will get spawned automatically -->
+				<action type="SetAnimalPopulation" animal_types="vulture dove eagle" min="1" max="3"/>
+
+				<action type="SetAnimalPopulation" animal_types="wolf" min="15" max="25" era_factors="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="cave_hyena cave_lion" min="15" max="20" era_factors="1 1 1 1 1 1"/>
+
+				<action type="SetAnimalPopulation" animal_types="bear cave_bear" min="10" max="20" era_factors="1 1 1 1 1 1"/>
+
+				<action type="SetAnimalPopulation" animal_types="ibex mouflon boar aurochs" min="20" max="30"/>
+				<action type="SetAnimalPopulation" animal_types="wild_horse wild_donkey feral_horse" min="20" max="30"/>
+
+				<action type="SetAnimalPopulation" animal_type="deer" min="15" max="40" era_factors="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="reindeer" min="25" max="40" era_factors="1 1 1 1 1 1"/>
+
+				<action type="SetAnimalPopulation" animal_type="muskox" min="13" max="20" era_factors="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="ancient_bison" min="13" max="20" era_factors="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="bison" min="13" max="20" era_factors="1 1 1 1 1 1"/>
+
+				<action type="SetAnimalPopulation" animal_type="megaloceros" min="15" max="30" era_factors="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="woolly_rhinoceros" min="10" max="15" era_factors="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="mammoth" min="10" max="15" era_factors="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="elasmotherium" min="10" max="15" era_factors="1 1 1 1 1 1"/>
+				<!-- Set raider parameters -->
+				<action type="SetRaider" era="Paleolithic" entity_types="cave_lion" period="1y" variance="0.25y" extra_raider_per_population="20"/>
+				<action type="SetRaider" era="Mesolithic" hardcore_timer="4y" entity_types="cave_bear" period="1y" variance="0.25y" extra_raider_per_population="20"/>
+				<action type="SetRaider" era="Neolithic" hardcore_timer="7y" entity_types="woolly_rhinoceros mammoth" min="4" max="5" period="1y" variance="0.25y" extra_raider_per_population="20"/>
+				<action type="SetRaider" era="CopperAge" hardcore_timer="10y" entity_types="primitive_human" min="6" max="12" period="1y" variance="0.25y" extra_raider_per_population="20"/>
+				<action type="SetRaider" era="BronzeAge" hardcore_timer="13y" entity_types="primitive_human" min="13" max="18" period="1y" variance="0.25y" extra_raider_per_population="20"/>
+				<action type="SetRaider" era="IronAge" hardcore_timer="16y" entity_types="primitive_human" min="19" max="24" period="1y" variance="0.25y" extra_raider_per_population="20"/>
+				<!-- Features -->
+				<action type="SetFeatureEnabled" feature="Hints" value="false"/>
+				<action type="SetFeatureEnabled" feature="TameableAnimalSpawn" value="true"/>
+
+				<!-- Knowledge -->
+				<action type="SetKnowledgeParameters" tech_cost_multiplier="1"/>
+
+				<!-- Set migration parameters NOMIGRATION -->
+				<action type="SetMigrationParameters" min="2" max="4" period="0.75y" decrease_start_population="450" decrease_halfing_population="450"/>
+				<!-- Set birth parameters -->
+				<action type="SetBirthParameters" decrease_start_population="500" decrease_halfing_population="100"/>
+
+				<!-- Set trader parameters -->
+				<action type="SetTraderPeriod" value="0.8y" variance="0.5y"/>
+
+				<!-- Set disease parameters -->
+				<action type="SetDiseaseParameters" period="1y" variance="0.4y" individual_disease_chance="0.5"/>
+
+
+			</actions>
+		</event>
+
+		<!-- Intro -->
+		<event>
+			<condition type="TimeElapsed" timer="RealTime" value="1"/>
+			<actions>
+				<action type="ShowMessage" title="highlander_welcome_title" text="highlander_welcome_description"/>
+			</actions>
+		</event>
+
+
+<!-- Highlander 50 respawns -->
+<event>
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor MacLeod"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="C&#x200b;onnor MacLeod" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" amount="1" name="C&#x200b;onnor MacLeod"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Co&#x200b;nnor MacLeod" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" amount="1" name="Co&#x200b;nnor MacLeod"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Con&#x200b;nor MacLeod" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Con&#x200b;nor MacLeod"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Conn&#x200b;or MacLeod" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Conn&#x200b;or MacLeod"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Conno&#x200b;r MacLeod" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Conno&#x200b;r MacLeod"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor&#x200b; MacLeod" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor&#x200b; MacLeod"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor &#x200b;MacLeod" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor &#x200b;MacLeod"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor M&#x200b;acLeod" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor M&#x200b;acLeod"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor Ma&#x200b;cLeod" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor Ma&#x200b;cLeod"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor Mac&#x200b;Leod" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<!--		11 - 20 -->
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor Mac&#x200b;Leod"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor MacL&#x200b;eod" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" amount="1" name="Connor MacL&#x200b;eod"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor MacLe&#x200b;od" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" amount="1" name="Connor MacLe&#x200b;od"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor MacLeo&#x200b;d" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor MacLeo&#x200b;d"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor MacLeod&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor MacLeod&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="&#x200b;Connor MacLeod&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="&#x200b;Connor MacLeod&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="C&#x200b;onnor MacLeod&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="C&#x200b;onnor MacLeod&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Co&#x200b;nnor MacLeod&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Co&#x200b;nnor MacLeod&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Con&#x200b;nor MacLeod&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Con&#x200b;nor MacLeod&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Conn&#x200b;or MacLeod&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Conn&#x200b;or MacLeod&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Conno&#x200b;r MacLeod&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+
+
+<!-- Highlander respawn events -->
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Conno&#x200b;r MacLeod&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor&#x200b; MacLeod&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" amount="1" name="Connor&#x200b; MacLeod&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor &#x200b;MacLeod&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" amount="1" name="Connor &#x200b;MacLeod&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor M&#x200b;acLeod&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor M&#x200b;acLeod&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor Ma&#x200b;cLeod&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor Ma&#x200b;cLeod&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor Mac&#x200b;Leod&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor Mac&#x200b;Leod&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor MacL&#x200b;eod&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor MacL&#x200b;eod&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor MacLe&#x200b;od&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor MacLe&#x200b;od&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor MacLeo&#x200b;d&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor MacLeo&#x200b;d&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor MacLeod&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor MacLeod&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="&#x200b;Connor MacLeod&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<!--		31 - 40 -->
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="&#x200b;Connor MacLeod&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="C&#x200b;onnor MacLeod&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" amount="1" name="C&#x200b;onnor MacLeod&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Co&#x200b;nnor MacLeod&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" amount="1" name="Co&#x200b;nnor MacLeod&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Con&#x200b;nor MacLeod&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Con&#x200b;nor MacLeod&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Conn&#x200b;or MacLeod&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Conn&#x200b;or MacLeod&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Conno&#x200b;r MacLeod&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Conno&#x200b;r MacLeod&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor&#x200b; MacLeod&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor&#x200b; MacLeod&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor &#x200b;MacLeod&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor &#x200b;MacLeod&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor M&#x200b;acLeod&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor M&#x200b;acLeod&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor Ma&#x200b;cLeod&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor Ma&#x200b;cLeod&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor Mac&#x200b;Leod&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+
+
+<!--		41 - 50 -->
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor Mac&#x200b;Leod&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor MacL&#x200b;eod&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" amount="1" name="Connor MacL&#x200b;eod&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor MacLe&#x200b;od&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" amount="1" name="Connor MacLe&#x200b;od&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor MacLeo&#x200b;d&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor MacLeo&#x200b;d&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Connor MacLeod&#x200b;&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Connor MacLeod&#x200b;&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="&#x200b;Connor MacLeod&#x200b;&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+
+
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="&#x200b;Connor MacLeod&#x200b;&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="C&#x200b;onnor MacLeod&#x200b;&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="C&#x200b;onnor MacLeod&#x200b;&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Co&#x200b;nnor MacLeod&#x200b;&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Co&#x200b;nnor MacLeod&#x200b;&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Con&#x200b;nor MacLeod&#x200b;&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Con&#x200b;nor MacLeod&#x200b;&#x200b;&#x200b;"/>
+</condition>
+<actions>
+<action type="ShowMessage" title="highlander_respawn_title" text="highlander_respawn_description"/>
+<action type="Spawn" entity_type="primitive_human" amount="1" name="Conn&#x200b;or MacLeod&#x200b;&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+<condition type="Not">
+<sub_condition type="IsAlive" name="Conn&#x200b;or MacLeod&#x200b;&#x200b;&#x200b;"/>
+</condition>
+<actions>
+	<action type="ShowMessage" title="highlander_respawn_title" text="highlander_last_respawn_description"/>
+	<action type="Spawn" entity_type="primitive_human" amount="1" name="Conno&#x200b;r MacLeod&#x200b;&#x200b;&#x200b;" placement="StartLocationCircular" radius="0" years_old="16" gender="Male"/>
+</actions>
+</event>
+
+<event flags="RequiresPrevious,ClearUi">
+	<condition type="Not">
+	<sub_condition type="IsAlive" name="Conno&#x200b;r MacLeod&#x200b;&#x200b;&#x200b;"/>
+	</condition>
+	<actions>
+		<action type="ShowMessage" title="highlander_last_dead_title" text="highlander_last_dead_description"/>
+	</actions>
+</event>
+
+
+	</events>
+</scenario>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<environment>
+
+	<noise_amplitudes values="0.0 0.03 0.2 0.154 0.097 0.045 0.025 0.005"/>
+
+	<deposits values="Flint"/>
+	<resource_factor value="0.75"/>
+	<sun_angle_factor value="0.4"/>
+
+	<trees values="Fir Pine Spruce Blackberry Blueberry Raspberry Strawberry Chestnut Cherry Service Einkorn Barley Emmer Peas Chickpeas Lentils Flax"/>
+
+	<tree_override_prototypes>
+
+		<tree_override_prototype>
+			<id value="Fir"/>
+			<min_altitude value="0" />
+			<max_altitude value="14"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Spruce"/>
+			<min_altitude value="0" />
+			<max_altitude value="14"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Pine"/>
+			<min_altitude value="2" />
+			<max_altitude value="16"/>
+		</tree_override_prototype>
+
+	</tree_override_prototypes>
+
+	<seasons>
+		<season id="Spring" setup_id="Spring" duration="0.2" precipitation_chance="0.8" windy_chance="0.5" very_windy_chance="0.5" fish_boost="0.5">
+			<min_temperature value="-3"/>
+			<max_temperature value="6"/>
+		</season>
+
+		<season id="Summer" setup_id="Summer" duration="0.2" precipitation_chance="0.8" windy_chance="0.5" very_windy_chance="0.5" fish_boost="1">
+			<min_temperature value="15"/>
+			<max_temperature value="30"/>
+		</season>
+
+		<season id="Fall" setup_id="Fall" duration="0.2" precipitation_chance="0.8" windy_chance="0.5" very_windy_chance="0.5" fish_boost="0.5">
+			<min_temperature value="-3"/>
+			<max_temperature value="6"/>
+		</season>
+
+		<season id="Winter" setup_id="Winter" duration="0.4" snow_setup_id="WinterSnow" precipitation_chance="1" windy_chance="0.5" very_windy_chance="0.5" reduced_fauna="true" fish_boost="0.1">
+			<min_temperature value="-15"/>
+			<max_temperature value="0"/>
+		</season>
+	</seasons>
+</environment>
