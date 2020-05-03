@@ -68,15 +68,31 @@
 				<action type="ClearTrees" radius="20"/>
 
 				<!-- Spawn initial entities -->
-				<action type="Spawn" entity_type="nuts" amount="20" placement="StartLocationCircular" radius="1"/>
-				<action type="Spawn" entity_type="dry_skin" amount="5" placement="StartLocationCircular" radius="1"/>
-
-				<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" angle="10" radius="10" years_old="16" gender="Male"/>
-				<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" angle="20" radius="12" years_old="16" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" angle="10" radius="5" years_old="16" gender="Male"/>
+				<action type="Spawn" entity_type="primitive_human" amount="4" placement="StartLocationCircular" angle="20" radius="5" years_old="16" gender="Female"/>
 
 				<action type="Spawn" entity_type="skins_outfit" amount="8" placement="Human"/>
-				<action type="Spawn" entity_type="wooden_spear" amount="8" placement="Human"/>
-				<action type="Spawn" entity_type="biface" amount="8" placement="Human"/>
+
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+
+				<action type="Spawn" entity_type="nuts" amount="16" placement="Human"/>
+				<action type="Spawn" entity_type="dry_skin" amount="5" placement="Human"/>
+				<action type="Spawn" entity_type="sticks" amount="3" placement="Human"/>
 
 			</actions>
 		</event>
@@ -90,6 +106,7 @@
 
 				<action type="SetAnimalPopulation" animal_types="wolf" min="16" max="35"  era_factors ="1 1 1 1 1 1"/>
 				<action type="SetAnimalPopulation" animal_types="cave_lion" min="15" max="20"  era_factors ="1 1 0.75 0.5 0.5 0.5"/>
+				<action type="SetAnimalPopulation" animal_types="cave_hyena" min="15" max="25" era_factors ="1 1 0.75 0.5 0.5 0.5"/>
 
 				<action type="SetAnimalPopulation" animal_types="bear" min="15" max="25" era_factors ="0.0 0.25 0.25 0.25 0.5 0.75"/>
 				<action type="SetAnimalPopulation" animal_types="cave_bear" min="15" max="25"  era_factors ="1 0.75 0.75 0.5 0.5 0.25"/>
@@ -110,6 +127,8 @@
 				<action type="SetAnimalPopulation" animal_type="megaloceros" min="15" max="25"  era_factors ="1 1 0.75 0.5 0.25 0.25"/>
 				<action type="SetAnimalPopulation" animal_type="mammoth" min="15" max="25"  era_factors ="1 1 1 0.75 0.75 0.75"/>
 				<action type="SetAnimalPopulation" animal_type="woolly_rhinoceros" min="15" max="25"  era_factors ="1 1 1 0.75 0.75 0.75"/>
+				<action type="SetAnimalPopulation" animal_type="elasmotherium" min="10" max="15" era_factors ="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="muskox" min="15" max="30" era_factors ="1 1 1 1 1 1"/>
 
 				<!-- Set raider parameters -->
 				<action type="SetRaider" era="Paleolithic" entity_types="wolf cave_lion" min="1" max="3" period="0.8y" variance="0.5y"/>
@@ -126,8 +145,8 @@
 				<action type="SetKnowledgeParameters" tech_cost_multiplier="1.5"/>
 
 				<!-- Parameters -->
-				<action type="SetMigrationParameters" min="2" max="6" period="0.8y" decrease_start_population="500" decrease_halfing_population="150"/>
-				<action type="SetBirthParameters" decrease_start_population="500" decrease_halfing_population="500"/>
+				<action type="SetMigrationParameters" min="2" max="6" period="0.8y" decrease_start_population="800" decrease_halfing_population="350"/>
+				<action type="SetBirthParameters" decrease_start_population="800" decrease_halfing_population="500"/>
 				<action type="SetTraderPeriod" value="0.7y"/>
 				<action type="SetDiseaseParameters" period="1.5y" variance="0.5y" individual_disease_chance="0.5"/>
 

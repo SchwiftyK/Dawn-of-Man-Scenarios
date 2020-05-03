@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string name="medium_happyfarmer">Happy Farmer</string>
+	<string name="happyfarmer_group">Happy Farmers</string>
+	<string name="scenario_medium_happyfarmer">Happy Farmer</string>
+	<string name="scenario_medium_happyfarmer_subtitle">Animal Fun</string>
+	<string name="scenario_medium_happyfarmer_description">
+Happy farming with animals and stuff.
+	</string>
+	<string name="scenario_medium_happyfarmer_context">
+Winter is coming, every year. And this winter is short. All the time.
+</string>
+
+	<string name="medium_happyfarmer_welcome_title">You like watching people farm?</string>
+	<string name="medium_happyfarmer_welcome_description">Welcome to the funscenario Happy Farmer.
+The landscape and the weather are great. The winter lasts not very long and animals stay outside all the time.
+If you like it, give it a thumbs up in the workshop and write a comment. Have fun!
+</string>
+
+<string name="scenario_very_happy_farmer">Very Happy Farmer</string>
+<string name="scenario_very_happy_farmer_subtitle">No Raiders</string>
+<string name="scenario_very_happy_farmer_description">
+Happy farming with animals and stuff.
+</string>
+<string name="scenario_very_happy_farmer_context">
+Winter is coming, every year. And this winter is short. All the time. NO RAIDERS. Wild animals exist and may attack. Not my fault!
+</string>
+
+<string name="very_happy_farmer_welcome_title">You like watching people farm?</string>
+<string name="very_happy_farmer_welcome_description">Welcome to the funscenario Very Happy Farmer.
+The landscape and the weather are great. No Human Raiders will attack!
+If you like it, give it a thumbs up in the workshop and write a comment. Have fun!
+</string>
+
+
+	<string name="nice_flatlands_spawn_hf">Nice Flatlands</string>
+	<string name="nice_river_spawn_hf">Nice River</string>
+	<string name="nice_lakes_spawn_hf">Nice Lakes</string>
+	<string name="ore_lake_spawn_hf">Iron Lake</string>
+	<string name="middle_spawn_hf">Middle of nowhere</string>
+
+	<string name="milestone_mile_happyfarmer_village">Small Village</string>
+	<string name="milestone_mile_happyfarmer_village_description">Build: 10x Tent, 1x Storage Tent, 5x Skins Dryer and reach a Population of 25.</string>
+
+	<string name="milestone_mile_happyfarmer_survival5w">Five long winters</string>
+	<string name="milestone_mile_happyfarmer_survival5w_description">Survive for 5 short winters.</string>
+
+<string name="milestone_mile_happyfarmer_steadfast">Steadfast</string>
+<string name="milestone_mile_happyfarmer_steadfast_description">Build: 15x Hut, 3x Storage Hut and reach a Population of 50 people and 25 animals.</string>
+
+<string name="milestone_mile_happyfarmer_sacrificial_ceremonies">Sacrificial Ceremonie</string>
+<string name="milestone_mile_happyfarmer_sacrificial_ceremonies_description">Build: 10x Skull Pole, 5x Totem, 1x Menhir. Also reach an animal population of 50 animals and provide 25 copper knives.</string>
+
+<string name="milestone_mile_happyfarmer_pray">Time to pray!</string>
+<string name="milestone_mile_happyfarmer_pray_description">Build: 25x Skull Pole, 3x Dolmen and 1x Stone Circle.</string>
+
+<string name="milestone_mile_happyfarmer_mammoth_hunter">Big game hunting.</string>
+<string name="milestone_mile_happyfarmer_mammoth_hunter_description">Hunt 25 Mammoths before they extinct!.</string>
+
+<string name="milestone_mile_happyfarmer_bronze">Bronze is fun!</string>
+<string name="milestone_mile_happyfarmer_bronze_description">Own 25 of each bronze tool. (Axe, Knife, Pick, Sickle, Spear, Sword)</string>
+
+<string name="milestone_mile_happyfarmer_steel">Steel is more fun!</string>
+<string name="milestone_mile_happyfarmer_steel_description">Own 50 of each steel tool. (Axe, Knife, Pick, Sickle, Spear, Sword)</string>
+
+<string name="milestone_mile_happyfarmer_town">Beautiful town!</string>
+<string name="milestone_mile_happyfarmer_town_description">Build: 40x Roundhouse, 10x Warehouse, 1 Blacksmith, 10x Statue, 1 Cairn and reach a Population of 150 people and 100 animals.</string>
+
+<string name="milestone_mile_happyfarmer_oktoberfest">Party time!</string>
+<string name="milestone_mile_happyfarmer_oktoberfest_description">With such long falls one should celebrate Oktoberfest. Have 100 units of beer ready in your lager.</string>
+
+</strings>

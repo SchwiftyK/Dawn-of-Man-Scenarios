@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+
+<string name="flatlands">平原</string>
+<string name="flatlands_group">平原</string>
+<string name="scenario_flatlands">平原</string>
+<string name="scenario_flatlands_subtitle">有点挑战性</string>
+<string name="scenario_flatlands_description">
+找个好地方。</string>
+<string name="scenario_flatlands_context">
+山岭中一片平原，这里有丰富石矿，花草和动物也非常茂盛。</string>
+<string name="goal_flatlands_welcome_title">好选择！</string>
+<string name="goal_flatlands_welcome_description">欢迎来到平原黎明。看看这风境！</string>
+
+<string name="flatlands_spawn">平原</string>
+<string name="river_spawn">河边</string>
+<string name="valley_spawn">山谷</string>
+<string name="clear_water_spawn">清湖</string>
+
+<string name="milestone_yeiy_people">好！有人啦！</string>
+<string name="milestone_yeiy_people_description">达到15人口。</string>
+<string name="milestone_simple_camp">扎营求存</string>
+<string name="milestone_simple_camp_description">木堆，石堆，晒皮架，手工台，3个帐篷，储物帐蓬。</string>
+<string name="milestone_survival5w"> 5个寒冬</string>
+<string name="milestone_survival5w_description">度过5个寒冬。</string>
+<string name="milestone_200people"> 200人</string>
+<string name="milestone_200people_description">达到200人口。</string>
+<string name="milestone_lotopray">我好累啊</string>
+<string name="milestone_lotopray_description">建筑10个巨石圈阵。</string>
+<string name="milestone_1k_bread">赐我用粮</string>
+<string name="milestone_1k_bread_description">制造1000块面包。</string>
+<string name="milestone_sic_o_war">别再打啦，拜托</string>
+<string name="milestone_sic_o_war_description">杀500个侵入者。</string>
+
+<string name="scenario_flatlands_easy">平原容易</string>
+<string name="scenario_flatlands_easy_subtitle">很容易</string>
+<string name="scenario_flatlands_easy_description">
+找个好地方.
+</string>
+<string name="scenario_flatlands_easy_context">
+山岭中一片平原，这里有丰富石矿，花草和动物也非常茂盛（没有捕食者／侵入者）。较少暴风／暴雨，秋长冬短。</string>
+
+<string name="milestone_get_some_nuts">找些坚果!</string>
+<string name="milestone_get_some_nuts_description">采集1000颗坚果.</string>
+
+</strings>

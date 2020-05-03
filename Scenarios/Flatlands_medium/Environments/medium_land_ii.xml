@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<environment>
+	<noise_amplitudes values="0.003 0.2 0.01 0.05 0.075 0.01 0.0 0.04"/>
+
+
+	<distance_height_offset value="0.25"/>
+	<ford_distance_factor value="0.4"/>
+	<trees_everywhere value="false"/>
+
+
+	<detail_override_prototypes>
+		<detail_override_prototype>
+			<id value="DetailStick"/>
+			<density value="0.13" />
+			<min_altitude value="-2" />
+			<max_altitude value="18"/>
+			<min_angle value="0" />
+			<max_angle value="90"/>
+			<min_humidity value="0.3"/>
+			<max_humidity value="0.85"/>
+		</detail_override_prototype>
+
+		<detail_override_prototype>
+			<id value="DetailGrass"/>
+			<density value="0.3" />
+			<min_altitude value="-1" />
+			<max_altitude value="15"/>
+			<min_angle value="-5" />
+			<max_angle value="25"/>
+			<min_humidity value="0"/>
+			<max_humidity value="0.7"/>
+		</detail_override_prototype>
+
+
+
+
+	</detail_override_prototypes>
+
+
+	<prop_override_prototypes>
+		<prop_override_prototype>
+			<id value="SmallRocks"/>
+			<density value="0.2" />
+			<min_altitude value="5" />
+			<max_altitude value="30"/>
+			<min_angle value="15" />
+			<max_angle value="70"/>
+		</prop_override_prototype>
+
+		<prop_override_prototype>
+			<id value="Flint"/>
+			<density value="0.1" />
+			<min_altitude value="0" />
+			<max_altitude value="30"/>
+			<min_angle value="1" />
+			<max_angle value="40"/>
+		</prop_override_prototype>
+
+
+	</prop_override_prototypes>
+
+
+	<deposit_override_prototypes>
+		<deposit_override_prototype>
+			<id value="Flint"/>
+			<min_angle value="1" />
+			<max_angle value="20"/>
+			<min_altitude value="3" />
+			<max_altitude value="55"/>
+		</deposit_override_prototype>
+		<deposit_override_prototype>
+			<id value="Copper"/>
+			<min_angle value="1" />
+			<max_angle value="20"/>
+			<min_altitude value="3" />
+			<max_altitude value="55"/>
+		</deposit_override_prototype>
+		<deposit_override_prototype>
+			<id value="Tin"/>
+			<min_angle value="1" />
+			<max_angle value="20"/>
+			<min_altitude value="3" />
+			<max_altitude value="55"/>
+		</deposit_override_prototype>
+		<deposit_override_prototype>
+			<id value="Iron"/>
+			<min_angle value="0" />
+			<max_angle value="45"/>
+			<min_altitude value="2" />
+			<max_altitude value="65"/>
+		</deposit_override_prototype>
+	</deposit_override_prototypes>
+
+
+
+
+
+<deposits values="Flint Tin Copper Iron"/>
+	<resource_factor value="1"/>
+
+	<seasons>
+    <season id="Spring" setup_id="Spring" duration="0.25" precipitation_chance="0.5" windy_chance="0.5" very_windy_chance="0.2">
+       <min_temperature value="5"/>
+       <max_temperature value="15"/>
+    </season>
+
+    <season id="Summer" setup_id="Summer" duration="0.25" precipitation_chance="0.25"  windy_chance="0.25">
+      <min_temperature value="20"/>
+      <max_temperature value="35"/>
+      <min_wind value="0"/>
+      <max_wind value="5"/>
+    </season>
+
+    <season id="Fall" setup_id="Fall" duration="0.25" precipitation_chance="0.8" windy_chance="0.5" very_windy_chance="0.2">
+      <min_temperature value="-1"/>
+      <max_temperature value="12"/>
+    </season>
+
+    <season id="Winter" setup_id="Winter" snow_setup_id="WinterSnow" duration="0.25" precipitation_chance="0.9" windy_chance="0.5" very_windy_chance="0.2" reduced_fauna="true">
+      <min_temperature value="-7"/>
+      <max_temperature value="-2"/>
+    </season>
+  </seasons>
+</environment>

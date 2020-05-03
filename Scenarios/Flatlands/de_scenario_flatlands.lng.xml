@@ -33,4 +33,15 @@ Tiefe, flache Täler inmitten einer Gebirgslandschaft. Reich an Erz und mit gede
 <string name="milestone_sic_o_war_description">Töte 500 Angreifer.</string>
 
 
+<string name="scenario_flatlands_easy">Flachland Einfach</string>
+<string name="scenario_flatlands_easy_subtitle">Einfach</string>
+<string name="scenario_flatlands_easy_description">
+Finde einen schönen Platz, um zu siedeln.
+</string>
+<string name="scenario_flatlands_easy_context">
+Tiefe, flache Täler inmitten einer Gebirgslandschaft. Reich an Erz und mit gedeihender Flora and friedlicher Fauna. Keine Angriffe, kurze Winter</string>
+
+<string name="milestone_get_some_nuts">Eine harte Nuss!</string>
+<string name="milestone_get_some_nuts_description">Sammel 1000 Nüsse.</string>
+
 </strings>

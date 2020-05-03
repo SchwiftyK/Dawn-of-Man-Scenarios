@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string name="medium_everwinter">Everwinter</string>
+	<string name="everwinter_group">Everwinter</string>
+	<string name="scenario_medium_everwinter">Everwinter</string>
+	<string name="scenario_medium_everwinter_subtitle">Torment</string>
+	<string name="scenario_medium_everwinter_description">
+Survive the long and cold winters.
+	</string>
+	<string name="scenario_medium_everwinter_context">
+Winter is coming, every year. And this winter lasts half a year or even longer. Collect supplies to survive it.
+If you like it extra hard: choose Middle of nowhere as your starting point. The sticks are on the other side of the river and everything else is also far away. Try to relocate your camp. But do it quickly and efficiently, because without a place to stay, people will freeze to death in winter.
+Hint: Dogs count as animal population.
+</string>
+<string name="scenario_everwinter_flatlands">Everwinter Flatlands</string>
+<string name="scenario_everwinter_flatlands_subtitle">Torment</string>
+<string name="scenario_everwinter_flatlands_description">
+Survive the long and cold winters.
+</string>
+<string name="scenario_everwinter_flatlands_context">
+A toast wanted the Flatlands as a hardcore version. Here you go. If it crashes or gives funny errors please let me know, but don't blame me. :D
+Winter is coming, every year. And this winter lasts half a year or even longer. Collect supplies to survive it.
+If you like it extra hard: Try to relocate your camp. But do it quickly and efficiently, because without a place to stay, people will freeze to death in winter.
+Hint: Dogs count as animal population.
+</string>
+	<string name="medium_everwinter_welcome_title">Do you like seeing people suffer?</string>
+	<string name="medium_everwinter_welcome_description">Welcome to the fun Everwinter challenge.
+The landscape is great, but the weather is not so nice. The winter lasts very long, sometimes longer or it comes earlier.
+The bigger and more prosperous your settlement becomes, the more people will try to kill your people and destroy your village. Even in the early years, so make sure you have enough spears!
+If you like it, give it a thumbs up in the workshop and/or write a comment. Have fun!
+</string>
+
+	<string name="cold_flatlands_spawn">Cold Flatlands</string>
+	<string name="frozen_river_spawn">Frozen River</string>
+	<string name="frozen_lakes_spawn">Frozen Lakes</string>
+	<string name="ore_lake_spawn">Iron Lake</string>
+	<string name="middle_spawn">Middle of nowhere</string>
+
+	<string name="milestone_mile_everw_village">Small Village</string>
+	<string name="milestone_mile_everw_village_description">Build: 10x Tent, 3x Storage Tent, 5x Skins Dryer and reach a Population of 25.</string>
+
+	<string name="milestone_mile_everw_survival5w">Five long winters</string>
+	<string name="milestone_mile_everw_survival5w_description">Survive for 5 long winters.</string>
+
+<string name="milestone_mile_everw_steadfast">Steadfast</string>
+<string name="milestone_mile_everw_steadfast_description">Build: 15x Hut, 5x Storage Hut and reach a Population of 50 people and 25 animals.</string>
+
+<string name="milestone_mile_everw_sacrificial_ceremonies">Sacrificial Ceremonie</string>
+<string name="milestone_mile_everw_sacrificial_ceremonies_description">Build: 25x Skull Pole, 5x Totem, 1x Menhir. Also reach an animal population of 50 animals and provide 50 copper knives.</string>
+
+<string name="milestone_mile_everw_pray">Time to pray!</string>
+<string name="milestone_mile_everw_pray_description">Build: 50x Skull Pole, 3x Dolmen and 1x Stone Circle.</string>
+
+<string name="milestone_mile_everw_mammoth_hunter">Big game hunting.</string>
+<string name="milestone_mile_everw_mammoth_hunter_description">Hunt 75 Mammoths.</string>
+
+<string name="milestone_mile_everw_bronze">Bronze is fun!</string>
+<string name="milestone_mile_everw_bronze_description">Own 50 of each bronze tool. (Axe, Knife, Pick, Sickle, Spear, Sword)</string>
+
+<string name="milestone_mile_everw_steel">Steel is more fun!</string>
+<string name="milestone_mile_everw_steel_description">Own 75 of each steel tool. (Axe, Knife, Pick, Sickle, Spear, Sword)</string>
+
+<string name="milestone_mile_everw_town">Beautiful town!</string>
+<string name="milestone_mile_everw_town_description">Build: 40x Roundhouse, 10x Warehouse, 5x Blacksmith, 10x Statue, 1 Cairn and reach a Population of 200 people and 100 animals.</string>
+
+<string name="milestone_mile_everw_oktoberfest">Party time!</string>
+<string name="milestone_mile_everw_oktoberfest_description">With such long winters one should celebrate Oktoberfest. Have 100 units of beer ready in your lager.</string>
+
+<string name="medium_everwinter_raiders20_title">Unpleasant company.</string>
+<string name="medium_everwinter_raiders20_description">There's some weird guys on their way to your settlement. They don't look very friendly.
+But they have tools with them.</string>
+
+<string name="medium_everwinter_raiders35_title">People live in the mountains!</string>
+<string name="medium_everwinter_raiders35_description">You don't see them. But I have seen them! With my wolf's eye I saw them. Drink this, maybe you will see them.
+- Quote from your village shaman</string>
+
+<string name="medium_everwinter_raiders47_title">Nightmare.</string>
+<string name="medium_everwinter_raiders47_description">Your village elder slept terribly. He had a bad dream. The people from the mountains are coming back.</string>
+
+<string name="medium_everwinter_raiders60_title">Children in the forest.</string>
+<string name="medium_everwinter_raiders60_description">Kharkal tells you, that the kids in your village don't like to go looking for sticks in the woods anymore.
+They are afraid of the strangers who live there. Only childish horror stories or do you also see the danger lurking in the forest?</string>
+
+<string name="medium_everwinter_raiders77_title">Screams in the wind.</string>
+<string name="medium_everwinter_raiders77_description">The old man who lives on the edge of your village tells he heard something strange when he was getting wood.
+The wind sounded as if it was carrying the sounds of a battle. He firmly claims that he heard what he heard.</string>
+
+<string name="medium_everwinter_raiders90_title">Bad stench.</string>
+<string name="medium_everwinter_raiders90_description">Some of your people asserting that it smells like a settlement and its inhabitants are on fire. Protect your people from this fate.</string>
+
+<string name="medium_everwinter_raiders101_title">We've been spotted!</string>
+<string name="medium_everwinter_raiders101_description">There's a group of angry people marching towards your settlement! Tarzor saw them. Prepare everything and sound the alarm in time!</string>
+
+<string name="medium_everwinter_raiders120_title">Hey, good for you.</string>
+<string name="medium_everwinter_raiders120_description">You're still playing? Haven't you already had enough suffering and misery? Oh, you like to see that? Oh well, we already had that topic.
+Have you already given a good rating in the Steam Workshop? No? Do that as soon as possible! XD</string>
+
+<string name="medium_everwinter_raiders140_title">Enemies sighted!</string>
+<string name="medium_everwinter_raiders140_description">Trok thinks the last trader noticed you only gave him worthless trinkets. All of a sudden so many people are coming towards the village.
+You can see them from the high mountain. The attackers in the red skirts are on their way. This time we discovered them early, maybe next time we won't have so much luck.</string>
+
+<string name="medium_everwinter_romans_title">The Romans have been spotted.</string>
+<string name="medium_everwinter_romans_description">The last newcomers in your settlement tell you that Roman Empire forces are on their way in the area.
+You'd better take out this squad on sight before they reveal your position to their superiors.</string>
+
+<string name="medium_everwinter_romansII_title">The (Roman) Empire strikes back!</string>
+<string name="medium_everwinter_romansII_description">Looks like there's more of them than last time.</string>
+
+<string name="medium_everwinter_romansIII_title">More roman soldiers sighted!</string>
+<string name="medium_everwinter_romansIII_description">Roman Empire forces are on their way to your settlement. Get ready for a big battle! Break them or get ready to learn Latin!</string>
+
+<string name="medium_everwinter_longwinter_title">Just another nightmare.</string>
+<string name="medium_everwinter_longwinter_description">Your village elder slept terribly. He had a very bad dream.
+He dreamed that this winter would last forever and devour many people and animals.</string>
+
+<string name="medium_everwinter_longwinter2_title">Are the gods angry?</string>
+<string name="medium_everwinter_longwinter2_description">Many of your people believe that too little spirituality and the worship of false gods are to blame for the long winter.
+Especially the younger ones believe that more totems will make the nature mild.</string>
+
+<string name="medium_everwinter_longwinter3_title">The gods must be angry!</string>
+<string name="medium_everwinter_longwinter3_description">Many of your villagers are sitting in their accommodations arguing whether the village needs more totems or not.
+Others just repeat: This weather is cursed. Nobody has experienced that before. The gods must be angry!</string>
+
+<string name="medium_everwinter_totemspring_title">Thank the gods!</string>
+<string name="medium_everwinter_totemspring_description">The gods have sent spring. Your people have survived a long winter. But next winter is coming.</string>
+
+<string name="medium_everwinter_straw_earlywinter_title">That doesn't feel good!</string>
+<string name="medium_everwinter_straw_earlywinter_description">While one of your people is cutting straw, a fast drop in temperature is noticeable. Winter will come earlier this year.
+Hardly any time to bring in the harvest.</string>
+
+<string name="medium_everwinter_grain_earlywinter_title">That doesn't feel good!</string>
+<string name="medium_everwinter_grain_earlywinter_description">While your people harvesting grain, a massive drop in temperature is noticeable. Winter will come early this year.</string>
+
+<string name="medium_everwinter_berries_earlywinter_title">Temperature drop during Summer!</string>
+<string name="medium_everwinter_berries_earlywinter_description">While one of your people is picking a ripe berry, it suddenly gets unusually cold. Winter is coming!</string>
+
+<string name="medium_everwinter_fruit_earlywinter_title">Was that the forbidden fruit?</string>
+<string name="medium_everwinter_fruit_earlywinter_description">Just as one of your people is picking a ripe fruit from a tree, it suddenly gets colder and colder. Unusual for this season. An early winter is imminent.</string>
+
+<string name="medium_everwinter_pulses_earlywinter_title">The last pulses of the year.</string>
+<string name="medium_everwinter_pulses_earlywinter_description">Oh, no! During the pulse harvest it becomes suddenly very cold. Better dress your people warm! Winter is coming.</string>
+
+<string name="medium_everwinter_nuts_earlywinter_title">Are we nuts?</string>
+<string name="medium_everwinter_nuts_earlywinter_description">While your people collcting nuts, a massive drop in temperature is noticeable. Winter will come early this year.</string>
+
+<string name="medium_everwinter_linen_earlywinter_title">That doesn't feel good!</string>
+<string name="medium_everwinter_linen_earlywinter_description">During the flax harvest, the temperature drops rapidly. What the hell are we growing this stuff for?
+Clothing? The summer is so short that we can all walk through the fields naked and in a good mood.</string>
+
+</strings>

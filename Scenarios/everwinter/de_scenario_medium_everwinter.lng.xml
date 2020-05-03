@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string name="medium_everwinter">Everwinter</string>
+	<string name="everwinter_group">Everwinter</string>
+	<string name="scenario_medium_everwinter">Everwinter</string>
+	<string name="scenario_medium_everwinter_subtitle">Tut echt weh.</string>
+	<string name="scenario_medium_everwinter_description">
+Überlebe die langen, kalten Winter.
+	</string>
+	<string name="scenario_medium_everwinter_context">
+Der Winter kommt, jedes Jahr. Und dieser Winter dauert so lange, wie alle anderen Jahreszeiten zusammen oder länger. Sammel Vorräte, um zu überleben.
+Wenn du es extra schwer magst: Nimm Mitten im Nirgendwo als Startpunkt. Die Stöcke sind dann auf der anderen Seite des Flusses und alles andere ist auch sehr weit weg.
+Hinweis: Hunde zählen zur Tierpopulation.
+</string>
+	<string name="medium_everwinter_welcome_title">Siehst du gerne Leute leiden?</string>
+	<string name="medium_everwinter_welcome_description">Herzlich Willkommen zu dieser spaßigen Herausforderung.
+Die Landschaft ist herrlich, aber das Wetter ist nicht so schön. Die Winter dauern lang, manchmal länger oder er kommt früher.
+Je größer deine Siedlung wird, desto mehr Fremde werden versuchen deine Leute zu töten und deine Siedlung zu zerstören. Auch schon in den frühen Jahren, also kümmer dich um genug Speere!
+Wenn du das Szenario magst, gib deinen erhobenen Daumen im Steam Workshop ab, ich mach mir eine Kette daraus. Viel Spaß!
+</string>
+
+	<string name="cold_flatlands_spawn">Kaltes Flachland</string>
+	<string name="frozen_river_spawn">Gefrohrener Fluss</string>
+	<string name="frozen_lakes_spawn">Gefrohrener See</string>
+	<string name="ore_lake_spawn">Eisen See/string></string>
+	<string name="middle_spawn">Mitten im Nirgendwo</string>
+
+	<string name="milestone_mile_everw_village">Kleines Dorf</string>
+	<string name="milestone_mile_everw_village_description">Baue: 10x Zelt, 3x Lagerzelt, 5x Häutetrockner und erreiche eine Population von 25.</string>
+
+	<string name="milestone_mile_everw_survival5w">Fünf lange Winter</string>
+	<string name="milestone_mile_everw_survival5w_description">Überlebe 5 lange Winter.</string>
+
+<string name="milestone_mile_everw_steadfast">Standfest</string>
+<string name="milestone_mile_everw_steadfast_description">Baue: 15x Strohhütte, 5x Lager Hütte und erreiche eine Population von 50 Menschen und 25 Tieren.</string>
+
+<string name="milestone_mile_everw_sacrificial_ceremonies">Opferzeremonie</string>
+<string name="milestone_mile_everw_sacrificial_ceremonies_description">Baue: 25x Schädelpfahl, 5x Totem, 1x Menhir. Besitze 50 Tiere und stelle 50 Kupfermesser bereit.</string>
+
+<string name="milestone_mile_everw_pray">Zeit für Gebete!</string>
+<string name="milestone_mile_everw_pray_description">Baue: 50x Schädelpfahl, 3x Dolmen und 1x Steinkreis.</string>
+
+<string name="milestone_mile_everw_mammoth_hunter">Großwildjagd</string>
+<string name="milestone_mile_everw_mammoth_hunter_description">Jage 75 Mammute.</string>
+
+<string name="milestone_mile_everw_bronze">Bronze macht Spaß!</string>
+<string name="milestone_mile_everw_bronze_description">Besitze 50 von jedem Bronzewerkzeug. (Axt, Messer, Hacke, Sichel, Speer, Schwert)</string>
+
+<string name="milestone_mile_everw_steel">Stahl macht mehr Spaß!</string>
+<string name="milestone_mile_everw_steel_description">Besitze 75 von jedem Stahlwerkzeug. (Axt, Messer, Hacke, Sichel, Speer, Schwert)</string>
+
+<string name="milestone_mile_everw_town">Schöne Stadt!</string>
+<string name="milestone_mile_everw_town_description">Baue: 40x Rundhaus, 10x Warenhaus, 5x Schmiede, 10x Statue, 1 Cairn und erreiche eine Population von 200 Menschen und 100 Tieren.</string>
+
+<string name="milestone_mile_everw_oktoberfest">Saufen!!!</string>
+<string name="milestone_mile_everw_oktoberfest_description">Mit so langen Wintern sollte man Oktoberfest feiern. Stelle 100 Einheiten Bier in deinem Lager Bereit.</string>
+
+<string name="medium_everwinter_raiders20_title">Ungebetene Gesellschaft.</string>
+<string name="medium_everwinter_raiders20_description">Da sind ein paar komische Gestalten unterwegs in deine Stadt. Sie sehen nicht sehr freundlich aus.
+Aber sie bringen Werkzeuge mit.</string>
+
+<string name="medium_everwinter_raiders35_title">Leute leben in den Bergen!</string>
+<string name="medium_everwinter_raiders35_description">Du siehst sie nicht. Aber ich sehe sie! Ich sah sieh durch die Augen des Wolfs. Trink das, vielleicht siehst du sie dann auch.
+- Zitat deines Dorfschamanen</string>
+
+<string name="medium_everwinter_raiders47_title">Albtraum.</string>
+<string name="medium_everwinter_raiders47_description">Dein Dorfältester hat schrecklich geschlafen. Er hatte einen schlechten Traum. Die Leute aus den Bergen werden wiederkommen!</string>
+
+<string name="medium_everwinter_raiders60_title">Kinder im Wald.</string>
+<string name="medium_everwinter_raiders60_description">Kharkal erzählt dir, dass die Kinder deines Dorfes nicht mehr in den Wald gehen wollen, um nach Stöcken zu suchen.
+Sie haben Angst vor den Fremden, die im Wald wohnen sollen. Nur Kindermärchen oder siehst du die Gefahr im Wald auch?</string>
+
+<string name="medium_everwinter_raiders77_title">Schreie im Wind.</string>
+<string name="medium_everwinter_raiders77_description">Der alte Mann, der am Rand deines Dorfes wohnt erzählt, der Wind klingt komisch.
+Es hört sich an, als würde er die Schreie eines Kampfes mit sich tragen. Er besteht darauf, dass er gehört hat, was er gehört hat.</string>
+
+<string name="medium_everwinter_raiders90_title">Übler Geruch.</string>
+<string name="medium_everwinter_raiders90_description">Ein paar deiner Leute finden, es riecht nach verbranntem Dorf. Erspare deinen Leuten dieses Schicksal.</string>
+
+<string name="medium_everwinter_raiders101_title">Wir wurden entdeckt!</string>
+<string name="medium_everwinter_raiders101_description">Da marschiert eine Gruppe wütend aussehender Leute auf dich zu! Tarzor hat sie gesehen. Bereite alles vor und vergiss den Alarm nicht!</string>
+
+<string name="medium_everwinter_raiders120_title">Hey, schön für dich!</string>
+<string name="medium_everwinter_raiders120_description">Du lebst und spielst noch? Hattest du noch nicht genug Leid und Elend? Ach, du siehst das gerne? Achja, das Thema hatten wir ja schon.
+Hast du wenigstens deinen erhobenen Daumen im Steam Workshop abgegeben? Nein? Dann wirds aber Zeit! XD</string>
+
+<string name="medium_everwinter_raiders140_title">Feinde gesichtet!</string>
+<string name="medium_everwinter_raiders140_description">Trok denkt, der letzte Händler hat mitgekriegt, dass du ihm nur wertlosen Schrott angedreht hast. Plötzlich marschieren ein paar wütende Leute auf dein Dorf zu.
+Du kannst sie vopm hohen Berg aus sehen. Die Angreifer in ihren roten Röckchen sind auf dem Weg. Diesmal haben wir sie frühzeitig entdeckt, vielleicht haben wir nächstes mal nicht so viel Glück.</string>
+
+<string name="medium_everwinter_romans_title">Römer im Anmarsch!</string>
+<string name="medium_everwinter_romans_description">Die letzten Neuankömmlinge in deiner Siedlung erzählen, dass die Truppen des Römischen Reiches in der Gegend sind.
+Du solltest diese Truppe sofort ausschalten, bevor sie ihre Vorgesetzten über deine Position informiert.</string>
+
+<string name="medium_everwinter_romansII_title">Das (Römische) Reich schlägt zurück!</string>
+<string name="medium_everwinter_romansII_description">Sieht aus, als wären es mehr als beim letzten Mal.</string>
+
+<string name="medium_everwinter_romansIII_title">Mehr römische Soldaten gesichtet!</string>
+<string name="medium_everwinter_romansIII_description">Die Truppen des Römischen Reiches sind auf dem Weg in deine Siedlung. Mach dich bereit für eine große Schlacht!
+Gewinne sie oder bereite dich schonmal darauf vor Latein zu lernen!</string>
+
+<string name="medium_everwinter_longwinter_title">Nur ein weiterer Albtraum.</string>
+<string name="medium_everwinter_longwinter_description">Dein Dorfältester hat schrecklich geschlafen. Er hatte einen sehr schlechten Traum.
+Er träumte, dass dieser Winter ewig dauern und viele Menschen und Tiere verschlingen würde.</string>
+
+<string name="medium_everwinter_longwinter2_title">Sind die Götter zornig?</string>
+<string name="medium_everwinter_longwinter2_description">Viele deiner Leute glauben, dass zu wenig Spiritualität und die Anbetung falscher Götter für den langen Winter verantwortlich sind.
+Vor allem die Jüngeren glauben, dass mehr Totems die Götter und die Natur wieder mild stimmen werden.</string>
+
+<string name="medium_everwinter_longwinter3_title">Die Götter müssen zornig sein!</string>
+<string name="medium_everwinter_longwinter3_description">Viele deiner Dorfbewohner sitzen in ihrer Unterkunft und streiten sich, ob das Dorf mehr Totems braucht oder nicht.
+Andere wiederholen nur: Dieses Wetter ist verflucht. Niemand hat sowas schon einmal erlebt. Die Götter müssen zornig sein!</string>
+
+<string name="medium_everwinter_totemspring_title">Den Göttern sei Dank!</string>
+<string name="medium_everwinter_totemspring_description">Die Götter haben den Frühling gesandt. Dein Volk hat einen langen Winter überlebt. Aber der nächste Winter kommt.</string>
+
+<string name="medium_everwinter_straw_earlywinter_title">Das fühlt sich nicht gut an!</string>
+<string name="medium_everwinter_straw_earlywinter_description">Während einer deiner Leute Stroh schneidet, ist ein schneller Temperaturabfall spürbar. Der Winter wird dieses Jahr früher kommen.
+Kaum Zeit, um die Ernte einzubringen.</string>
+
+<string name="medium_everwinter_grain_earlywinter_title">Das fühlt sich nicht gut an!</string>
+<string name="medium_everwinter_grain_earlywinter_description">Während deine Leute Getreide ernten, ist ein massiver Temperaturabfall spürbar. Der Winter wird dieses Jahr früher kommen.</string>
+
+<string name="medium_everwinter_berries_earlywinter_title">Temperaturabfall im Sommer!</string>
+<string name="medium_everwinter_berries_earlywinter_description">Während einer deiner Leute eine reife Beere pflückt, wird es plötzlich ungewöhnlich kalt. Der Winter naht!</string>
+
+<string name="medium_everwinter_fruit_earlywinter_title">War das die verbotene Frucht?</string>
+<string name="medium_everwinter_fruit_earlywinter_description">Gerade als einer deiner Leute eine reife Frucht von einem Baum pflückt, wird es plötzlich immer kälter. Ungewöhnlich für diese Jahreszeit. Ein früher Winter steht bevor.</string>
+
+<string name="medium_everwinter_pulses_earlywinter_title">Die letzten Hülsenfrüchte des Jahres.</string>
+<string name="medium_everwinter_pulses_earlywinter_description">Oh, nein! Während der Hülsenfruchternte wird es plötzlich sehr kalt. Zieh deine Leute besser warm an! Der Winter kommt.</string>
+
+<string name="medium_everwinter_nuts_earlywinter_title">Sind wir verrückt?</string>
+<string name="medium_everwinter_nuts_earlywinter_description">Während deine Leute Nüsse sammeln, ist ein starker Temperaturabfall spürbar. Der Winter kommt.</string>
+
+<string name="medium_everwinter_linen_earlywinter_title">Das fühlt sich nicht gut an!</string>
+<string name="medium_everwinter_linen_earlywinter_description">Während der Flachsernte sinkt die Temperatur schnell. Wofür zum Teufel bauen wir das Zeug überhaupt an?
+Kleidung? Der Sommer ist so kurz, dass wir alle gut gelaunt und nackt durch die Felder laufen können.</string>
+
+
+</strings>

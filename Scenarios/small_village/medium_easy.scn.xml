@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <scenario>
-	<hardcore_mode_allowed value="true"/>
+	<hardcore_mode_allowed value="false"/>
 	<category value="Freeplay"/>
-	<group_id value="smallvillage_group"/>
+	<group_id value="easyvillage_group"/>
 	<size value="3"/>
+
+	<!-- OLD SCENARIO -->
+	<visible value="false"/>
 
 	<locations>
 		<location id="medium_flatlands_spawn" seed="3" environment="medium_land" map_location="0.5,0.2" river="true" lakes="2"/>
 		<location id="very_twisted_rivers_spawn" seed="2" environment="medium_land" map_location="0.35,0.3" river="true" lakes="1"/>
 		<location id="copper_lakes_spawn" seed="1" environment="medium_land" map_location="0.6,0.4" river="true" lakes="8"/>
-		<location id="so_far_stach_spawn" seed="0" environment="medium_land" map_location="0.3,0.5" river="true" lakes="5"/>
-
-		<location id="v2_medium_flatlands_spawn" seed="3" environment="medium_land_ii" map_location="0.4,0.6" river="true" lakes="2" position="800,750"/>
-		<location id="v2_very_twisted_rivers_spawn" seed="2" environment="medium_land_ii" map_location="0.5,0.6" river="true" lakes="1" position="850,700"/>
-		<location id="v2_copper_lakes_spawn" seed="1" environment="medium_land_ii" map_location="0.6,0.6" river="true" lakes="8" position="800,750"/>
-		<location id="v2_so_far_stach_spawn" seed="0" environment="medium_land_ii" map_location="0.7,0.6" river="true" lakes="5" position="800,750"/>
+		<location id="so_far_stach_spawn" seed="0" environment="medium_land" map_location="0.2,0.5" river="true" lakes="5"/>
 	</locations>
 
 	<disasters>
@@ -102,39 +100,36 @@
 				<!-- Set animal populations, these will get spawned automatically -->
 				<action type="SetAnimalPopulation" animal_types="vulture dove eagle" min="0" max="0"/>
 
-				<action type="SetAnimalPopulation" animal_types="wolf" min="15" max="25"  era_factors ="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="wolf" min="15" max="20"  era_factors ="1 1 1 1 1 1"/>
 				<action type="SetAnimalPopulation" animal_types="cave_lion" min="10" max="12"  era_factors ="1 1 1 1 1 1"/>
-				<action type="SetAnimalPopulation" animal_types="cave_hyena" min="10" max="12"  era_factors ="1 0.75 0.75 0.5 0.25 0.25"/>
 
 				<action type="SetAnimalPopulation" animal_types="bear" min="13" max="15" era_factors ="0.25 0.25 0.25 0.5 0.5 0.75"/>
-				<action type="SetAnimalPopulation" animal_types="cave_bear" min="13" max="15"  era_factors ="0.75 0.75 0.75 0.5 0.5 0"/>
+				<action type="SetAnimalPopulation" animal_types="cave_bear" min="13" max="15"  era_factors ="0.75 0.75 0.75 0.5 0.5 0.25"/>
 
 				<action type="SetAnimalPopulation" animal_types="ibex" min="15" max="25" era_factors ="1 1 1 1 1 1"/>
-				<action type="SetAnimalPopulation" animal_types="mouflon" min="15" max="25" era_factors ="0.25 0.75 1 1 1 1"/>
-				<action type="SetAnimalPopulation" animal_types="boar" min="15" max="25" era_factors ="0.25 0.75 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="mouflon" min="15" max="25" era_factors ="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="boar" min="15" max="25" era_factors ="1 1 1 1 1 1"/>
 
-				<action type="SetAnimalPopulation" animal_types="feral_horse wild_horse wild_donkey" min="13" max="18"/>
+				<action type="SetAnimalPopulation" animal_types="wild_horse wild_donkey" min="13" max="18"/>
 
-				<action type="SetAnimalPopulation" animal_type="deer" min="20" max="35"  era_factors ="0 0.25 0.25 0.5 0.75 1"/>
-				<action type="SetAnimalPopulation" animal_type="reindeer" min="15" max="15"  era_factors ="0.25 0.5 1 1 1 1"/>
-				<action type="SetAnimalPopulation" animal_type="muskox" min="12" max="22" era_factors ="1 1 0.75 0.5 0.5 0.25"/>
-				<action type="SetAnimalPopulation" animal_type="elasmotherium" min="10" max="15"  era_factors ="1 1 0.75 0.5 0.25 0"/>
+				<action type="SetAnimalPopulation" animal_type="deer" min="20" max="35"  era_factors ="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="reindeer" min="15" max="15"  era_factors ="1 1 1 1 1 1"/>
 
 				<action type="SetAnimalPopulation" animal_type="ancient_bison" min="13" max="15"  era_factors ="0.75 0.75 0.75 0.5 0.5 0.25"/>
 				<action type="SetAnimalPopulation" animal_type="bison" min="10" max="18"  era_factors ="0.25 0.25 0.25 0.5 0.5 0.75"/>
 				<action type="SetAnimalPopulation" animal_type="aurochs" min="16" max="22" era_factors ="1 1 1 1 1 1"/>
 
-				<action type="SetAnimalPopulation" animal_type="megaloceros" min="10" max="20"  era_factors ="1 1 1 0.75 0.5 0"/>
-				<action type="SetAnimalPopulation" animal_type="mammoth" min="10" max="20"  era_factors ="1 1 1 0.75 0.5 0.1"/>
-				<action type="SetAnimalPopulation" animal_type="woolly_rhinoceros" min="10" max="20"  era_factors ="1 1 1 0.75 0.75 0.25"/>
+				<action type="SetAnimalPopulation" animal_type="megaloceros" min="10" max="20"  era_factors ="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="mammoth" min="10" max="20"  era_factors ="1 1 1 0.75 0.75 0.75"/>
+				<action type="SetAnimalPopulation" animal_type="woolly_rhinoceros" min="10" max="20"  era_factors ="1 1 1 0.75 0.75 0.75"/>
 
 				<!-- Set raider parameters -->
-				<action type="SetRaider" era="Paleolithic" entity_types="wolf" min="1" max="1" period="1.8y" variance="0.2y"/>
-				<action type="SetRaider" era="Mesolithic" hardcore_timer="5y" entity_types="woolly_rhinoceros" min="1" max="1" period="0.9y" variance="0.3y"/>
-				<action type="SetRaider" era="Neolithic" hardcore_timer="10y" entity_types="mammoth" min="1" max="1" period="0.9y" variance="0.3y" extra_raider_per_population="10"/>
-				<action type="SetRaider" era="CopperAge" hardcore_timer="15y" entity_types="primitive_human" min="1" max="3" period="3.5y" variance="0.8y" extra_raider_per_population="10"/>
-				<action type="SetRaider" era="BronzeAge" hardcore_timer="20y" entity_types="primitive_human" min="3" max="5" period="3.5y" variance="0.8y" extra_raider_per_population="8"/>
-				<action type="SetRaider" era="IronAge" hardcore_timer="25y" entity_types="primitive_human" min="5" max="7" period="3.5y" variance="0.8y" extra_raider_per_population="5"/>
+				<action type="SetRaider" era="Paleolithic" entity_types="wolf" min="1" max="1" period="3y" variance="0.2y"/>
+				<action type="SetRaider" era="Mesolithic" hardcore_timer="5y" entity_types="cave_lion" min="1" max="1" period="3y" variance="0.3y"/>
+				<action type="SetRaider" era="Neolithic" hardcore_timer="10y" entity_types="bear" min="1" max="1" period="3y" variance="0.3y" extra_raider_per_population="30"/>
+				<action type="SetRaider" era="CopperAge" hardcore_timer="15y" entity_types="cave_bear" min="1" max="1" period="3.5y" variance="0.8y" extra_raider_per_population="30"/>
+				<action type="SetRaider" era="BronzeAge" hardcore_timer="20y" entity_types="woolly_rhinoceros" min="1" max="1" period="4y" variance="0.8y" extra_raider_per_population="30"/>
+				<action type="SetRaider" era="IronAge" hardcore_timer="25y" entity_types="mammoth" min="1" max="1" period="5y" variance="0.8y" extra_raider_per_population="30"/>
 
 				<!-- Features -->
 				<action type="SetFeatureEnabled" feature="Hints" value="true"/>
@@ -156,7 +151,15 @@
 		<event>
 			<condition type="TimeElapsed" timer="RealTime" value="0"/>
 			<actions>
-				<action type="ShowMessage" title="medium_village_welcome_title" text="medium_village_welcome_description"/>
+				<action type="ShowMessage" title="medium_village_easy_welcome_title" text="medium_village_easy_welcome_description"/>
+			</actions>
+		</event>
+
+		<!-- Patch message -->
+		<event>
+			<condition type="TimeElapsed" timer="RealTime" value="0.1"/>
+			<actions>
+				<action type="ShowMessage" title="v2_update_notification_title" text="v2_update_notification_description"/>
 			</actions>
 		</event>
 

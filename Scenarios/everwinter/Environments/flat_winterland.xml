@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<environment>
+
+<noise_amplitudes values="0.5 0.0 0.0 0.05 0.075 0.0 0.0 0.04"/>
+
+<deposits values="Flint Tin Copper Iron"/>
+<resource_factor value="3"/>
+
+<seasons>
+	<season id="Spring" setup_id="Spring" duration="0.17" precipitation_chance="0.5" windy_chance="0.5" very_windy_chance="0.5" mud_boost="1">
+		<min_temperature value="-5"/>
+		<max_temperature value="15"/>
+	</season>
+
+	<season id="Summer" setup_id="Summer" duration="0.16" precipitation_chance="0.5" windy_chance="0.5">
+		<min_temperature value="15"/>
+		<max_temperature value="25"/>
+		<min_wind value="0"/>
+		<max_wind value="10"/>
+	</season>
+
+	<season id="Fall" setup_id="Fall" duration="0.17" precipitation_chance="0.3" windy_chance="0.5" very_windy_chance="0.8" fish_boost="1">
+		<min_temperature value="-5"/>
+		<max_temperature value="15"/>
+	</season>
+
+	<season id="Winter" setup_id="Winter" snow_setup_id="WinterSnow" duration="0.5" precipitation_chance="1" windy_chance="0.5" very_windy_chance="1" reduced_fauna="true" fish_boost="1">
+		<min_temperature value="-15"/>
+		<max_temperature value="-5"/>
+		<min_wind value="6"/>
+		<max_wind value="10"/>
+	</season>
+</seasons>
+
+</environment>

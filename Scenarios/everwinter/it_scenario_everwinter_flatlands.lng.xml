@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<strings>
+	<string name="medium_everwinter">Inverno perenne</string>
+	<string name="everwinter_group">Inverno perenne</string>
+	<string name="scenario_medium_everwinter">Inverno perenne</string>
+	<string name="scenario_medium_everwinter_subtitle">Tormenta</string>
+	<string name="scenario_medium_everwinter_description">
+Sopravvivi al lungo e freddo inverno.
+	</string>
+	<string name="scenario_medium_everwinter_context">
+L'inverno sta arrivando come ogni anno. E'questo sarò un lungo inverno, durerà mezzo anno o anche più. Raccogli rifornimenti per sopravvivere.
+Se ti piace molto difficile: scegli In mezzo al nulla come punto di partenza. Il legname è dall'altra parte del fiume e tutto il resto è molto lontano. Prova a trasferire il tuo campo. Ma fallo in fretta ed in modo efficiènte, perchè senza un posto in cui stare, la gente morirà congelata in inverno.
+Indizio: i cani contano come popolazione animale.
+</string>
+	<string name="medium_everwinter_welcome_title">Ti piace vedere le persone soffrire?</string>
+	<string name="medium_everwinter_welcome_description">Benvenuto nella divertenete sfida del lungo inverno.
+Il paesaggio è grandioso, ma il tempo non è cosi amichevole. L'inverno dura molto a lungo, a volte più a lungo a volte arriva prima.
+Più il tuo insediamento diventa grande e prosperoso, più gente proverà a distruggerlo ed uccidere i suoi abitanti. Anche nei primi anni, quindi assicurati di avere abbastanza lance!
+Se ti piace, metti pollice in su nello workshop e/o scrivi un commento. Buon divertimento!
+</string>
+
+	<string name="cold_flatlands_spawn">Fredda Pianura</string>
+	<string name="frozen_river_spawn">Fiume Ghiacciato</string>
+	<string name="frozen_lakes_spawn">Lago Ghiacciato</string>
+	<string name="ore_lake_spawn">Lago di Ferro</string>
+	<string name="middle_spawn">In mezzo al nulla</string>
+
+	<string name="milestone_mile_everw_village">Piccolo Villaggio</string>
+	<string name="milestone_mile_everw_village_description">Costruisci: 10x Tenda, 3x Tenda di stoccaggio, 5x Essiccatore di pelli e raggiungi una popolazione di 25.</string>
+
+	<string name="milestone_mile_everw_survival5w">Cinque lunghi inverni</string>
+	<string name="milestone_mile_everw_survival5w_description">Sopravvivi per cinque lunghi inverni.</string>
+
+<string name="milestone_mile_everw_steadfast">Fermamente</string>
+<string name="milestone_mile_everw_steadfast_description">Costruisci: 15x Capanna, 5x Capanno di stoccaggio e raggiungi una popolazione di 50 persone e 25 animali.</string>
+
+<string name="milestone_mile_everw_sacrificial_ceremonies">Cerimonia Sacrificale</string>
+<string name="milestone_mile_everw_sacrificial_ceremonies_description">Costruisci: 25x Palo con teschio, 5x Totem, 1x Menhir. Raggiungi anche una popolazione minima di 50 animali e fornisci 50 coltelli di rame.</string>
+
+<string name="milestone_mile_everw_pray">Ora di pregare!</string>
+<string name="milestone_mile_everw_pray_description">Costruisci: 50x Palo con teschio, 3x Dolmen e 1x Cerchio di Pietre.</string>
+
+<string name="milestone_mile_everw_mammoth_hunter">Caccia Grossa.</string>
+<string name="milestone_mile_everw_mammoth_hunter_description">Caccia 75 Mammoths.</string>
+
+<string name="milestone_mile_everw_bronze">Il Bronzo è divertente!</string>
+<string name="milestone_mile_everw_bronze_description">Possiedi 50 strumenti in Bronzo di ogni tipo. (Ascia, Coltello, Piccone, Falce, Lancia, Spada)</string>
+
+<string name="milestone_mile_everw_steel">L'acciaio è più divertente!</string>
+<string name="milestone_mile_everw_steel_description">Possiedi 75 strumenti in Ferro di ogni tipo. (Ascia, Coltello, Piccone, Falce, Lancia, Spada)</string>
+
+<string name="milestone_mile_everw_town">Bella Città!</string>
+<string name="milestone_mile_everw_town_description">Costruisci: 40x Capanna in Pietra, 10x Magazzino, 5x Fabbro, 10x Statue, 1 Cairn e raggiungi una popolazione di 200 persone e 100 animali.</string>
+
+<string name="milestone_mile_everw_oktoberfest">Tempo di festa!</string>
+<string name="milestone_mile_everw_oktoberfest_description">Con inverni così lunghi si dovrebbe festeggiare l'Oktoberfest. Produci e conserva 100 unità di birra.</string>
+
+<string name="medium_everwinter_raiders20_title">Spiacevole compagnia.</string>
+<string name="medium_everwinter_raiders20_description">Ci sono alcuni tipi strani che stanno arrivando al tuo insediamento. Non sembrano molto amichevoli.
+Ma hanno degli strumenti con loro.</string>
+
+<string name="medium_everwinter_raiders35_title">La gente vive in montagna!</string>
+<string name="medium_everwinter_raiders35_description">Non li vedi. Ma io li vedo! Con i miei occhi di lupo li vedo. Bevi questo, forse li vedrai.
+- Citazione dal tuo sciamano del villaggio</string>
+
+<string name="medium_everwinter_raiders47_title">Incubo.</string>
+<string name="medium_everwinter_raiders47_description">L'anziano del villaggio ha dormito terribilmente. Ha avuto un brutto sogno. La gente delle montagne sta tornando.</string>
+
+<string name="medium_everwinter_raiders60_title">Bambini nella foresta.</string>
+<string name="medium_everwinter_raiders60_description">Kharkal ti dice che i bambini del tuo villaggio non amano più andare a cercare legna nei boschi.
+Hanno paura degli stranieri che vivono lì. Solo storie di orrore infantili o vedi anche il pericolo che si nasconde nella foresta?</string>
+
+<string name="medium_everwinter_raiders77_title">Urla nel vento.</string>
+<string name="medium_everwinter_raiders77_description">Il vecchio che vive ai margini del tuo villaggio dice di aver sentito qualcosa di strano quando stava raccogliendo legna.
+Sembrava come se il vento stesse trasportando i suoni di una battaglia. Afferma fermamente di aver sentito ciò che ha sentito.</string>
+
+<string name="medium_everwinter_raiders90_title">Cattivo odore.</string>
+<string name="medium_everwinter_raiders90_description">Alcuni dei tuoi affermano che odora di insediamento e che i suoi abitanti sono in fiamme. Proteggi il tuo popolo da questo destino.</string>
+
+<string name="medium_everwinter_raiders101_title">Siamo stati individuati!</string>
+<string name="medium_everwinter_raiders101_description">C'è un gruppo di persone arrabbiate in marcia verso il tuo insediamento! Tarzor li ha visti. Prepara tutto e suonare l'allarme in tempo.</string>
+
+<string name="medium_everwinter_raiders120_title">Ehi, buono per te.</string>
+<string name="medium_everwinter_raiders120_description">Stai ancora giocando? Non ne hai già avuto abbastanza di sofferenza e miseria? Oh, ti piace vederlo? Oh bene, avevamo già quell'argomento.
+Hai già dato una buona valutazione nel Steam Workshop? No? Fallo il prima possibile! XD</string>
+
+<string name="medium_everwinter_raiders140_title">Nemici avvistati!</string>
+<string name="medium_everwinter_raiders140_description">Trok pensa che l'ultimo mercante abbia notato che gli hai dato solo ciondoli senza valore. Tutto ad un tratto così tante persone stanno venendo verso il villaggio.
+Li puoi vedere dall'alto della montagna. I nemici con le gonne rosse stanno arrivando. Questa volta li abbiamo scoperti presto, forse la prossima volta non avremo così tanta fortuna.</string>
+
+<string name="medium_everwinter_romans_title">I Romani sono stati avvistati.</string>
+<string name="medium_everwinter_romans_description">Gli ultimi arrivati ​​nel tuo insediamento ti dicono che le forze dell'Impero Romano stanno arrivando nella zona.
+Faresti meglio ad eliminare questa pattuglia prima che rivelino la tua posizione ai loro superiori.</string>
+
+<string name="medium_everwinter_romansII_title">I (Romani) L'Impero colpisce ancora!</string>
+<string name="medium_everwinter_romansII_description">Sembra che ce ne siano più dell'ultima volta.</string>
+
+<string name="medium_everwinter_romansIII_title">Altri soldati romani avvistati!</string>
+<string name="medium_everwinter_romansIII_description">Le forze dell'Impero Romano si stanno dirigendo al tuo insediamento. Preparati per una grande battaglia! Annientali o preparati ad imparare il Latino!</string>
+
+<string name="medium_everwinter_longwinter_title">Un altro incubo.</string>
+<string name="medium_everwinter_longwinter_description">L'anziano del villaggio ha dormito terribilmente. Ha fatto un sogno terribile.
+Ha sognato che questo inverno sarebbe durato per sempre e avrebbe divorato molte persone e animali.</string>
+
+<string name="medium_everwinter_longwinter2_title">Gli Dei sono arrabbiati?</string>
+<string name="medium_everwinter_longwinter2_description">Molta della tua gente crede che la scarsa spiritualità e il culto dei falsi dei siano la causa del lungo inverno.
+Soprattutto i più giovani credono che più totem renderanno la natura mite.</string>
+
+<string name="medium_everwinter_longwinter3_title">Gli dei sono arrabbiati!</string>
+<string name="medium_everwinter_longwinter3_description">Molti dei tuoi abitanti del villaggio sono seduti nei loro alloggi a discutere se il villaggio ha bisogno di più totem o meno.Altri semplicemente ripetono: questo tempo è maledetto. Nessuno l'ha mai provato prima. Gli dei devono essere arrabbiati!</string>
+
+<string name="medium_everwinter_totemspring_title">Ringrazia gli Dei!</string>
+<string name="medium_everwinter_totemspring_description">Gli Dei hanno mandato la primavera. La tua gente è sopravvissuta ad un lungo inverno. Ma il prossimo inverno è in arrivo.</string>
+
+<string name="medium_everwinter_straw_earlywinter_title">Non va bene!</string>
+<string name="medium_everwinter_straw_earlywinter_description">Mentre uno dei vostri uomini taglia la paglia, si nota un rapido abbassamento della temperatura. L'inverno arriverà all'inizio di quest'anno.
+Non c'e' quasi mai il momento di portare il raccolto.</string>
+
+<string name="medium_everwinter_grain_earlywinter_title">Non va bene!</string>
+<string name="medium_everwinter_grain_earlywinter_description">Mentre la vostra gente sta raccogliendo il grano, si nota un massiccio abbassamento della temperatura. L'inverno arriverà all'inizio di quest'anno.</string>
+
+<string name="medium_everwinter_berries_earlywinter_title">Calo di temperatura durante l'estate!</string>
+<string name="medium_everwinter_berries_earlywinter_description">Mentre uno dei tuoi uomini sta raccogliendo una bacca matura, improvvisamente diventa insolitamente freddo. L'inverno sta arrivando!</string>
+
+<string name="medium_everwinter_fruit_earlywinter_title">Era il frutto proibito?</string>
+<string name="medium_everwinter_fruit_earlywinter_description">Proprio come uno dei tuoi uomini sta raccogliendo un frutto maturo da un albero, all'improvviso diventa sempre più freddo. Insolito per questa stagione. È imminente l'inizio dell'inverno.</string>
+
+<string name="medium_everwinter_pulses_earlywinter_title">Gli ultimi impulsi dell'anno.</string>
+<string name="medium_everwinter_pulses_earlywinter_description">Oh, no! Durante la raccolta dei legumi, improvvisamente fa molto freddo. Meglio vestire i vostri popoli caldo! L'inverno sta arrivando.</string>
+
+<string name="medium_everwinter_nuts_earlywinter_title">Siamo impazziti?</string>
+<string name="medium_everwinter_nuts_earlywinter_description">Mentre la vostra gente sta raccogliendo le noci, si nota un massiccio abbassamento della temperatura. L'inverno sta per cadere su di noi.</string>
+
+<string name="medium_everwinter_linen_earlywinter_title">Non va bene!</string>
+<string name="medium_everwinter_linen_earlywinter_description">Durante la raccolta del lino, la temperatura scende rapidamente. Per che diavolo stiamo coltivando questa roba?
+Abbigliamento? L'estate è così breve che tutti noi possiamo camminare nei campi nudi e di buon umore.</string>
+
+
+
+</strings>

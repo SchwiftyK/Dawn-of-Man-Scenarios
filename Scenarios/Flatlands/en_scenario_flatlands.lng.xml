@@ -33,4 +33,15 @@ Deep, flat valleys in the middle of a mountain landscape. Rich in ore with thriv
 <string name="milestone_sic_o_war_description">Kill 500 raiders.</string>
 
 
+<string name="scenario_flatlands_easy">Flatlands Easy</string>
+<string name="scenario_flatlands_easy_subtitle">Very Easy</string>
+<string name="scenario_flatlands_easy_description">
+Find a nice place to stay.
+</string>
+<string name="scenario_flatlands_easy_context">
+Deep, flat valleys in the middle of a mountain landscape. Rich in ore with thriving flora and harmless fauna. No Raiders. Less storms and blizzards. Longer Fall, shorter Winter.</string>
+
+<string name="milestone_get_some_nuts">Get some nuts!</string>
+<string name="milestone_get_some_nuts_description">Collect 1000 nuts.</string>
+
 </strings>

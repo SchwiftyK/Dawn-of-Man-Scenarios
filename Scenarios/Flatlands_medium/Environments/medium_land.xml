@@ -2,30 +2,12 @@
 <environment>
 	<noise_amplitudes values="0.003 0.2 0.01 0.05 0.075 0.01 0.0 0.04"/>
 
-	 <!--
-
-	 mediumlands "0.003 0.2 0.0 0.05 0.075 0.0 0.0 0.04"
-nice! 0.003 0.2 0.2 0.06 0.1 0.01 0.02 0.008
-	 ok 2r 0.003 0.2 0.2 0.06 0.1 0.01 0.02 0.008
-"0.003 0.2 0.2 0.06 0.06 0.01 0.02 0.008" better
-"0.003 0.0 0.2 0.06 0.06 0.01 0.02 0.004" my sticks
-
-meh 0.003 0.2 0.2 0.006 0.006 0.01 0.002 0.04
-
-II "0.003 0.2 0.2 0.06 0.06 0.01 0.02 0.04"
-
-	 "0.0 0.03 0.2 0.154 0.097 0.045 0.025 0.005" sticks
-0 0 0.2 0.154 0.097 0.045 0.025 0.005 0 0
-0.003 0.0 0.06 0.06 0.06 0.04 0.04 0.04
--->
 	<distance_height_offset value="0.25"/>
-	<ford_distance_factor value="0.002"/>
-<!--	<trees values="Oak"/> -->
+	<ford_distance_factor value="0.4"/>
+
 	<trees_everywhere value="false"/>
 
-<!--	<squash_factor value="100"/>
-<squash_offset value="25"/>
-<smooth value="True"/> -->
+
 
 <deposits values="Flint Tin Copper Iron"/>
 	<resource_factor value="1.8"/>

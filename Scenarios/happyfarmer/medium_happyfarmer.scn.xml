@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scenario>
+	<hardcore_mode_allowed value="true"/>
+	<category value="Freeplay"/>
+	<group_id value="happyfarmer_group"/>
+	<size value="3"/>
+	<starting_conditions season_id="Summer"/>
+
+	<locations>
+		<location id="nice_river_spawn_hf" seed="2857909" environment="medium_summerland" map_location="0.5,0.2" river="true" lakes="7"/>
+		<location id="ore_lake_spawn_hf" seed="2857999" environment="medium_summerland" map_location="0.2,0.5" river="true" lakes="3"/>
+		<location id="nice_flatlands_spawn_hf" seed="00088000" environment="medium_summerland" map_location="0.35,0.3" river="false" lakes="8"/>
+		<location id="nice_lakes_spawn_hf" seed="28579696" environment="medium_summerland" map_location="0.58,0.33" river="true" lakes="3"/>
+		<location id="middle_spawn_hf" seed="8186483" environment="medium_summerland" map_location="0.5,0.5" river="true" lakes="5"/>
+	</locations>
+
+	<disasters>
+		<disaster disaster_type="Storm" period="5y" variance="1y"/>
+		<disaster disaster_type="Blizzard" period="7y" variance="0.25y"/>
+	</disasters>
+
+	<milestones>
+
+		<milestone id="mile_happyfarmer_village">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="storage_tent" value="1"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="tent" value="10"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="skins_dryer" value="5"/>
+					<condition type="ValueReached" id="Population" value="25"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_happyfarmer_survival5w">
+			<condition type="TimeElapsed" timer="GameTime" value="4.65y"/>
+		</milestone>
+
+		<milestone id="mile_happyfarmer_steadfast">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="storage_hut" value="3"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="hut" value="15"/>
+					<condition type="ValueReached" id="DomesticAnimalCount" value="25"/>
+					<condition type="ValueReached" id="Population" value="50"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_happyfarmer_sacrificial_ceremonies">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="skull_pole" value="10"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="totem" value="5"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="menhir" value="1"/>
+					<condition type="ValueReached" id="DomesticAnimalCount" value="50"/>
+					<condition type="EntityCountReached" entity_type="copper_knife" value="25"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_happyfarmer_pray">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="skull_pole" value="25"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="dolmen" value="3"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="stone_circle" value="1"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_happyfarmer_mammoth_hunter">
+			<condition type="EntityCountReached" counter="HuntedAnimals" entity_type="mammoth" value="25"/>
+		</milestone>
+
+		<milestone id="mile_happyfarmer_bronze">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" entity_type="bronze_axe" value="25"/>
+					<condition type="EntityCountReached" entity_type="bronze_knife" value="25"/>
+					<condition type="EntityCountReached" entity_type="bronze_pick" value="25"/>
+					<condition type="EntityCountReached" entity_type="bronze_sickle" value="25"/>
+					<condition type="EntityCountReached" entity_type="bronze_spear" value="25"/>
+					<condition type="EntityCountReached" entity_type="bronze_sword" value="25"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_happyfarmer_steel">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" entity_type="steel_axe" value="50"/>
+					<condition type="EntityCountReached" entity_type="steel_knife" value="50"/>
+					<condition type="EntityCountReached" entity_type="steel_pick" value="50"/>
+					<condition type="EntityCountReached" entity_type="steel_sickle" value="50"/>
+					<condition type="EntityCountReached" entity_type="steel_spear" value="50"/>
+					<condition type="EntityCountReached" entity_type="steel_sword" value="50"/>
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_happyfarmer_town">
+			<condition type="And">
+				<sub_conditions>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="warehouse" value="10"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="roundhouse" value="40"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="blacksmith" value="1"/>
+					<condition type="ValueReached" id="DomesticAnimalCount" value="100"/>
+					<condition type="ValueReached" id="Population" value="150"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="statue" value="10"/>
+					<condition type="EntityCountReached" counter="BuiltStructures" entity_type="cairn" value="1"/>
+
+				</sub_conditions>
+			</condition>
+		</milestone>
+
+		<milestone id="mile_happyfarmer_oktoberfest">
+				<condition type="EntityCountReached" entity_type="beer" value="100"/>
+		</milestone>
+
+	</milestones>
+
+	<events>
+
+		<!-- This gets run once, when the game is first started -->
+		<event>
+			<condition type="NewGame"/>
+			<actions>
+				<!-- Clear trees around start location -->
+				<action type="ClearTrees" radius="20"/>
+
+				<!-- Spawn initial entities -->
+
+				<action type="Spawn" entity_type="tent" amount="1" placement="StartLocationCircular" radius="5"/>
+				<action type="Spawn" entity_type="hearth" amount="1" placement="StartLocationCircular" radius="0"/>
+
+				<action type="Spawn" entity_type="fruit" amount="3" placement="Storage"/>
+				<action type="Spawn" entity_type="raw_fish" amount="2" placement="Storage"/>
+				<action type="Spawn" entity_type="raw_meat" amount="2" placement="Storage"/>
+				<action type="Spawn" entity_type="raw_skin" amount="3" placement="Storage"/>
+
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="40" radius="3" years_old="16" gender="Female"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="40" radius="3" years_old="16" gender="Male"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="40" radius="3" age="Old" gender="Male" name="Elder"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="40" radius="3" years_old="10" gender="Male" name="Timmy"/>
+				<action type="Spawn" entity_type="primitive_human" amount="1" placement="StartLocationCircular" angle="40" radius="3" years_old="10" gender="Female"/>
+
+				<action type="Spawn" entity_type="dog" amount="1" placement="StartLocationCircular" angle="40" radius="2" gender="Male" age="Adult"/>
+				<action type="Spawn" entity_type="dog" amount="2" placement="StartLocationCircular" angle="40" radius="2" gender="Female" age="Adult"/>
+
+				<action type="Spawn" entity_type="goat" amount="1" placement="StartLocationCircular" angle="40" radius="2" gender="Female" age="Young"/>
+				<action type="Spawn" entity_type="goat" amount="1" placement="StartLocationCircular" angle="40" radius="2" gender="Male" age="Adult"/>
+				<action type="Spawn" entity_type="goat" amount="3" placement="StartLocationCircular" angle="40" radius="2" gender="Female" age="Adult"/>
+
+				<action type="Spawn" entity_type="skins_outfit" amount="5" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
+				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
+
+			</actions>
+		</event>
+
+		<!-- This gets run every time the game is started or loaded, to allow for easy iteration -->
+		<event flags="MultipleExecutions">
+			<condition type="InitGame"/>
+			<actions>
+				<!-- Set animal populations, these will get spawned automatically -->
+				<action type="SetAnimalPopulation" animal_types="vulture dove eagle" min="0" max="0"/>
+
+				<action type="SetAnimalPopulation" animal_types="wolf" min="15" max="35" era_factors="0.25 0.5 0.75 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="cave_lion" min="15" max="25" era_factors="1 0.75 0.5 0.25 0 0"/>
+
+				<action type="SetAnimalPopulation" animal_types="bear" min="10" max="20" era_factors="0.0 0.25 0.5 0.75 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="cave_bear" min="10" max="20" era_factors="1 0.75 0.5 0.25 0 0"/>
+
+				<action type="SetAnimalPopulation" animal_types="ibex" min="20" max="45" era_factors="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="mouflon" min="20" max="45" era_factors="1 1 1 1 1 1"/>
+				<action type="SetAnimalPopulation" animal_types="boar" min="20" max="45" era_factors="1 1 1 1 1 1"/>
+
+				<action type="SetAnimalPopulation" animal_types="wild_horse wild_donkey" min="20" max="45"/>
+
+				<action type="SetAnimalPopulation" animal_type="deer" min="15" max="25" era_factors="0 0 0.25 0.5 0.75 1"/>
+				<action type="SetAnimalPopulation" animal_type="reindeer" min="25" max="25" era_factors="1 0.75 0.5 0.25 0 0"/>
+
+				<action type="SetAnimalPopulation" animal_type="ancient_bison" min="20" max="25" era_factors="1 0.75 0.5 0.25 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="bison" min="20" max="25" era_factors="0 0.25 0.5 0.75 1 1"/>
+				<action type="SetAnimalPopulation" animal_type="aurochs" min="20" max="40"/>
+
+				<action type="SetAnimalPopulation" animal_type="megaloceros" min="15" max="20" era_factors="1 0.75 0.5 0.25 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="mammoth" min="15" max="20" era_factors="1 0.75 0.5 0 0 0"/>
+				<action type="SetAnimalPopulation" animal_type="woolly_rhinoceros" min="15" max="20" era_factors="1 0.5 0.25 0 0 0"/>
+
+				<!-- Set raider parameters -->
+				<action type="SetRaider" era="Paleolithic" entity_types="wolf cave_lion" period="2.5y" variance="0.5y"/>
+				<action type="SetRaider" era="Mesolithic" hardcore_timer="5y" entity_types="wolf cave_lion cave_bear" period="2.5y" variance="0.5y"/>
+				<action type="SetRaider" era="Neolithic" hardcore_timer="10y" entity_types="cave_bear" min="1" max="3" period="3.5y" variance="0.2y"/>
+				<action type="SetRaider" era="CopperAge" hardcore_timer="15y" entity_types="primitive_human" min="4" max="7" period="3.0y" variance="0.5y" extra_raider_per_population="40"/>
+				<action type="SetRaider" era="BronzeAge" hardcore_timer="20y" entity_types="wolf primitive_human" min="7" max="10" period="3.0y" variance="0.5y" extra_raider_per_population="40"/>
+				<action type="SetRaider" era="IronAge" hardcore_timer="25y" entity_types="primitive_human" min="10" max="15" period="3.0y" variance="0.5y" extra_raider_per_population="40"/>
+
+				<!-- Features -->
+
+				<action type="SetFeatureEnabled" feature="TameableAnimalSpawn" value="true"/>
+
+				<action type="SetKnowledgeParameters" tech_cost_multiplier="1"/>
+
+				<action type="SetFeatureEnabled" feature="Hints" value="false"/>
+				<action type="SetFeatureEnabled" feature="Warnings" value="false"/>
+
+				<!-- Parameters -->
+				<action type="SetMigrationParameters" min="2" max="6" period="0.666y" decrease_start_population="2000" decrease_halfing_population="1000"/>
+				<action type="SetBirthParameters" decrease_start_population="2000" decrease_halfing_population="2000"/>
+				<action type="SetTraderPeriod" value="0.7y"/>
+				<action type="SetDiseaseParameters" period="1.5y" variance="0.5y" individual_disease_chance="0.5"/>
+
+			</actions>
+		</event>
+
+		<!-- dog & goat -->
+
+		<event>
+			<condition type="TimeElapsed" timer="RealTime" value="0"/>
+			<actions>
+				<action type="Unlock" tech_type="dog_domestication"/>
+				<action type="Unlock" tech_type="goat_domestication"/>
+			</actions>
+		</event>
+
+		<!-- Intro -->
+
+		<event>
+			<condition type="TimeElapsed" timer="RealTime" value="0"/>
+			<actions>
+				<action type="ShowMessage" title="medium_happyfarmer_welcome_title" text="medium_happyfarmer_welcome_description"/>
+			</actions>
+		</event>
+
+
+
+	</events>
+</scenario>
