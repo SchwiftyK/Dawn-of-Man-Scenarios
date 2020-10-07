@@ -10,6 +10,7 @@
 		<location id="river_spawn" seed="11111111" environment="flat_river" map_location="0.6,0.4"   river="true" lakes="4"/>
 		<location id="valley_spawn" seed="00000000" environment="flat_river" map_location="0.35,0.3" river="false" lakes="4"/>
 		<location id="clear_water_spawn" seed="00000000" environment="flat_river" map_location="0.2,0.5" river="true" lakes="8"/>
+		<location id="rocky_river_spawn" seed="00100100" environment="rocky_river" map_location="0.69,0.60" river="true" lakes="14"/>
 	</locations>
 
 	<disasters>
@@ -91,8 +92,7 @@
 				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
 
 				<action type="Spawn" entity_type="nuts" amount="16" placement="Human"/>
-				<action type="Spawn" entity_type="dry_skin" amount="5" placement="Human"/>
-				<action type="Spawn" entity_type="sticks" amount="3" placement="Human"/>
+				<action type="Spawn" entity_type="dry_skin" amount="8" placement="Human"/>
 
 			</actions>
 		</event>

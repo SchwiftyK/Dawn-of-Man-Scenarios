@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <scenario>
-	<hardcore_mode_allowed value="false"/>
+	<hardcore_mode_allowed value="true"/>
 	<category value="Freeplay"/>
 	<group_id value="flatlands_group"/>
 	<size value="4"/>
@@ -10,6 +10,7 @@
 		<location id="river_spawn" seed="11111111" environment="flat_river_easy" map_location="0.6,0.4"   river="true" lakes="4"/>
 		<location id="valley_spawn" seed="00000000" environment="flat_river_easy" map_location="0.35,0.3" river="false" lakes="4"/>
 		<location id="clear_water_spawn" seed="00000000" environment="flat_river_easy" map_location="0.2,0.5" river="true" lakes="8"/>
+		<location id="rocky_river_spawn" seed="00100100" environment="rocky_river" map_location="0.69,0.60" river="true" lakes="14"/>
 	</locations>
 
 	<disasters>
@@ -94,7 +95,9 @@
 				<action type="Spawn" entity_type="dry_skin" amount="8" placement="Human"/>
 
 				<action type="Spawn" entity_type="sledge" amount="2" placement="StartLocationCircular" angle="10" radius="4"/>
-				<action type="Spawn" entity_type="sticks" amount="8" placement="Transport"/>
+				<action type="Spawn" entity_type="dry_skin" amount="4" placement="Transport"/>
+				<action type="Spawn" entity_type="raw_meat" amount="2" placement="Transport"/>
+				<action type="Spawn" entity_type="raw_skin" amount="2" placement="Transport"/>
 				<action type="Spawn" entity_type="flint" amount="3" placement="Transport"/>
 				<action type="Spawn" entity_type="stone" amount="1" placement="Transport"/>
 

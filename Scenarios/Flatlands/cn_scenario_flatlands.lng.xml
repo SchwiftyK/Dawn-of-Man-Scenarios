@@ -16,6 +16,7 @@
 <string name="river_spawn">河边</string>
 <string name="valley_spawn">山谷</string>
 <string name="clear_water_spawn">清湖</string>
+<string name="rocky_river_spawn">石头河</string>
 
 <string name="milestone_yeiy_people">好！有人啦！</string>
 <string name="milestone_yeiy_people_description">达到15人口。</string>

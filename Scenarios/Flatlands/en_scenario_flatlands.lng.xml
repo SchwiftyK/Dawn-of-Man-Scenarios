@@ -16,6 +16,7 @@ Deep, flat valleys in the middle of a mountain landscape. Rich in ore with thriv
 	<string name="river_spawn">Riverlands</string>
 	<string name="valley_spawn">The Valley</string>
 	<string name="clear_water_spawn">Clear Water Lakes</string>
+	<string name="rocky_river_spawn">Rocky River</string>
 
 <string name="milestone_yeiy_people">Yeiy! People</string>
 <string name="milestone_yeiy_people_description">Reach a population of 15.</string>
