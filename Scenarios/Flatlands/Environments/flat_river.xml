@@ -6,6 +6,21 @@
 <deposits values="Flint Tin Copper Iron"/>
 <resource_factor value="3"/>
 
+<detail_override_prototypes>
+
+    <detail_override_prototype>
+        <id value="DetailStick"/>
+        <density value="0.23" />
+        <min_altitude value="-2" />
+        <max_altitude value="80"/>
+        <min_angle value="-1" />
+        <max_angle value="60"/>
+        <min_humidity value="0.3"/>
+        <max_humidity value="0.75"/>
+    </detail_override_prototype>
+
+</detail_override_prototypes>
+
   <seasons>
     <season id="Spring" setup_id="Spring" duration="0.25" precipitation_chance="0.5" windy_chance="0.5" very_windy_chance="0.1">
        <min_temperature value="5"/>

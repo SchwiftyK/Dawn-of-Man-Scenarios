@@ -12,11 +12,14 @@ Deep, flat valleys in the middle of a mountain landscape. Rich in ore with thriv
 	<string name="goal_flatlands_welcome_title">Good choice. Enjoy!</string>
 	<string name="goal_flatlands_welcome_description">Welcome to the dawn of Flatlands. Look at the view!</string>
 
-	<string name="flatlands_spawn">The Flatlands</string>
-	<string name="river_spawn">Riverlands</string>
-	<string name="valley_spawn">The Valley</string>
-	<string name="clear_water_spawn">Clear Water Lakes</string>
-	<string name="rocky_river_spawn">Rocky River</string>
+	<string name="flatlands_flatlands_spawn">The Flatlands</string>
+	<string name="flatlands_river_spawn">Riverlands</string>
+	<string name="flatlands_valley_spawn">The Valley</string>
+	<string name="flatlands_clear_water_spawn">Clear Water Lakes</string>
+	<string name="flatlands_rocky_river_spawn">Rocky River</string>
+	<string name="flatlands_smooth_hills">Smooth Hills</string>
+	<string name="flatlands_handprint">Large Imprint</string>
+
 
 <string name="milestone_yeiy_people">Yeiy! People</string>
 <string name="milestone_yeiy_people_description">Reach a population of 15.</string>

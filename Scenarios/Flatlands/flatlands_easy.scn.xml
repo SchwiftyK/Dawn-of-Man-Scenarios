@@ -6,16 +6,18 @@
 	<size value="4"/>
 
 	<locations>
-		<location id="flatlands_spawn" seed="11111111" environment="flat_river_easy" map_location="0.5,0.2" river="false" lakes="4"/>
-		<location id="river_spawn" seed="11111111" environment="flat_river_easy" map_location="0.6,0.4"   river="true" lakes="4"/>
-		<location id="valley_spawn" seed="00000000" environment="flat_river_easy" map_location="0.35,0.3" river="false" lakes="4"/>
-		<location id="clear_water_spawn" seed="00000000" environment="flat_river_easy" map_location="0.2,0.5" river="true" lakes="8"/>
-		<location id="rocky_river_spawn" seed="00100100" environment="rocky_river" map_location="0.69,0.60" river="true" lakes="14"/>
+		<location id="flatlands_flatlands_spawn" seed="11111111" environment="flat_river_easy" map_location="0.5,0.2" river="false" lakes="4"/>
+		<location id="flatlands_river_spawn" seed="11111111" environment="flat_river_easy" map_location="0.6,0.4"   river="true" lakes="4"/>
+		<location id="flatlands_valley_spawn" seed="00000000" environment="flat_river_easy" map_location="0.35,0.3" river="false" lakes="4"/>
+		<location id="flatlands_clear_water_spawn" seed="00000000" environment="flat_river_easy" map_location="0.2,0.5" river="true" lakes="8"/>
+		<location id="flatlands_rocky_river_spawn" seed="00100100" environment="rocky_river" map_location="0.69,0.60" river="true" lakes="14"/>
+		<location id="flatlands_smooth_hills" seed="51236123" environment="swamped_hills" position="1060,960" map_location="0.25,0.3" river="true" lakes="56"/>
+		<location id="flatlands_handprint" seed="3" environment="larger_hills" position="990,920" map_location="0.28,0.64" river="true" lakes="56"/>
 	</locations>
 
 	<disasters>
-		<disaster disaster_type="Storm" period="3.5y" variance="0.2y"/>
-		<disaster disaster_type="Blizzard" period="7y" variance="0.2y"/>
+		<disaster disaster_type="Storm" period="8.5y" variance="0.2y"/>
+		<disaster disaster_type="Blizzard" period="12y" variance="0.2y"/>
 	</disasters>
 
 	<milestones>

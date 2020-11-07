@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<environment>
+
+	<noise_amplitudes values="0 0.5"/>
+
+	<high_texture_height value="75"/>
+
+	<distance_height_offset value="0.01666"/>
+
+
+	<deposits values="Flint Tin Copper Iron"/>
+	<resource_factor value="1.5"/>
+	<ford_distance_factor value="0.2"/>
+	<trees_everywhere value="false"/>
+
+	<backdrop_scale value="2, 1, 1"/>
+
+
+	<detail_override_prototypes>
+			<detail_override_prototype>
+				<id value="DetailStick"/>
+				<density value="0.2" />
+				<min_altitude value="-2" />
+				<max_altitude value="80"/>
+				<min_angle value="-1" />
+				<max_angle value="45"/>
+				<min_humidity value="0.3"/>
+				<max_humidity value="0.75"/>
+			</detail_override_prototype>
+
+			<detail_override_prototype>
+				<id value="DetailGrass"/>
+				<density value="0.2" />
+				<min_altitude value="-1" />
+				<max_altitude value="8"/>
+				<min_angle value="-5" />
+				<max_angle value="25"/>
+				<min_humidity value="0.1"/>
+				<max_humidity value="0.9"/>
+			</detail_override_prototype>
+
+			<detail_override_prototype>
+				<id value="DetailReeds"/>
+				<density value="0.3" />
+				<min_altitude value="-5" />
+				<max_altitude value="1"/>
+				<min_angle value="-5" />
+				<max_angle value="25"/>
+				<min_humidity value="0.98"/>
+				<max_humidity value="1"/>
+			</detail_override_prototype>
+
+			<detail_override_prototype>
+				<id value="GroundPlant"/>
+				<density value="0.086" />
+				<min_altitude value="-2" />
+				<max_altitude value="90"/>
+				<min_angle value="5" />
+				<max_angle value="60"/>
+				<min_humidity value="0.02"/>
+				<max_humidity value="0.75"/>
+			</detail_override_prototype>
+
+		</detail_override_prototypes>
+
+
+		<prop_override_prototypes>
+			<prop_override_prototype>
+				<id value="SmallRocks"/>
+				<density value="0.04" />
+				<min_altitude value="-3" />
+				<max_altitude value="6"/>
+				<min_angle value="10" />
+				<max_angle value="90"/>
+			</prop_override_prototype>
+
+			<prop_override_prototype>
+				<id value="MediumRocks"/>
+				<density value="0.0022" />
+				<min_altitude value="-3" />
+				<max_altitude value="80"/>
+				<min_angle value="25" />
+				<max_angle value="35"/>
+			</prop_override_prototype>
+
+			<prop_override_prototype>
+				<id value="BigRocks"/>
+				<density value="0.0001" />
+				<min_altitude value="70" />
+				<max_altitude value="100"/>
+				<min_angle value="35" />
+				<max_angle value="90"/>
+			</prop_override_prototype>
+
+			<prop_override_prototype>
+				<id value="Flint"/>
+				<density value="0.045" />
+				<min_altitude value="-3" />
+				<max_altitude value="45"/>
+				<min_angle value="3.15" />
+				<max_angle value="25"/>
+			</prop_override_prototype>
+
+			<prop_override_prototype>
+				<id value="Megalith"/>
+				<density value="0.06" />
+				<min_altitude value="-4" />
+				<max_altitude value="75"/>
+				<min_angle value="0.6" />
+				<max_angle value="25"/>
+			</prop_override_prototype>
+
+
+		</prop_override_prototypes>
+
+
+		<deposit_override_prototypes>
+			<deposit_override_prototype>
+				<id value="Flint"/>
+				<density value="0.025" />
+				<min_angle value="7" />
+				<max_angle value="26"/>
+				<min_altitude value="-2" />
+				<max_altitude value="45"/>
+			</deposit_override_prototype>
+			<deposit_override_prototype>
+				<id value="Copper"/>
+				<density value="0.045" />
+				<min_angle value="5" />
+				<max_angle value="50"/>
+				<min_altitude value="-2" />
+				<max_altitude value="45"/>
+			</deposit_override_prototype>
+			<deposit_override_prototype>
+				<id value="Tin"/>
+				<density value="0.04" />
+				<min_angle value="18" />
+				<max_angle value="50"/>
+				<min_altitude value="-2" />
+				<max_altitude value="45"/>
+			</deposit_override_prototype>
+			<deposit_override_prototype>
+				<id value="Iron"/>
+				<density value="0.072" />
+				<min_angle value="14" />
+				<max_angle value="75"/>
+				<min_altitude value="-3" />
+				<max_altitude value="50"/>
+				<min_humidity value="0.01"/>
+				<max_humidity value="0.99"/>
+			</deposit_override_prototype>
+		</deposit_override_prototypes>
+
+	<tree_override_prototypes>
+
+		<tree_override_prototype>
+			<id value="Pear"/>
+			<min_altitude value="-2" />
+			<max_altitude value="2"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Cherry"/>
+			<min_altitude value="0" />
+			<max_altitude value="10"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Chestnut"/>
+			<density value="0.4" />
+			<min_altitude value="1" />
+			<max_altitude value="15"/>
+			<min_angle value="-10" />
+			<max_angle value="10"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Oak"/>
+			<density value="0.72" />
+			<min_altitude value="-1" />
+			<max_altitude value="13"/>
+			<min_angle value="-15" />
+			<max_angle value="60"/>
+			<min_humidity value="0.2"/>
+			<max_humidity value="1"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Fir"/>
+			<density value="3.9" />
+			<min_altitude value="13" />
+			<max_altitude value="80"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Pine"/>
+			<density value="0.9" />
+			<min_altitude value="12" />
+			<max_altitude value="80"/>
+			<min_angle value="-10" />
+			<max_angle value="80"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Spruce"/>
+			<density value="5.6" />
+			<min_altitude value="5" />
+			<max_altitude value="45"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Beech"/>
+			<density value="1.8" />
+			<min_altitude value="0" />
+			<max_altitude value="12"/>
+			<min_angle value="-10" />
+			<max_angle value="45"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Birch"/>
+			<density value="0.8" />
+			<min_altitude value="-2" />
+			<max_altitude value="5"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Flax"/>
+			<density value="0.3" />
+			<min_altitude value="-3.5" />
+			<max_altitude value="3.5"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Barley"/>
+			<density value="0.01" />
+			<min_altitude value="-2" />
+			<max_altitude value="10"/>
+			<min_angle value="-10" />
+			<max_angle value="10"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Einkorn"/>
+			<density value="0.01" />
+			<min_altitude value="-2" />
+			<max_altitude value="10"/>
+			<min_angle value="-10" />
+			<max_angle value="10"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Emmer"/>
+			<density value="0.01" />
+			<min_altitude value="-2" />
+			<max_altitude value="10"/>
+			<min_angle value="-10" />
+			<max_angle value="10"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Rye"/>
+			<density value="0.01" />
+			<min_altitude value="-2" />
+			<max_altitude value="10"/>
+			<min_angle value="-10" />
+			<max_angle value="10"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="BitterVetch"/>
+			<min_altitude value="-2" />
+			<max_altitude value="5"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Chickpeas"/>
+			<min_altitude value="-2" />
+			<max_altitude value="5"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Lentils"/>
+			<min_altitude value="-2" />
+			<max_altitude value="5"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Peas"/>
+			<min_altitude value="-2" />
+			<max_altitude value="5"/>
+		</tree_override_prototype>
+
+	</tree_override_prototypes>
+
+	<seasons>
+		<season id="Spring" setup_id="Spring" duration="0.25" precipitation_chance="0.6" windy_chance="0.5" very_windy_chance="0.1" fish_boost="1">
+			<min_temperature value="0"/>
+			<max_temperature value="25"/>
+		</season>
+
+		<season id="Summer" setup_id="Summer" duration="0.25" precipitation_chance="0.1"  windy_chance="0.25" fish_boost="1">
+			<min_temperature value="20"/>
+			<max_temperature value="25"/>
+		</season>
+
+		<season id="Fall" setup_id="Fall" duration="0.25" precipitation_chance="0.35" windy_chance="0.2" very_windy_chance="0.1" fish_boost="1">
+			<min_temperature value="5"/>
+			<max_temperature value="25"/>
+		</season>
+
+		<season id="Winter" setup_id="Winter" duration="0.25" fish_boost="1" snow_setup_id="WinterSnow" precipitation_chance="0.5" windy_chance="0.1" very_windy_chance="0.3" reduced_fauna="true">
+			<min_temperature value="-8"/>
+			<max_temperature value="3"/>
+		</season>
+	</seasons>
+
+</environment>

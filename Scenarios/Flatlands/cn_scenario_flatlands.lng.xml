@@ -12,11 +12,13 @@
 <string name="goal_flatlands_welcome_title">好选择！</string>
 <string name="goal_flatlands_welcome_description">欢迎来到平原黎明。看看这风境！</string>
 
-<string name="flatlands_spawn">平原</string>
-<string name="river_spawn">河边</string>
-<string name="valley_spawn">山谷</string>
-<string name="clear_water_spawn">清湖</string>
-<string name="rocky_river_spawn">石头河</string>
+<string name="flatlands_flatlands_spawn">平原</string>
+<string name="flatlands_river_spawn">河边</string>
+<string name="flatlands_valley_spawn">山谷</string>
+<string name="flatlands_clear_water_spawn">清湖</string>
+<string name="flatlands_rocky_river_spawn">石头河</string>
+<string name="flatlands_smooth_hills">平滑山丘</string>
+<string name="flatlands_handprint">掌印</string>
 
 <string name="milestone_yeiy_people">好！有人啦！</string>
 <string name="milestone_yeiy_people_description">达到15人口。</string>

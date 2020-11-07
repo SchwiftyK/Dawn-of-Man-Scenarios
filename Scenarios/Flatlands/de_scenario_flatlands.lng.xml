@@ -12,11 +12,13 @@ Tiefe, flache Täler inmitten einer Gebirgslandschaft. Reich an Erz und mit gede
 	<string name="goal_flatlands_welcome_title">Gute Wahl! Viel Spaß!</string>
 	<string name="goal_flatlands_welcome_description">Willkommen in den Flachlanden, schau dir die Aussicht an!</string>
 
-	<string name="flatlands_spawn">Flachland</string>
-	<string name="river_spawn">Donautal</string>
-	<string name="valley_spawn">Kleines Lautertal</string>
-	<string name="clear_water_spawn">Zell am See</string>
-	<string name="rocky_river_spawn">Steiniger Fluss</string>
+	<string name="flatlands_flatlands_spawn">Flachland</string>
+	<string name="flatlands_river_spawn">Donautal</string>
+	<string name="flatlands_valley_spawn">Kleines Lautertal</string>
+	<string name="flatlands_clear_water_spawn">Zell am See</string>
+	<string name="flatlands_rocky_river_spawn">Steiniger Fluss</string>
+	<string name="flatlands_smooth_hills">Weiche Hügel</string>
+	<string name="flatlands_handprint">Handabdruck</string>
 
 <string name="milestone_yeiy_people">Jippie! Leute</string>
 <string name="milestone_yeiy_people_description">Erreiche eine Bevölkerung von 15.</string>
