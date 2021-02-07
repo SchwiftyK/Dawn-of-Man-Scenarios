@@ -3,11 +3,12 @@
 	<string name="flatlands">Flachland</string>
 	<string name="flatlands_group">Flachland</string>
 	<string name="scenario_flatlands">Flachland</string>
-	<string name="scenario_flatlands_subtitle">Ausgewogen</string>
-	<string name="scenario_flatlands_description">
+	<string name="scenario_flatlands_v2">Flachland</string>
+	<string name="scenario_flatlands_v2_subtitle">Ausgewogen</string>
+	<string name="scenario_flatlands_v2_description">
 Finde einen schönen Platz, um zu siedeln.
 	</string>
-	<string name="scenario_flatlands_context">
+	<string name="scenario_flatlands_v2_context">
 Tiefe, flache Täler inmitten einer Gebirgslandschaft. Reich an Erz und mit gedeihender Flora and Fauna.</string>
 	<string name="goal_flatlands_welcome_title">Gute Wahl! Viel Spaß!</string>
 	<string name="goal_flatlands_welcome_description">Willkommen in den Flachlanden, schau dir die Aussicht an!</string>
@@ -19,29 +20,33 @@ Tiefe, flache Täler inmitten einer Gebirgslandschaft. Reich an Erz und mit gede
 	<string name="flatlands_rocky_river_spawn">Steiniger Fluss</string>
 	<string name="flatlands_smooth_hills">Weiche Hügel</string>
 	<string name="flatlands_handprint">Handabdruck</string>
+	<string name="swamp_connected_isles">Tiefer Sumpf</string>
+	<string name="swamp_the_bogs_islands">Das Moor</string>
+	<string name="swamp_swampy_marshlands">Sumpfgebiete</string>
 
 <string name="milestone_yeiy_people">Jippie! Leute</string>
-<string name="milestone_yeiy_people_description">Erreiche eine Bevölkerung von 15.</string>
+<string name="milestone_yeiy_people_description">Erreiche eine Bevölkerung von 50.</string>
 <string name="milestone_simple_camp">Errichte ein Lager</string>
 <string name="milestone_simple_camp_description">Holzhaufen, Steinhaufen, Häutetrockner, Handwerksschuppen, 3 Zelte, Lagerzelt.</string>
-<string name="milestone_survival5w">Fünf Winter</string>
-<string name="milestone_survival5w_description">Überlebe 5 Winter.</string>
+<string name="milestone_survival5w">Fünfzehn Winter</string>
+<string name="milestone_survival5w_description">Überlebe 15 Winter.</string>
 <string name="milestone_200people">Die 200</string>
 <string name="milestone_200people_description">Erreiche eine Bevölkerung von 200.</string>
 <string name="milestone_lotopray">Eine menge Arbeit</string>
-<string name="milestone_lotopray_description">Errichte 10 Steinkreise.</string>
+<string name="milestone_lotopray_description">Errichte 7 Steinkreise.</string>
 <string name="milestone_1k_bread">Unser Täglich Brot</string>
 <string name="milestone_1k_bread_description">Backe 1000 köstliche Brote.</string>
 <string name="milestone_sic_o_war">Kriegsbegeistert</string>
-<string name="milestone_sic_o_war_description">Töte 500 Angreifer.</string>
+<string name="milestone_sic_o_war_description">Töte 300 Angreifer.</string>
 
 
 <string name="scenario_flatlands_easy">Flachland Einfach</string>
-<string name="scenario_flatlands_easy_subtitle">Einfach</string>
-<string name="scenario_flatlands_easy_description">
+<string name="scenario_flatlands_easy_v2">Friedliches Flachland</string>
+<string name="scenario_flatlands_easy_v2_subtitle">Einfach - Keine Feinde</string>
+<string name="scenario_flatlands_easy_v2_description">
 Finde einen schönen Platz, um zu siedeln.
 </string>
-<string name="scenario_flatlands_easy_context">
+<string name="scenario_flatlands_easy_v2_context">
 Tiefe, flache Täler inmitten einer Gebirgslandschaft. Reich an Erz und mit gedeihender Flora and friedlicher Fauna. Keine Angriffe, kurze Winter</string>
 
 <string name="milestone_get_some_nuts">Eine harte Nuss!</string>

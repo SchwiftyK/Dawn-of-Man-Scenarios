@@ -3,31 +3,36 @@
 	<hardcore_mode_allowed value="true"/>
 	<category value="Freeplay"/>
 	<group_id value="flatlands_group"/>
+
+	 <!-- map size 4x4, 3 and 5 work good too! -->
 	<size value="4"/>
 
-	<!-- OLD SCENARIO, have a look at flatlands_v2.scn.xml -->
-	<visible value="false"/>
-
+	<!-- envionments - see environments folder for details and resource overrides -->
+	<!-- Add more, if you like! share great seeds with others!
+		<location id="name_of_location" seed="SomeRandomNumbers" environment="seeEnvironmentsFolder" map_location="coordinatesOnMinimap" river="true/false" lakes="number"/>
+ 	-->
 	<locations>
 		<location id="flatlands_flatlands_spawn" seed="11111111" environment="flat_river" map_location="0.5,0.2" river="false" lakes="4"/>
 		<location id="flatlands_river_spawn" seed="11111111" environment="flat_river" map_location="0.6,0.4" river="true" lakes="4"/>
 		<location id="flatlands_valley_spawn" seed="00000000" environment="flat_river" map_location="0.42,0.22" river="false" lakes="4"/>
 		<location id="flatlands_clear_water_spawn" seed="00000000" environment="flat_river" map_location="0.2,0.5" river="true" lakes="8"/>
-		<location id="flatlands_rocky_river_spawn" seed="00100100" environment="rocky_river" map_location="0.38,0.44" river="true" lakes="14"/>
-		<location id="flatlands_smooth_hills" seed="51236123" environment="swamped_hills" position="1060,960" map_location="0.25,0.3" river="true" lakes="56"/>
-		<location id="flatlands_handprint" seed="3" environment="larger_hills" position="990,920" map_location="0.28,0.64" river="true" lakes="56"/>
+		<location id="flatlands_rocky_river_spawn" seed="00100100" environment="rocky_river_v2" map_location="0.38,0.44" river="true" lakes="14"/>
+		<location id="flatlands_smooth_hills" seed="51236123" environment="swamped_hills_v2" position="1060,960" map_location="0.25,0.3" river="true" lakes="56"/>
+		<location id="flatlands_handprint" seed="3" environment="larger_hills_v2" position="990,920" map_location="0.28,0.64" river="true" lakes="56"/>
+		<location id="swamp_the_bogs_islands" seed="51236123" environment="swamp_island_land" position="800,560" map_location="0.8,0.31" river="true" lakes="340"/> <!-- more MediumRocks rock! -->
+		<location id="swamp_connected_isles" seed="1235123" environment="swamp_island_land" position="990,920" map_location="0.737,0.23" river="true" lakes="1024"/>
+		<location id="swamp_swampy_marshlands" seed="3" environment="swamped_trees" position="990,920" map_location="0.57,0.06" river="true" lakes="56"/>
 	</locations>
 
+	<!-- Storm and Blizzard occurence -->
 	<disasters>
-		<disaster disaster_type="Storm" period="10.5y" variance="2.5y"/>
-		<disaster disaster_type="Blizzard" period="10.5y" variance="2.25y"/>
+		<disaster disaster_type="Storm" period="3.5y" variance="2.5y"/>
+		<disaster disaster_type="Blizzard" period="4.5y" variance="2.25y"/>
 	</disasters>
 
+	<!-- some milestones, see .lng file for pattern, milestone_id; milestone_id_description -->
+	<!-- see other scenarios and madruga ref page: https://madrugaworks.com/dawnofman/reference_conditions.php -->
 	<milestones>
-
-		<milestone id="yeiy_people">
-			<condition type="ValueReached" id="Population" value="15"/>
-		</milestone>
 
 		<milestone id="simple_camp">
 			<condition type="And">
@@ -42,8 +47,12 @@
 			</condition>
 		</milestone>
 
+		<milestone id="yeiy_people">
+			<condition type="ValueReached" id="Population" value="50"/>
+		</milestone>
+
 		<milestone id="survival5w">
-			<condition type="TimeElapsed" timer="GameTime" value="5y"/>
+			<condition type="TimeElapsed" timer="GameTime" value="15y"/>
 		</milestone>
 
 		<milestone id="200people">
@@ -51,7 +60,7 @@
 		</milestone>
 
 		<milestone id="lotopray">
-			<condition type="EntityCountReached" counter="BuiltStructures" entity_type="stone_circle" value="10"/>
+			<condition type="EntityCountReached" counter="BuiltStructures" entity_type="stone_circle" value="7"/>
 		</milestone>
 
 		<milestone id="1k_bread">
@@ -59,7 +68,7 @@
 		</milestone>
 
 		<milestone id="sic_o_war">
-			<condition type="EntityCountReached" counter="KilledRaiders" value="500"/>
+			<condition type="EntityCountReached" counter="KilledRaiders" value="300"/>
 		</milestone>
 
 	</milestones>
@@ -79,6 +88,7 @@
 
 				<action type="Spawn" entity_type="skins_outfit" amount="8" placement="Human"/>
 
+				<!-- Spawn equipment -->
 				<action type="Spawn" entity_type="wooden_spear" amount="1" placement="Human"/>
 				<action type="Spawn" entity_type="biface" amount="1" placement="Human"/>
 				<action type="Spawn" entity_type="wooden_harpoon" amount="1" placement="Human"/>
@@ -107,6 +117,7 @@
 			<condition type="InitGame"/>
 			<actions>
 				<!-- Set animal populations, these will get spawned automatically -->
+				<!-- min during summer, max during winter, era factor 0 = extinction -->
 				<action type="SetAnimalPopulation" animal_types="vulture dove eagle" min="0" max="0"/>
 
 				<action type="SetAnimalPopulation" animal_type="wolf" min="30" max="35" era_factors="1 1 1 1 1 1"/>
@@ -131,9 +142,9 @@
 				<action type="SetAnimalPopulation" animal_type="bison" min="10" max="40" era_factors="0 0.25 0.5 0.75 1 1"/>
 				<action type="SetAnimalPopulation" animal_type="aurochs" min="15" max="50" era_factors="1 1 1 1 1 1"/>
 
-				<action type="SetAnimalPopulation" animal_type="megaloceros" min="35" max="40" era_factors="1 1 0.75 0.5 0.25 0.25"/>
-				<action type="SetAnimalPopulation" animal_type="mammoth" min="35" max="45" era_factors="1 1 1 0.75 0.55 0.15"/>
-				<action type="SetAnimalPopulation" animal_type="woolly_rhinoceros" min="35" max="45" era_factors="1 1 1 0.75 0.55 0.15"/>
+				<action type="SetAnimalPopulation" animal_type="megaloceros" min="35" max="40" era_factors="1 1 0.75 0.5 0.25 0.1"/>
+				<action type="SetAnimalPopulation" animal_type="mammoth" min="35" max="45" era_factors="1 1 1 0.75 0.55 0.1"/>
+				<action type="SetAnimalPopulation" animal_type="woolly_rhinoceros" min="35" max="45" era_factors="1 1 1 0.75 0.55 0.1"/>
 				<action type="SetAnimalPopulation" animal_type="elasmotherium" min="35" max="45" era_factors="1 1 1 0.75 0.55 0.15"/>
 				<action type="SetAnimalPopulation" animal_type="muskox" min="35" max="35" era_factors="1 1 1 1 1 1"/>
 
@@ -141,24 +152,54 @@
 				<action type="SetRaider" era="Paleolithic" entity_types="wolf cave_lion cave_hyena cave_bear" mins="2 2 2 1" maxes="3 3 3 2" grace_period="0.9y" period="1.4y" variance="0.2y"/>
 				<action type="SetRaider" era="Mesolithic" hardcore_timer="6y" entity_types="wolf cave_lion cave_hyena cave_bear" mins="3 3 3 3" maxes="4 4 4 4" grace_period="1.2y" period="2.25y" variance="0.2y"/>
 				<action type="SetRaider" era="Neolithic" hardcore_timer="100y" entity_types="wolf cave_lion cave_hyena cave_bear woolly_rhinoceros primitive_human" mins="3 3 3 2 3 3" maxes="5 5 5 5 4 5" grace_period="1y" period="1.85y" variance="0.5y" extra_raider_per_population="20"/>
-				<action type="SetRaider" era="CopperAge" hardcore_timer="150y" entity_types="primitive_human wolf" mins="4 4" maxes="7 5" period="2.7y" variance="0.5y" extra_raider_per_population="20"/>
-				<action type="SetRaider" era="BronzeAge" hardcore_timer="200y" entity_types="primitive_human wolf" mins="7 4" maxes="15 7" period="2.7y" variance="1.5y" extra_raider_per_population="20"/>
-				<action type="SetRaider" era="IronAge" hardcore_timer="250y" entity_types="primitive_human wolf bear" mins="15 6 1" maxes="20 8 5" period="3.2y" variance="1.3y" extra_raider_per_population="20"/>
+				<action type="SetRaider" era="CopperAge" hardcore_timer="150y" entity_types="primitive_human wolf bear" mins="4 4 1" maxes="7 5 3" period="2.7y" variance="0.5y" extra_raider_per_population="20"/>
+				<action type="SetRaider" era="BronzeAge" hardcore_timer="200y" entity_types="primitive_human wolf" mins="10 4" maxes="15 5" period="2.6y" variance="1.5y" extra_raider_per_population="20"/>
+				<action type="SetRaider" era="IronAge" hardcore_timer="250y" entity_types="primitive_human" min="20" max="25" period="2.3y" variance="0.7y" extra_raider_per_population="20"/>
 
 				<!-- Features -->
 				<action type="SetFeatureEnabled" feature="Hints" value="false"/>
 				<action type="SetFeatureEnabled" feature="Warnings" value="false"/>
+				<!-- Spawns tameable animals near your base / starting location? -->
 				<action type="SetFeatureEnabled" feature="TameableAnimalSpawn" value="true"/>
 
+				<!-- Tech cost requirement, can be set to 0 for free techs! -->
 				<action type="SetKnowledgeParameters" tech_cost_multiplier="1.5"/>
 
 				<!-- Parameters -->
-				<action type="SetMigrationParameters" min="2" max="8" period="1.8y" decrease_start_population="9000" decrease_halfing_population="9000"/>
-				<action type="SetBirthParameters" decrease_start_population="-1" decrease_halfing_population="-1"/>
+				<action type="SetMigrationParameters" min="2" max="5" period="0.8y" decrease_start_population="90000" decrease_halfing_population="90000"/>
+				<action type="SetBirthParameters" decrease_start_population="90000" decrease_halfing_population="90000"/>
 				<action type="SetTraderPeriod" value="2.3y"/>
 				<action type="SetDiseaseParameters" period="4.5y" variance="1.5y" individual_disease_chance="0.9"/>
 
 			</actions>
 		</event>
+
+		<!--
+
+		In case you want to sandbox around a while, you might use the following event.
+		Copy it out of this comment section and paste it below.
+		It works with BEER too! List of all Resource Types: https://madrugaworks.com/dawnofman/reference_entities.php
+
+		<event flags="MultipleExecutions">
+			<condition type="Not">
+				<sub_condition value="20" type="EntityCountReached" entity_type="bread"/>
+			</condition>
+			<actions>
+				<action type="Spawn" entity_type="bread" amount="1" placement="StartLocationCircular" angle="20" radius="5"/>
+			</actions>
+		</event>
+
+
+		HOW TO MODIFY YOUR SAVE FOR UNLIMITED IRON / COPPER / TIN after building a mine:
+		https://steamcommunity.com/app/858810/discussions/1/3001046778348471430/?tscn=1604134011
+
+		essentials:
+		https://steamcommunity.com/app/858810/discussions/1/1840188800786675958/
+		-->
+
+		<!--  Paste event below this line	-->
+
+
+
 	</events>
 </scenario>

@@ -5,17 +5,17 @@
 	<group_id value="flatlands_group"/>
 	<size value="4"/>
 
-	<!-- OLD SCENARIO, see _v2 -->
-	<visible value="false"/>
-
 	<locations>
 		<location id="flatlands_flatlands_spawn" seed="11111111" environment="flat_river_easy" map_location="0.5,0.2" river="false" lakes="4"/>
 		<location id="flatlands_river_spawn" seed="11111111" environment="flat_river_easy" map_location="0.6,0.4"   river="true" lakes="4"/>
 		<location id="flatlands_valley_spawn" seed="00000000" environment="flat_river_easy" map_location="0.35,0.3" river="false" lakes="4"/>
 		<location id="flatlands_clear_water_spawn" seed="00000000" environment="flat_river_easy" map_location="0.2,0.5" river="true" lakes="8"/>
-		<location id="flatlands_rocky_river_spawn" seed="00100100" environment="rocky_river" map_location="0.69,0.60" river="true" lakes="14"/>
-		<location id="flatlands_smooth_hills" seed="51236123" environment="swamped_hills" position="1060,960" map_location="0.25,0.3" river="true" lakes="56"/>
-		<location id="flatlands_handprint" seed="3" environment="larger_hills" position="990,920" map_location="0.28,0.64" river="true" lakes="56"/>
+		<location id="flatlands_rocky_river_spawn" seed="00100100" environment="rocky_river_v2" map_location="0.69,0.60" river="true" lakes="14"/>
+		<location id="flatlands_smooth_hills" seed="51236123" environment="swamped_hills_v2" position="1060,960" map_location="0.25,0.3" river="true" lakes="56"/>
+		<location id="flatlands_handprint" seed="3" environment="larger_hills_v2" position="990,920" map_location="0.28,0.64" river="true" lakes="56"/>
+		<location id="swamp_the_bogs_islands" seed="51236123" environment="swamp_island_land" position="800,560" map_location="0.8,0.31" river="true" lakes="340"/> <!-- more MediumRocks rock! -->
+		<location id="swamp_connected_isles" seed="1235123" environment="swamp_island_land" position="990,920" map_location="0.737,0.23" river="true" lakes="1024"/>
+		<location id="swamp_swampy_marshlands" seed="3" environment="swamped_trees" position="990,920" map_location="0.57,0.06" river="true" lakes="56"/>
 	</locations>
 
 	<disasters>
@@ -24,10 +24,6 @@
 	</disasters>
 
 	<milestones>
-
-		<milestone id="yeiy_people">
-			<condition type="ValueReached" id="Population" value="15"/>
-		</milestone>
 
 		<milestone id="simple_camp">
 			<condition type="And">
@@ -42,8 +38,12 @@
 			</condition>
 		</milestone>
 
+		<milestone id="yeiy_people">
+			<condition type="ValueReached" id="Population" value="50"/>
+		</milestone>
+
 		<milestone id="survival5w">
-			<condition type="TimeElapsed" timer="GameTime" value="5y"/>
+			<condition type="TimeElapsed" timer="GameTime" value="15y"/>
 		</milestone>
 
 		<milestone id="200people">
@@ -51,7 +51,7 @@
 		</milestone>
 
 		<milestone id="lotopray">
-			<condition type="EntityCountReached" counter="BuiltStructures" entity_type="stone_circle" value="10"/>
+			<condition type="EntityCountReached" counter="BuiltStructures" entity_type="stone_circle" value="7"/>
 		</milestone>
 
 		<milestone id="1k_bread">
@@ -155,7 +155,7 @@
 				<action type="SetFeatureEnabled" feature="Warnings" value="false"/>
 				<action type="SetFeatureEnabled" feature="TameableAnimalSpawn" value="true"/>
 
-				<action type="SetKnowledgeParameters" tech_cost_multiplier="1.2"/>
+				<action type="SetKnowledgeParameters" tech_cost_multiplier="0.95"/>
 
 				<!-- Parameters -->
 				<action type="SetMigrationParameters" min="2" max="5" period="0.75y" decrease_start_population="9000" decrease_halfing_population="9000"/>

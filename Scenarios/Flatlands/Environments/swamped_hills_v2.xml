@@ -94,18 +94,19 @@
 	<max_angle value="90"/>
 </prop_override_prototype>
 
-<prop_override_prototype>
-	<id value="MediumRocks"/>
-	<density value="0.0022" />
-	<min_altitude value="-3" />
-	<max_altitude value="80"/>
-	<min_angle value="25" />
-	<max_angle value="35"/>
-</prop_override_prototype>
-
 -->
 
 		<prop_override_prototypes>
+
+			<!-- <density value="0.0022" /> is not enough! -->
+			<prop_override_prototype>
+				<id value="MediumRocks"/>
+				<density value="1.5" />
+				<min_altitude value="-3" />
+				<max_altitude value="80"/>
+				<min_angle value="17" />
+				<max_angle value="95"/>
+			</prop_override_prototype>
 
 			<prop_override_prototype>
 				<id value="BigRocks"/>
@@ -129,7 +130,7 @@
 			<prop_override_prototype>
 				<id value="Megalith"/>
 				<density value="0.07" />
-				<min_altitude value="-4" />
+				<min_altitude value="-3" />
 				<max_altitude value="75"/>
 				<min_angle value="0.6" />
 				<max_angle value="25"/>
@@ -331,29 +332,28 @@
 
 
 
+<seasons>
+	<season id="Spring" setup_id="Spring" duration="0.25" precipitation_chance="0.85" windy_chance="0.5" very_windy_chance="0.1" fish_boost="1">
+		<min_temperature value="0"/>
+		<max_temperature value="25"/>
+	</season>
 
-	<seasons>
-		<season id="Spring" setup_id="Spring" duration="0.25" precipitation_chance="0.7" windy_chance="0" very_windy_chance="0.1" fish_boost="1">
-			<min_temperature value="0"/>
-			<max_temperature value="25"/>
-		</season>
+	<season id="Summer" setup_id="Summer" duration="0.25" precipitation_chance="0.7"  windy_chance="0.25" fish_boost="1">
+		<min_temperature value="20"/>
+		<max_temperature value="35"/>
+		<min_wind value="0"/>
+		<max_wind value="5"/>
+	</season>
 
-		<season id="Summer" setup_id="Summer" duration="0.25" precipitation_chance="0.35" windy_chance="0.1" fish_boost="1">
-			<min_temperature value="20"/>
-			<max_temperature value="35"/>
-		</season>
+	<season id="Fall" setup_id="Fall" duration="0.25" precipitation_chance="0.85" windy_chance="0.5" very_windy_chance="0.1" fish_boost="1">
+		<min_temperature value="5"/>
+		<max_temperature value="25"/>
+	</season>
 
-		<season id="Fall" setup_id="Fall" duration="0.25" precipitation_chance="0.9" windy_chance="0.1" very_windy_chance="0.1" fish_boost="1">
-			<min_temperature value="5"/>
-			<max_temperature value="25"/>
-			<min_wind value="10"/>
-			<max_wind value="500"/>
-		</season>
-
-		<season id="Winter" setup_id="Winter" duration="0.25" snow_setup_id="WinterSnow" precipitation_chance="1" windy_chance="0.1" very_windy_chance="0.1"  fish_boost="1" reduced_fauna="true">
-			<min_temperature value="-5"/>
-			<max_temperature value="3.0"/>
-		</season>
-	</seasons>
+	<season id="Winter" setup_id="Winter" duration="0.25" snow_setup_id="WinterSnow" precipitation_chance="0.95" windy_chance="0.5" very_windy_chance="0.5"  fish_boost="1" reduced_fauna="true">
+		<min_temperature value="-5"/>
+		<max_temperature value="3.0"/>
+	</season>
+</seasons>
 
 </environment>

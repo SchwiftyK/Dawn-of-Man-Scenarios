@@ -93,7 +93,7 @@
 			<prop_override_prototype>
 				<id value="Megalith"/>
 				<density value="0.5" />
-				<min_altitude value="-5" />
+				<min_altitude value="-3" />
 				<max_altitude value="65"/>
 				<min_angle value="0.5" />
 				<max_angle value="90"/>
@@ -142,8 +142,13 @@
 
 		<tree_override_prototype>
 			<id value="Oak"/>
+			<density value="1.72" />
 			<min_altitude value="-1" />
-			<max_altitude value="35"/>
+			<max_altitude value="13"/>
+			<min_angle value="-15" />
+			<max_angle value="60"/>
+			<min_humidity value="0.2"/>
+			<max_humidity value="1"/>
 		</tree_override_prototype>
 
 		<tree_override_prototype>
@@ -230,6 +235,7 @@
 			<max_altitude value="5"/>
 		</tree_override_prototype>
 
+		<!-- Now with handwritten overrides for all the berries! Thank you very much for your hint! -->
 		<tree_override_prototype>
 			<id value="Blackberry"/>
 			<min_altitude value="-1" />
@@ -239,19 +245,19 @@
 		<tree_override_prototype>
 			<id value="Blueberry"/>
 			<min_altitude value="-1" />
+			<max_altitude value="33"/>
+		</tree_override_prototype>
+
+		<tree_override_prototype>
+			<id value="Strawberry"/>
+			<min_altitude value="4" />
 			<max_altitude value="8"/>
 		</tree_override_prototype>
 
 		<tree_override_prototype>
-			<id value="Blueberry"/>
-			<min_altitude value="-1" />
-			<max_altitude value="8"/>
-		</tree_override_prototype>
-
-		<tree_override_prototype>
-			<id value="Blueberry"/>
-			<min_altitude value="-1" />
-			<max_altitude value="8"/>
+			<id value="Raspberry"/>
+			<min_altitude value="3" />
+			<max_altitude value="18"/>
 		</tree_override_prototype>
 
 	</tree_override_prototypes>

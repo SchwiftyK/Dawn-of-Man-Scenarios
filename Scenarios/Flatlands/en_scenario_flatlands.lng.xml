@@ -3,11 +3,12 @@
 	<string name="flatlands">Flatlands</string>
 	<string name="flatlands_group">Flatlands</string>
 	<string name="scenario_flatlands">Flatlands</string>
-	<string name="scenario_flatlands_subtitle">Challenging</string>
-	<string name="scenario_flatlands_description">
+	<string name="scenario_flatlands_v2">Flatlands</string>
+	<string name="scenario_flatlands_v2_subtitle">Challenging</string>
+	<string name="scenario_flatlands_v2_description">
 Find a nice place to stay.
 	</string>
-	<string name="scenario_flatlands_context">
+	<string name="scenario_flatlands_v2_context">
 Deep, flat valleys in the middle of a mountain landscape. Rich in ore with thriving flora and fauna. </string>
 	<string name="goal_flatlands_welcome_title">Good choice. Enjoy!</string>
 	<string name="goal_flatlands_welcome_description">Welcome to the dawn of Flatlands. Look at the view!</string>
@@ -19,30 +20,33 @@ Deep, flat valleys in the middle of a mountain landscape. Rich in ore with thriv
 	<string name="flatlands_rocky_river_spawn">Rocky River</string>
 	<string name="flatlands_smooth_hills">Smooth Hills</string>
 	<string name="flatlands_handprint">Large Imprint</string>
-
+	<string name="swamp_connected_isles">Deep Swamp</string>
+	<string name="swamp_the_bogs_islands">The Bogs</string>
+	<string name="swamp_swampy_marshlands">Marshlands</string>
 
 <string name="milestone_yeiy_people">Yeiy! People</string>
-<string name="milestone_yeiy_people_description">Reach a population of 15.</string>
-<string name="milestone_simple_camp">Build a camp to survive</string>
+<string name="milestone_yeiy_people_description">Reach a population of 50.</string>
+<string name="milestone_simple_camp">Build A Camp</string>
 <string name="milestone_simple_camp_description">Wood Pile, Rock Pile, Skins Dryer, Crafter, 3 tents, Storage Tent.</string>
-<string name="milestone_survival5w">Five winters</string>
-<string name="milestone_survival5w_description">Survive for 5 winters.</string>
+<string name="milestone_survival5w">Fifteen Winters</string>
+<string name="milestone_survival5w_description">Survive for 15 winters.</string>
 <string name="milestone_200people">The 200</string>
 <string name="milestone_200people_description">Reach a population of 200.</string>
-<string name="milestone_lotopray">A lot of work</string>
-<string name="milestone_lotopray_description">Build 10 stone circles.</string>
-<string name="milestone_1k_bread">The daily bread</string>
+<string name="milestone_lotopray">A Lot o Work</string>
+<string name="milestone_lotopray_description">Build 7 stone circles.</string>
+<string name="milestone_1k_bread">The Daily Bread</string>
 <string name="milestone_1k_bread_description">Bake 1000 delicious breads.</string>
-<string name="milestone_sic_o_war">Sic of war</string>
-<string name="milestone_sic_o_war_description">Kill 500 raiders.</string>
+<string name="milestone_sic_o_war">Sic Of War</string>
+<string name="milestone_sic_o_war_description">Kill 300 raiders.</string>
 
 
 <string name="scenario_flatlands_easy">Flatlands Easy</string>
-<string name="scenario_flatlands_easy_subtitle">Very Easy</string>
-<string name="scenario_flatlands_easy_description">
+<string name="scenario_flatlands_easy_v2">Flatlands Easy</string>
+<string name="scenario_flatlands_easy_v2_subtitle">Very Easy - NO RAIDERS</string>
+<string name="scenario_flatlands_easy_v2_description">
 Find a nice place to stay.
 </string>
-<string name="scenario_flatlands_easy_context">
+<string name="scenario_flatlands_easy_v2_context">
 Deep, flat valleys in the middle of a mountain landscape. Rich in ore with thriving flora and harmless fauna. No Raiders. Less storms and blizzards. Longer Fall, shorter Winter.</string>
 
 <string name="milestone_get_some_nuts">Get some nuts!</string>
